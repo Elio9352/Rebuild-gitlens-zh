@@ -1,7 +1,9 @@
---- a/src/plus/gk/utils/checkin.utils.ts	2026-05-28 03:46:35.846496489 +0000
-+++ b/src/plus/gk/utils/checkin.utils.ts	2026-05-28 03:46:58.032036523 +0000
-@@ -145,6 +145,21 @@
- 		effective = { ...actual };
+diff --git a/src/plus/gk/utils/checkin.utils.ts b/src/plus/gk/utils/checkin.utils.ts
+index 515a8c67e..6de4ffc2d 100644
+--- a/src/plus/gk/utils/checkin.utils.ts
++++ b/src/plus/gk/utils/checkin.utils.ts
+@@ -154,10 +154,25 @@ export function getSubscriptionFromCheckIn(
+ 		activeOrganization = organizationsWithNoLicense[0];
  	}
  
 +	const enterprisePlan = getSubscriptionPlan(
@@ -19,11 +21,6 @@
 +		data.nextOptInDate,
 +	);
 +
- 	let activeOrganization: Organization | undefined;
- 	if (organizationId != null) {
- 		activeOrganization = organizations.find(organization => organization.id === organizationId);
-@@ -156,8 +171,8 @@
- 
  	return {
  		plan: {
 -			actual: actual,
