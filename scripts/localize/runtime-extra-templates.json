@@ -1,0 +1,74 @@
+[
+	[
+		"Failed to stage (⟦⟧) untracked files for patch",
+		"为补丁暂存 (⟦⟧) 个未跟踪文件失败"
+	],
+	[
+		"Failed to unstage (⟦⟧) untracked files for patch",
+		"为补丁取消暂存 (⟦⟧) 个未跟踪文件失败"
+	],
+	[
+		"Failed to stage (⟦⟧) untracked files for copying changes",
+		"暂存 (⟦⟧) 个未跟踪文件以复制更改时失败"
+	],
+	[
+		"Failed to unstage (⟦⟧) untracked files for copying changes",
+		"取消暂存 (⟦⟧) 个未跟踪文件以复制更改时失败"
+	],
+	[
+		"Cannot find target ⟦⟧ in repo.",
+		"在仓库中找不到目标 ⟦⟧。"
+	],
+	[
+		"Cannot push; ⟦⟧ is behind ⟦⟧ by ⟦⟧",
+		"无法推送；⟦⟧ 落后于 ⟦⟧ ⟦⟧"
+	],
+	[
+		"Unable to find a remote for PR #⟦⟧.",
+		"找不到 PR #⟦⟧ 对应的远程仓库。"
+	],
+	[
+		"Failed to open plan: ⟦⟧",
+		"打开计划失败: ⟦⟧"
+	],
+	[
+		"⟦⟧ shared workspaces hidden - upgrade to GitLens Pro to access.",
+		"已隐藏 ⟦⟧ 个共享工作区 - 升级到 GitLens Pro 以访问。"
+	],
+	[
+		"Adding repositories to workspace failed: (⟦⟧) ⟦⟧",
+		"添加仓库到工作区失败：(⟦⟧) ⟦⟧"
+	],
+	[
+		"Removing repositories from workspace failed: (⟦⟧) ⟦⟧",
+		"从工作区移除仓库失败：(⟦⟧) ⟦⟧"
+	],
+	[
+		"Creating workspace failed: (⟦⟧) ⟦⟧",
+		"创建工作区失败：(⟦⟧) ⟦⟧"
+	],
+	[
+		"Deleting workspace failed: (⟦⟧) ⟦⟧",
+		"删除工作区失败：(⟦⟧) ⟦⟧"
+	],
+	[
+		"Getting workspaces failed: (⟦⟧) ⟦⟧",
+		"获取工作区列表失败：(⟦⟧) ⟦⟧"
+	],
+	[
+		"Getting workspace failed: (⟦⟧) ⟦⟧",
+		"获取工作区失败：(⟦⟧) ⟦⟧"
+	],
+	[
+		"Getting workspace repos failed: (⟦⟧) ⟦⟧",
+		"获取工作区仓库失败：(⟦⟧) ⟦⟧"
+	],
+	[
+		"Getting account info failed: (⟦⟧) ⟦⟧",
+		"获取账号信息失败：(⟦⟧) ⟦⟧"
+	],
+	[
+		"Getting token failed: (⟦⟧) ⟦⟧",
+		"获取令牌失败：(⟦⟧) ⟦⟧"
+	]
+]

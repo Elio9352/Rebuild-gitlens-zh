@@ -1,0 +1,4930 @@
+[
+	[
+		"Every active agent session shows up alongside your work. See a status pill for each session on the\n\t\t\t\tbranch cards in the Home view and Graph sidebar, or see associated agents in the details panel when\n\t\t\t\tviewing working changes. See what needs attention. Hover for the full picture. Take action &mdash;\n\t\t\t\tresume, respond, switch &mdash; straight from the status. No more rotating through terminal tabs or chat\n\t\t\t\tpanes to figure out which agent needs you.",
+		"每个活动的智能体会话都会显示在你的工作旁边。在主页视图和提交图侧栏的分支卡片上查看每个会话的状态标签，或在查看工作更改时在详情面板中查看关联的智能体。一眼看清需要关注的内容，悬停查看完整信息，并直接从状态执行操作 &mdash; 恢复、回复、切换。再也不用在终端标签页和聊天面板之间来回翻找哪个智能体需要你了。"
+	],
+	[
+		"The working changes view of the details panel is your workflow guide. Selecting on a working changes row\n\t\t\t\tsurfaces the next action that keeps the loop moving: respond to an awaiting agent, push, open a PR,\n\t\t\t\tresolve a conflict, finish the rebase. Nothing in flight? The integrated Launchpad points you to the\n\t\t\t\tnext PR or issue worth picking up.",
+		"详情面板的工作更改视图是你的工作流向导。选中一行工作更改\n\t\t\t\t即可显示推动流程继续的下一步操作：回应等待中的智能体、推送、打开 PR、\n\t\t\t\t解决冲突、完成变基。当前没有进行中的工作？集成的启动台会为你指出\n\t\t\t\t下一个值得着手的 PR 或议题。"
+	],
+	[
+		"if(!t)return\"changes\";if(\"commit\"===t.type)return\"commit\";if(\"compare\"===t.type){let i=t.includeShas?.length;return i?ou(\"commit\",i):\"comparison\"}let i=[];(t.includeStaged||t.includeUnstaged)&&i.push(\"working changes\");let o=t.includeShas?.length??0;return o>0&&i.push(ou(\"commit\",o)),i.length?i.join(\" + \"):\"changes\"",
+		"if(!t)return\"更改\";if(\"commit\"===t.type)return\"提交\";if(\"compare\"===t.type){let i=t.includeShas?.length;return i?ou(\"个提交\",i,{plural:\"个提交\"}):\"比较\"}let i=[];(t.includeStaged||t.includeUnstaged)&&i.push(\"工作区更改\");let o=t.includeShas?.length??0;return o>0&&i.push(ou(\"个提交\",o,{plural:\"个提交\"})),i.length?i.join(\" + \"):\"更改\""
+	],
+	[
+		"<strong>Multi-WIP visibility:</strong> every worktree's working changes are visible at the same time, in\n\t\t\t\tthe same Graph. <strong>Focused Graph mode:</strong> when you're heads-down on one branch, scope the\n\t\t\t\tGraph to just the commits that matter &mdash; the bigger picture is always one click away.",
+		"<strong>多 WIP 可见性：</strong>所有 Worktree 的工作更改同时显示在同一个提交图中。<strong>聚焦图模式：</strong>当你专注于某个分支时，可以将提交图限定到真正相关的提交 &mdash; 全局视角始终一键可达。"
+	],
+	[
+		"Select a commit or multi-select rows in the Graph and jump straight into Compare mode in the details\n\t\t\t\tpanel. Branch vs. branch, commit vs. commit, working changes vs. anything &mdash; just select and\n\t\t\t\tcompare. It's the fastest way to get eyes on the exact diff you care about.",
+		"在提交图中选择一个提交或多选多行，直接进入详情面板的比较模式。分支对分支、提交对提交、工作更改对任意引用 &mdash; 选中即比较。这是查看你关心的确切差异的最快方式。"
+	],
+	[
+		"(this.behind&&t.push(`${ou(\"commit\",this.behind)} behind`),this.ahead&&t.push(`${ou(\"commit\",this.ahead)} ahead of`),t.length)?tO`${ds(this.branchName)} is ${t.join(\", \")}\n\t\t\t${ds(this.upstreamName)}`:tO`${ds(this.branchName)} is up to date with ${ds(this.upstreamName)}`",
+		"(this.behind&&t.push(`落后 ${ou(\"个提交\",this.behind,{plural:\"个提交\"})}`),this.ahead&&t.push(`领先 ${ou(\"个提交\",this.ahead,{plural:\"个提交\"})}`),t.length)?tO`${ds(this.branchName)} 相对 ${ds(this.upstreamName)}\n\t\t\t${t.join(\"、\")}`:tO`${ds(this.branchName)} 已与 ${ds(this.upstreamName)} 保持同步`"
+	],
+	[
+		"Compose mode lives right in the details panel: select files, exclude noise, and let AI split a sprawling\n\t\t\t\tWIP into a series of focused commits &mdash; without ever opening a separate view. Your reviewers will\n\t\t\t\tthank you, and so will your future self.",
+		"编排模式就在详情面板中：选择文件、排除噪音，让 AI 把庞杂的 WIP 拆分为一系列聚焦的提交 &mdash; 无需打开单独的视图。你的评审者会感谢你，未来的你也会。"
+	],
+	[
+		"You also have access to the\n\t\t\t\t\t\t<a href=\"https://gitkraken.dev/tools\" target=\"_blank\">GitKraken DevEx platform</a>, unleashing\n\t\t\t\t\t\tpowerful Git visualization & productivity capabilities everywhere you work: IDE, desktop,\n\t\t\t\t\t\tbrowser, and terminal.",
+		"你还可以访问 <a href=\"https://gitkraken.dev/tools\" target=\"_blank\">GitKraken DevEx 平台</a>，在 IDE、桌面端、浏览器和终端等任何工作位置释放强大的 Git 可视化与生产力能力。"
+	],
+	[
+		"The <strong>Commit Graph</strong> brings your development and agentic workflows together. Parallelize\n\t\t\t\tyour work — manage multiple active worktrees, orchestrate concurrent agents, and execute your entire Git\n\t\t\t\tlifecycle without context-switching.",
+		"<strong>提交图</strong>将你的开发流程与智能体工作流融合在一起。并行推进工作 — 管理多个活动的 Worktree、编排并发智能体，并在不切换上下文的情况下完成整个 Git 生命周期。"
+	],
+	[
+		"e.missing?t=\"missing\":(s&&(t+=`${(0,r.td)(\"commit\",s,{infix:a?\"$(arrow-down) \":void 0})} behind`),i&&(t+=`${0===t.length?\"\":u}${(0,r.td)(\"commit\",i,{infix:a?\"$(arrow-up) \":void 0})} ahead`,h.includes(e.name.split(\"/\")[0])&&(t+=\" of\")))",
+		"e.missing?t=\"缺失上游\":(s&&(t+=`落后 ${(0,r.td)(\"个提交\",s,{infix:a?\"$(arrow-down) \":void 0,plural:\"个提交\"})}`),i&&(t+=`${0===t.length?\"\":u}领先 ${(0,r.td)(\"个提交\",i,{infix:a?\"$(arrow-up) \":void 0,plural:\"个提交\"})}`,h.includes(e.name.split(\"/\")[0])&&(t+=\"于\")))"
+	],
+	[
+		"t.missing?i=\"missing\":(c&&(i+=`${ou(\"commit\",c,{infix:g?\"$(arrow-down) \":void 0})} behind`),o&&(i+=`${0===i.length?\"\":f}${ou(\"commit\",o,{infix:g?\"$(arrow-up) \":void 0})} ahead`,b.includes(t.name.split(\"/\")[0])&&(i+=\" of\")))",
+		"t.missing?i=\"缺失上游\":(c&&(i+=`落后 ${ou(\"个提交\",c,{infix:g?\"$(arrow-down) \":void 0,plural:\"个提交\"})}`),o&&(i+=`${0===i.length?\"\":f}领先 ${ou(\"个提交\",o,{infix:g?\"$(arrow-up) \":void 0,plural:\"个提交\"})}`,b.includes(t.name.split(\"/\")[0])&&(i+=\"于\")))"
+	],
+	[
+		"Let AI handle the heavy lifting - from turning your changes into clear, logical commits to getting\n\t\t\t\tcontext on others' work. GitLens’s AI features make reviews efficient and keep your history clean.",
+		"让 AI 替你处理繁重工作 — 从将更改整理成清晰、有条理的提交，到了解他人工作的上下文。GitLens 的 AI 功能让评审更高效，并保持提交历史整洁。"
+	],
+	[
+		" Bring order from chaos. Restructure changes into\n\t\t\t\t\t\t\tclean, review-ready commits automatically. Catch issues early with severity-tagged reviews\n\t\t\t\t\t\t\tthat you can delegate directly to an agent",
+		" 化繁为简。自动将更改重组为干净、可评审的提交。通过带严重程度标记的评审尽早发现问题，并可直接委托给智能体处理"
+	],
+	[
+		"Review changes, stage files, create or compose commits, and\n\t\t\t\t\t\t\tresolve conflicts. On a clean worktree the Details Panel guides your next steps—like\n\t\t\t\t\t\t\tpulling, pushing, or drafting a PR",
+		"审查更改、暂存文件、创建或编排提交，并\n\t\t\t\t\t\t\t解决冲突。在干净的 Worktree 上，详情面板会引导你的后续步骤——例如\n\t\t\t\t\t\t\t拉取、推送或草拟 PR"
+	],
+	[
+		"The new Review mode in the details panel reads through any commits or WIP and surfaces severity-tagged\n\t\t\t\tinsights and a summary of changes, so you can ensure nothing's missed before you ship.",
+		"详情面板中全新的审查模式会通读所有提交或 WIP，并呈现带严重程度标记的\n\t\t\t\t洞察以及更改摘要，让你在交付前确保没有遗漏。"
+	],
+	[
+		"You're using <strong>GitLens Community</strong> edition. Track code changes and see who made them with\n\t\t\t\tfeatures like in-editor blame annotations, hovers, CodeLens, and more—completely free.",
+		"你正在使用 <strong>GitLens Community</strong> 版本。借助编辑器内 Blame 标注、悬停提示、CodeLens 等功能，跟踪代码更改并查看是谁做出的更改 — 完全免费。"
+	],
+	[
+		"Stay in control. Review and edit AI suggestions before finalizing, and\n\t\t\t\t<a href=\"command:gitlens.ai.switchProvider\">configure your preferred AI provider</a>\n\t\t\t\tand model to fit your needs.",
+		"一切尽在掌控。在最终确定前审查并编辑 AI 建议，并可<a href=\"command:gitlens.ai.switchProvider\">配置你偏好的 AI 提供商</a>和模型，以满足你的需求。"
+	],
+	[
+		"With GitLens Pro, you can accelerate PR reviews, visualize code history in-depth, and enhance\n\t\t\t\tcollaboration across your team. It's the perfect upgrade to streamline your VS Code workflow.",
+		"借助 GitLens Pro，你可以加速 PR 审查、深入可视化代码历史，并增强\n\t\t\t\t团队协作。它是简化你 VS Code 工作流的完美升级。"
+	],
+	[
+		"Juggle multiple active worktrees and agent sessions\n\t\t\t\t\t\t\twithin a single view. Focus the graph on specific changes instantly to review and track\n\t\t\t\t\t\t\twhere agents are working in real-time",
+		"在单一视图中同时管理多个活动的 Worktree 和智能体\n\t\t\t\t\t\t\t会话。即时将提交图聚焦到特定更改，以实时审查和跟踪\n\t\t\t\t\t\t\t智能体的工作位置"
+	],
+	[
+		"With agents running across multiple worktrees, working changes used to mean opening another window or\n\t\t\t\tdirectory just to remember what you (or your agent) left half-finished. Not anymore.",
+		"当智能体在多个 Worktree 中运行时，以前查看工作更改意味着要打开另一个窗口或\n\t\t\t\t目录，才能想起你（或你的智能体）有哪些未完成的工作。现在不必如此了。"
+	],
+	[
+		"Analyze repo evolution with the Visual History.\n\t\t\t\t\t\t\tPinpoint hotspots and trends or watch agent activity in real-time using the Files, Commits,\n\t\t\t\t\t\t\tand Agent Activity treemaps",
+		"使用可视化历史分析仓库演进。\n\t\t\t\t\t\t\t利用文件、提交和智能体活动树状图，精确定位热点和趋势，\n\t\t\t\t\t\t\t或实时观察智能体活动"
+	],
+	[
+		"<strong>GitLens Community</strong> edition. Track code changes and see who made them\n\t\t\t\twith features like in-editor blame annotations, hovers, CodeLens, and more—completely free.",
+		"<strong>GitLens Community</strong> 版本。借助编辑器内 Blame 标注、悬停提示、CodeLens 等功能，你可以跟踪代码更改并查看是谁做出的更改，而且完全免费。"
+	],
+	[
+		"GitKraken MCP is active in your AI chat, leveraging Git and your integrations to provide context and\n\t\t\t\tperform actions. You can also connect MCP to other agents on your machine.",
+		"GitKraken MCP 已在你的 AI 聊天中激活，利用 Git 和你的集成来提供上下文并\n\t\t\t\t执行操作。你还可以将 MCP 连接到你机器上的其他智能体。"
+	],
+	[
+		"As a GitLens Pro user, you have access to powerful tools that accelerate PR reviews, provide deeper code\n\t\t\t\thistory visualizations, and streamline collaboration across your team.",
+		"作为 GitLens Pro 用户，你可以使用强大的工具来加速 PR 审查、提供更深入的代码\n\t\t\t\t历史可视化，并简化团队协作。"
+	],
+	[
+		"Once your trial ends, you'll return to <strong>GitLens Community</strong> — where you can still leverage\n\t\t\t\tfeatures like in-editor blame annotations, hovers, CodeLens, and more.",
+		"试用结束后，你将回到 <strong>GitLens Community</strong> —— 仍可继续使用编辑器内 Blame 标注、悬停提示、CodeLens 等功能。"
+	],
+	[
+		"Push ${ou(\"commit\",this.branchState.ahead)} to ${this.upstream}${i}\n\t\t\t<hr />\n\t\t\t${this.renderBranchPrefix()} ${ou(\"commit\",this.branchState.ahead)} ahead of ${this.upstream}",
+		"推送 ${this.branchState.ahead} 个提交到 ${this.upstream}${i}\n\t\t\t<hr />\n\t\t\t${this.renderBranchPrefix()} 领先 ${this.upstream} ${this.branchState.ahead} 个提交"
+	],
+	[
+		"Navigate complex repositories with a searchable, color-coded\n\t\t\t\t\tcommit timeline. Instantly understand branch relationships, authorship patterns, and commit\n\t\t\t\t\tsequences.",
+		"通过可搜索、彩色编码的提交时间线浏览复杂仓库。\n\t\t\t\t\t即刻理解分支关系、作者模式和提交\n\t\t\t\t\t顺序。"
+	],
+	[
+		"${(0,c.td)(\"file\",this.contributor.stats.files)} changed, ${(0,c.td)(\"addition\",this.contributor.stats.additions)}, ${(0,c.td)(\"deletion\",this.contributor.stats.deletions)}",
+		"${this.contributor.stats.files} 个文件更改，${this.contributor.stats.additions} 行新增，${this.contributor.stats.deletions} 行删除"
+	],
+	[
+		"Complete this walkthrough to experience enhanced PR review tools, deeper code history visualizations,\n\t\t\t\tand streamlined collaboration to help boost your productivity.",
+		"完成此演练，体验增强的 PR 审查工具、更深入的代码历史可视化\n\t\t\t\t以及更顺畅的协作，帮助提升你的工作效率。"
+	],
+	[
+		">Parallelize your workflow—manage multiple active worktrees, orchestrate concurrent agents, and\n\t\t\t\t\t\texecute your entire Git lifecycle without context-switching<",
+		">并行化你的工作流——管理多个活动的 Worktree、编排并发的智能体，并\n\t\t\t\t\t\t在不切换上下文的情况下执行完整的 Git 生命周期<"
+	],
+	[
+		" Launch, monitor, and interact with agents from the\n\t\t\t\t\t\t\tgraph, Agents Side Bar, or Kanban board to approve permissions and view execution plans\n\t\t\t\t\t\t\tinline",
+		" 从提交图、智能体侧边栏或看板中启动、监控智能体并与之交互，内联批准权限并查看执行计划"
+	],
+	[
+		"Where your development and agentic workflows come together. Go beyond history visualization to\n\t\t\t\t\tmanage, execute, and parallelize your entire Git workflow.",
+		"让你的开发与智能体工作流汇聚于此。超越历史可视化，\n\t\t\t\t\t管理、执行并并行化你的完整 Git 工作流。"
+	],
+	[
+		"GitKraken MCP is active in your AI chat, leveraging Git and your integrations to provide context and perform actions. <a href=\"${hT.helpCenterMCP}\">了解更多</a>",
+		"GitKraken MCP 已在你的 AI 聊天中启用，可利用 Git 和集成来提供上下文并执行操作。<a href=\"${hT.helpCenterMCP}\">了解更多</a>"
+	],
+	[
+		"GitKraken MCP is active in your AI chat, leveraging Git and your integrations to provide context and perform actions. <a href=\"${ia.helpCenterMCP}\">了解更多</a>",
+		"GitKraken MCP 已在你的 AI 聊天中启用，可利用 Git 和集成来提供上下文并执行操作。<a href=\"${ia.helpCenterMCP}\">了解更多</a>"
+	],
+	[
+		"${this.renderBranchPrefix()} ${ou(\"commit\",this.branchState.behind)} behind and\n\t\t\t\t\t${ou(\"commit\",this.branchState.ahead)} ahead of ${this.upstream}${i}",
+		"${this.renderBranchPrefix()} 落后 ${this.upstream}${i} ${this.branchState.behind} 个提交，领先 ${this.branchState.ahead} 个提交"
+	],
+	[
+		"The GitLens Community edition lets you track code changes and see who made them with inline blame\n\t\t\t\tannotations, hovers, and more—completely free.",
+		"GitLens 社区版让你通过行内 Blame 注释、悬停提示等功能跟踪代码更改并查看其作者\n\t\t\t\t——完全免费。"
+	],
+	[
+		" Centralize your workflow with the Side Bar and dockable\n\t\t\t\t\t\t\tDetails Panel. Detach the graph into a separate window to maximize your editor space",
+		" 通过侧边栏和可停靠的详情面板集中管理你的工作流。可将提交图拆分到独立窗口，最大化编辑器空间"
+	],
+	[
+		"has uncommitted changes.\n\nDeleting it will cause those changes to be FOREVER LOST.\nThis is IRREVERSIBLE!\n\nAre you sure you still want to delete it?",
+		"存在未提交的更改。\n\n删除后这些更改将永久丢失。\n此操作不可逆！\n\n确定仍要删除吗？"
+	],
+	[
+		"GitLens Community edition lets you track code changes and see who made them with inline blame\n\t\t\t\tannotations, hovers, and more—completely free.",
+		"GitLens Community 版本让你借助内联 Blame 标注、悬停提示等功能跟踪代码更改并查看是谁做出的更改 — 完全免费。"
+	],
+	[
+		"<em>Tip:</em> To get the most out of your GitLens Pro experience, complete the walkthrough and visit our\n\t\t\t\tHelp Center for in-depth guides.",
+		"<em>提示：</em>为了充分发挥 GitLens Pro 体验，请完成演练，并访问我们的帮助中心查看深入指南。"
+	],
+	[
+		" Restructure changes into clean, review-ready commits and catch\n\t\t\t\t\tissues early with severity-tagged reviews you can delegate to an agent.",
+		" 将更改重组为干净、可评审的提交，并通过带严重程度标记的评审尽早发现问题，还可以委托给智能体处理。"
+	],
+	[
+		"With <strong>GitLens Pro</strong> (Free 14-Day Trial), you’ll get full access to advanced visualization,\n\t\t\t\tcollaboration, and built-in AI:",
+		"使用 <strong>GitLens Pro</strong>（免费试用 14 天），即可完整使用高级可视化、协作与内置 AI 功能："
+	],
+	[
+		"`Working tree changes from ${lg(t.lhs)}`:\"\"===t.rhs?`Changes from ${lg(t.lhs)} to working tree`:`Changes from ${lg(t.lhs)} to ${lg(t.rhs)}`",
+		"`Working Tree 更改（自 ${lg(t.lhs)}）`:\"\"===t.rhs?`从 ${lg(t.lhs)} 到 Working Tree 的更改`:`从 ${lg(t.lhs)} 到 ${lg(t.rhs)} 的更改`"
+	],
+	[
+		"Unable to complete the cherry-pick operation because ${i??\"it\"} resulted in an empty commit.\n\nDo you want to skip ${i??\"this commit\"}?",
+		"无法完成拣选操作，因为 ${i??\"它\"} 产生了一个空提交。\n\n是否跳过 ${i??\"此提交\"}？"
+	],
+	[
+		"Review changes, stage files, compose commits, and\n\t\t\t\t\tresolve conflicts — with guided next steps like pull, push, or draft a PR.",
+		"审查更改、暂存文件、组织提交以及\n\t\t\t\t\t解决冲突 — 并提供拉取、推送或起草 PR 等下一步操作引导。"
+	],
+	[
+		" Launch, monitor, and interact with agents directly from the\n\t\t\t\t\tgraph to approve permissions and review execution plans inline.",
+		" 直接从提交图启动、监控智能体并与之交互，内联批准权限和评审执行计划。"
+	],
+	[
+		"To get the most out of your GitLens Pro experience, complete the walkthrough and visit our\n\t\t\t\tHelp Center for in-depth guides.",
+		"为了充分利用你的 GitLens Pro 体验，请完成演练并访问我们的\n\t\t\t\t帮助中心获取深入指南。"
+	],
+	[
+		"Forcibly deleting it will cause those changes to be FOREVER LOST.\nThis is IRREVERSIBLE!\n\nWould you like to forcibly delete it?",
+		"强制删除后这些更改将永久丢失。\n此操作不可逆！\n\n是否要强制删除？"
+	],
+	[
+		"The compose rewrite succeeded, but re-applying your working changes hit a conflict. Your original state is saved as stash \"",
+		"编排重写已成功，但重新应用你的工作更改时遇到了冲突。你的原始状态已保存为贮藏 \""
+	],
+	[
+		"<strong>自动编排提交:</strong> instantly generate a sequence of commits with descriptive\n\t\t\t\t\tsummaries in an interactive editor",
+		"<strong>自动编排提交：</strong>在交互式编辑器中即时生成一系列带描述性摘要的提交"
+	],
+	[
+		"Unable to ${e.skip?\"skip\":\"continue\"} the ${e.operation.type} operation${this.original?`: ${this.original.message}`:\"\"}",
+		"无法${e.skip?\"跳过\":\"继续\"} ${e.operation.type} 操作${this.original?`：${this.original.message}`:\"\"}"
+	],
+	[
+		"function J(e,t,i){let r;if(null==i)return o??=(0,S.zd)(),`${o(t)} ${e}${1===t?\"\":\"s\"}`;let s=1===t?e:i.plural??`${e}s`;",
+		"function J(e,t,i){let zh={commit:\"个提交\",file:\"个文件\",\"pull request\":\"个拉取请求\",day:\"天\",conflict:\"处冲突\",deletion:\"行删除\",addition:\"行新增\",\"code suggestion\":\"条代码建议\",token:\"个 Token\",result:\"个结果\",line:\"行\",Tag:\"标签\",Stash:\"贮藏\",Branch:\"分支\",author:\"位作者\"}[e];zh&&(e=zh,i={...i,plural:zh},\" more \"===i.infix&&(i.infix=\" \"));let r;if(null==i)return o??=(0,S.zd)(),`${o(t)} ${e}${1===t?\"\":\"s\"}`;let s=1===t?e:i.plural??`${e}s`;"
+	],
+	[
+		"function J(e,t,i){let r;if(null==i)return n??=(0,k.zd)(),`${n(t)} ${e}${1===t?\"\":\"s\"}`;let s=1===t?e:i.plural??`${e}s`;",
+		"function J(e,t,i){let zh={commit:\"个提交\",file:\"个文件\",\"pull request\":\"个拉取请求\",day:\"天\",conflict:\"处冲突\",deletion:\"行删除\",addition:\"行新增\",\"code suggestion\":\"条代码建议\",token:\"个 Token\",result:\"个结果\",line:\"行\",Tag:\"标签\",Stash:\"贮藏\",Branch:\"分支\",author:\"位作者\"}[e];zh&&(e=zh,i={...i,plural:zh},\" more \"===i.infix&&(i.infix=\" \"));let r;if(null==i)return n??=(0,k.zd)(),`${n(t)} ${e}${1===t?\"\":\"s\"}`;let s=1===t?e:i.plural??`${e}s`;"
+	],
+	[
+		"No repository detected. To view ${e}, open a folder containing a git repository or clone from a URL in Source Control.",
+		"未检测到仓库。要查看 ${e}，请打开包含 Git 仓库的文件夹，或在源代码管理中通过 URL 克隆。"
+	],
+	[
+		"${t.title} and New Branch from ${(0,et.M4)(e.reference,{capitalize:!0,icon:!1,label:\"branch\"!==e.reference.refType})}",
+		"${t.title}并创建新分支，基于 ${(0,et.M4)(e.reference,{capitalize:!0,icon:!1,label:\"branch\"!==e.reference.refType})}"
+	],
+	[
+		"Cannot ${e.skip?\"skip\":\"continue\"} the ${e.operation.type} operation as there is no ${e.operation.type} in progress",
+		"无法${e.skip?\"跳过\":\"继续\"} ${e.operation.type} 操作，因为当前没有正在进行的 ${e.operation.type}"
+	],
+	[
+		"Unable to ${a} with that link. Please try clicking the link again. If this issue persists, please contact support.",
+		"无法通过该链接${a}。请尝试重新点击链接。如果问题持续存在，请联系支持。"
+	],
+	[
+		"Supercharge Git and unlock untapped knowledge within your repo to better understand, write, and\n\t\t\t\t\t\treview code.",
+		"为 Git 注入强大动力，发掘仓库中未被利用的知识，帮助你更好地理解、编写和\n\t\t\t\t\t\t审查代码。"
+	],
+	[
+		"<strong>Explain Commits and Branches:</strong> understand changes without wasting time diving into\n\t\t\t\t\tthe diffs",
+		"<strong>解释提交和分支：</strong>无需耗时钻研 diff 即可理解更改"
+	],
+	[
+		"Streamline your workflow — effortlessly track, manage, and collaborate on your branches and pull\n\t\t\t\t一切尽在一个直观的中心.",
+		"简化你的工作流 — 轻松跟踪、管理你的分支与拉取请求并展开协作，一切尽在一个直观的中心。"
+	],
+	[
+		"The ${i.type} operation cannot be continued because ${s} resulted in an empty commit.\n\nDo you want to skip ${s}?",
+		"${i.type} 操作无法继续，因为 ${s} 产生了一个空提交。\n\n是否跳过 ${s}？"
+	],
+	[
+		"Cannot ${e.skip?\"skip\":\"continue\"} the ${e.operation.type} operation as some local changes would be overwritten",
+		"无法${e.skip?\"跳过\":\"继续\"} ${e.operation.type} 操作，因为部分本地更改将被覆盖"
+	],
+	[
+		"Commit ${(0,a.M4)(t,{capitalize:!0,icon:!1})} cannot be undone, because it is no longer the most recent commit.",
+		"提交 ${(0,a.M4)(t,{capitalize:!0,icon:!1})} 无法撤销，因为它已不是最近的提交。"
+	],
+	[
+		"is already checked out.\n\nWould you like to create a new branch for this worktree or forcibly create it anyway?",
+		"已被检出。\n\n是否要为此 Worktree 创建新分支，还是强制创建？"
+	],
+	[
+		"${t}. Your local changes would be overwritten. Please commit or stash your changes before switching branches.",
+		"${t}。你的本地更改将被覆盖。请在切换分支前提交或贮藏你的更改。"
+	],
+	[
+		"Unable to cherry-pick. A cherry-pick is already in progress. Continue or abort the current cherry-pick first.",
+		"无法拣选。已有拣选操作正在进行中。请先继续或中止当前拣选。"
+	],
+	[
+		"${e.message}. Check branch policies, and ensure you have the necessary permissions to merge the pull request.",
+		"${e.message}。请检查分支策略，并确保你有合并此拉取请求的必要权限。"
+	],
+	[
+		"{\"30s\":\"30 seconds\",\"1m\":\"1 minute\",\"2m\":\"2 minutes\",\"5m\":\"5 minutes\",\"10m\":\"10 minutes\",\"30m\":\"30 minutes\"}",
+		"{\"30s\":\"30 秒\",\"1m\":\"1 分钟\",\"2m\":\"2 分钟\",\"5m\":\"5 分钟\",\"10m\":\"10 分钟\",\"30m\":\"30 分钟\"}"
+	],
+	[
+		"AI will analyze your working changes and unpushed commits to create a clean, logical commit\n\t\t\t\t\t\tsequence.",
+		"AI 将分析你的工作更改和未推送的提交，以创建清晰且符合逻辑的提交\n\t\t\t\t\t\t序列。"
+	],
+	[
+		"<strong>Visual File History:</strong> see how a file has evolved with a graph of what changed and\n\t\t\t\t\twhen",
+		"<strong>可视化文件历史：</strong>通过图表查看文件何时发生了哪些变化"
+	],
+	[
+		"Here's the breakdown of the commits created from the provided changes, along with explanations for each:",
+		"以下是根据所提供的更改创建的提交明细，以及每个提交的说明:"
+	],
+	[
+		"Cannot ${e.skip?\"skip\":\"continue\"} the ${e.operation.type} operation as there are unresolved conflicts",
+		"无法${e.skip?\"跳过\":\"继续\"} ${e.operation.type} 操作，因为存在未解决的冲突"
+	],
+	[
+		"Cannot ${e.skip?\"skip\":\"continue\"} the ${e.operation.type} operation as there are uncommitted changes",
+		"无法${e.skip?\"跳过\":\"继续\"} ${e.operation.type} 操作，因为存在未提交的更改"
+	],
+	[
+		"<a href=\"command:gitlens.welcome.openCommunityVsPro\">difference between GitLens Community vs. Pro</a>",
+		"<a href=\"command:gitlens.welcome.openCommunityVsPro\">GitLens Community 与 Pro 的区别</a>"
+	],
+	[
+		"Cannot ${e.skip?\"skip\":\"continue\"} the ${e.operation.type} operation as the previous commit is empty",
+		"无法${e.skip?\"跳过\":\"继续\"} ${e.operation.type} 操作，因为上一个提交为空"
+	],
+	[
+		"${this.renderBranchPrefix()} ${ou(\"commit\",this.branchState.behind)} behind\n\t\t\t\t${this.upstream}${i}",
+		"${this.renderBranchPrefix()} 落后 ${this.upstream}${i} ${this.branchState.behind} 个提交"
+	],
+	[
+		"Roll back unavailable: no undo manifest was created. Your original working changes remain in stash \"",
+		"无法回滚：未创建撤销清单。你的原始工作更改仍保留在贮藏中 \""
+	],
+	[
+		"<strong>Integrations:</strong> connect PRs and issues from GitHub, GitLab, Jira, Azure DevOps & more",
+		"<strong>集成：</strong>关联来自 GitHub、GitLab、Jira、Azure DevOps 等服务的 PR 和议题"
+	],
+	[
+		"<p><strong>Unlock more powerful tools — Try GitLens Pro again</strong> free for another 14 days.</p>",
+		"<p><strong>解锁更强大的工具 — 再次免费试用 GitLens Pro</strong> 14 天。</p>"
+	],
+	[
+		"Will set the upstream tracking for ${(0,et.M4)(e.reference)} to ${(0,et.M4)(e.upstream,{label:!1})}",
+		"将设置 ${(0,et.M4)(e.reference)} 的上游跟踪为 ${(0,et.M4)(e.upstream,{label:!1})}"
+	],
+	[
+		"Cannot ${e.skip?\"skip\":\"continue\"} the ${e.operation.type} operation as there are unstaged changes",
+		"无法${e.skip?\"跳过\":\"继续\"} ${e.operation.type} 操作，因为存在未暂存的更改"
+	],
+	[
+		"Cannot ${e.skip?\"skip\":\"continue\"} the ${e.operation.type} operation as there are unmerged files",
+		"无法${e.skip?\"跳过\":\"继续\"} ${e.operation.type} 操作，因为存在未合并的文件"
+	],
+	[
+		"Choose a ${\"workspace\"===t?\"workspace\":\"folder\"} to ${\"clone\"===t?\"克隆仓库到\":\"open the repository\"}",
+		"选择${\"workspace\"===t?\"工作区\":\"文件夹\"}以${\"clone\"===t?\"克隆仓库到\":\"打开仓库\"}"
+	],
+	[
+		"<li><strong>Create PR Titles & Descriptions:</strong> save reviewers 10+ minutes per review</li>",
+		"<li><strong>创建 PR 标题和描述：</strong>为评审者每次评审节省 10 分钟以上</li>"
+	],
+	[
+		" in the \\`${this.repoName}\\` worktree`:` in the \\`${this.repoName}\\` repository (main worktree)",
+		"（位于 \\`${this.repoName}\\` worktree）`:`（位于 \\`${this.repoName}\\` 仓库主 worktree）"
+	],
+	[
+		"Unable to revert. A revert is already in progress. Continue or abort the current revert first.",
+		"无法回退。已有回退操作正在进行中。请先继续或中止当前回退。"
+	],
+	[
+		"Generating ${r?.codeSuggestion?\"code suggestion\":\"cloud patch\"} description with ${e.name}...",
+		"正在使用 ${e.name} 生成${r?.codeSuggestion?\"代码建议\":\"云补丁\"}描述..."
+	],
+	[
+		"Browse Repository from${t?.before?\" Before\":\"\"} Here${t?.openInNewWindow?\" in New Window\":\"\"}",
+		"浏览仓库（从${t?.before?\"之前的\":\"当前\"}位置${t?.openInNewWindow?\"，在新窗口中打开\":\"\"}）"
+	],
+	[
+		"Your GitLens Pro trial has been reactivated! Experience all the new Pro features for another",
+		"你的 GitLens Pro 试用已重新激活！所有新的 Pro 功能可继续体验"
+	],
+	[
+		"<li><strong>Worktrees:</strong> code, test, and review on multiple branches in parallel</li>",
+		"<li><strong>Worktrees：</strong>在多个分支上并行编码、测试和评审</li>"
+	],
+	[
+		"Blame will resume after saving because there are unsaved changes and the file is over the [",
+		"保存后 Blame 将恢复，因为存在未保存的更改且文件超过了 ["
+	],
+	[
+		"<li><strong>Launchpad:</strong> view and manage all your PRs and branches from one hub</li>",
+		"<li><strong>启动台：</strong>在一个中心查看并管理所有 PR 和分支</li>"
+	],
+	[
+		"Unable to delete branch '${r}' as it is not fully merged. Do you want to delete it anyway?",
+		"无法删除分支 '${r}'，因为它尚未完全合并。是否仍要删除？"
+	],
+	[
+		"Will create a new worktree for a new branch named ${e.name} from ${(0,et.M4)(e.reference)}",
+		"将基于 ${(0,et.M4)(e.reference)} 为新分支 ${e.name} 创建新的 Worktree"
+	],
+	[
+		"Unable to delete worktree in '${r.fsPath}'.\n\nWould you like to try to forcibly delete it?",
+		"无法删除 Worktree 于 '${r.fsPath}'。\n\n是否尝试强制删除？"
+	],
+	[
+		"<span\n\t\t\t\t\t\t\t\t\t>${eJ(\"pull request\",i)} ${i>1?\"need\":\"needs\"} your\n\t\t\t\t\t\t\t\t\treview</span",
+		"<span\n\t\t\t\t\t\t\t\t\t>${i} 个拉取请求需要你评审</span"
+	],
+	[
+		"<span\n\t\t\t\t\t\t\t\t\t>${ou(\"pull request\",o)} ${o>1?\"need\":\"needs\"} your\n\t\t\t\t\t\t\t\t\treview</span",
+		"<span\n\t\t\t\t\t\t\t\t\t>${o} 个拉取请求需要你评审</span"
+	],
+	[
+		"<span\n\t\t\t\t\t\t\t\t\t>${t_(\"pull request\",i)} ${i>1?\"need\":\"needs\"} your\n\t\t\t\t\t\t\t\t\treview</span",
+		"<span\n\t\t\t\t\t\t\t\t\t>${i} 个拉取请求需要你评审</span"
+	],
+	[
+		"${t} because the remote contains work that you do not have locally. Try fetching first.",
+		"${t}，因为远程包含你本地没有的提交。请先获取。"
+	],
+	[
+		"> No changes found between ${n.head.label??n.head.ref} and ${n.base.label??n.base.ref}\n",
+		"> 在 ${n.head.label??n.head.ref} 和 ${n.base.label??n.base.ref} 之间未找到更改\n"
+	],
+	[
+		"The workspace file for ${i.name} has not been created. Would you like to create it now?",
+		"${i.name} 的工作区文件尚未创建。是否立即创建？"
+	],
+	[
+		"i=this.branch?ds(this.branch):\"Branch\",o=this.upstream?ds(this.upstream):\"its upstream\"",
+		"i=this.branch?ds(this.branch):\"分支\",o=this.upstream?ds(this.upstream):\"其上游\""
+	],
+	[
+		"<li><strong>Commit Graph:</strong> visualize every branch and commit relationship</li>",
+		"<li><strong>提交图：</strong>可视化每个分支和提交的关系</li>"
+	],
+	[
+		"Some commits appear in multiple partitions. Each must be in exactly one.\n\nDuplicates:",
+		"某些提交出现在多个拆分中。每个提交必须恰好属于一个拆分。\n\n重复项："
+	],
+	[
+		"The workspace file for ${i.name} could not be found. Would you like to locate it now?",
+		"无法找到 ${i.name} 的工作区文件。是否立即定位？"
+	],
+	[
+		"Will create and switch to a new branch named ${e.name} from ${(0,et.M4)(e.reference)}",
+		"将基于 ${(0,et.M4)(e.reference)} 创建并切换到新分支 ${e.name}"
+	],
+	[
+		"Are you sure you want to remove ${t.name} from this workspace? This cannot be undone.",
+		"确定要从此工作区移除 ${t.name} 吗？此操作无法撤销。"
+	],
+	[
+		"return tO`${ds(this.branchName)} is missing its upstream\n\t\t\t${ds(this.upstreamName)}`",
+		"return tO`${ds(this.branchName)} 缺失其上游\n\t\t\t${ds(this.upstreamName)}`"
+	],
+	[
+		"Unable to find the ${t} extension (${e}). Please ensure it is installed and enabled.",
+		"无法找到 ${t} 扩展（${e}）。请确保已安装并启用该扩展。"
+	],
+	[
+		"GitLens features will be unavailable. Unable to connect to the host GitLens service.",
+		"GitLens 功能将不可用。无法连接到 GitLens 宿主服务。"
+	],
+	[
+		"Unsafe legacy lifecycles will not be called for components using new component APIs.",
+		"对于使用新组件 API 的组件，将不会调用不安全的旧版生命周期。"
+	],
+	[
+		"`_default${this.worktree.opened?\", active_\":\"_\"}`:this.worktree.opened?\"_active_\":\"\"",
+		"`_默认${this.worktree.opened?\"、活动_\":\"_\"}`:this.worktree.opened?\"_活动_\":\"\""
+	],
+	[
+		" to get access to automatic rich autolinks for services like Jira, GitHub, and more",
+		" 获取 Jira、GitHub 等服务的自动富链接支持"
+	],
+	[
+		"<li><strong>Launchpad & Worktrees:</strong> manage PRs and branches in one hub</li>",
+		"<li><strong>启动台与 Worktrees：</strong>在一个中心管理 PR 和分支</li>"
+	],
+	[
+		" to linkify external references, like Jira or Zendesk tickets, in commit messages.",
+		"，以便在提交消息中将外部引用（如 Jira 或 Zendesk 工单）自动转换为链接。"
+	],
+	[
+		"${t} because some refs failed to push or the push was rejected. Try pulling first.",
+		"${t}，因为部分引用推送失败或推送被拒绝。请先拉取。"
+	],
+	[
+		"${t} because the index is not up to date (you may have unresolved merge conflicts)",
+		"${t}，因为索引不是最新的（你可能存在未解决的合并冲突）"
+	],
+	[
+		"For each sub-branch, name it following the repository's branch naming conventions.",
+		"为每个子分支命名时，请遵循仓库的分支命名约定。"
+	],
+	[
+		"Choose a worktree to copy your working${e.source?.name?\" worktree\":\"\"} changes to",
+		"选择一个 Worktree，将你的${e.source?.name?\" Worktree \":\"\"}工作区更改复制过去"
+	],
+	[
+		"<li><strong>GitKraken AI:</strong> writes commits, PRs & changelogs for you.</li>",
+		"<li><strong>GitKraken AI：</strong>为你撰写提交、PR 和变更日志。</li>"
+	],
+	[
+		"Waiting for agent activity — files will light up here as agents read or edit them",
+		"等待智能体活动 — 当智能体读取或编辑文件时，对应文件会在此处亮起"
+	],
+	[
+		"Unable to restore '${s}' from revision '${(0,a.M4)(t,{icon:!1,capitalize:!1})}'",
+		"无法从修订 '${(0,a.M4)(t,{icon:!1,capitalize:!1})}' 还原 '${s}'"
+	],
+	[
+		">Check your inbox for a verification link, then refresh once you've verified.<",
+		">请在你的收件箱中查收验证链接，完成验证后刷新。<"
+	],
+	[
+		"Learn more about the\n\t\t\t\t<a href=\"command:gitlens.welcome.openCommunityVsPro\">",
+		"了解更多关于\n\t\t\t\t<a href=\"command:gitlens.welcome.openCommunityVsPro\">"
+	],
+	[
+		"{strings:{uncommitted:\"Working\",uncommittedStaged:\"Staged\",working:\"Working\"}}",
+		"{strings:{uncommitted:\"工作区\",uncommittedStaged:\"已暂存\",working:\"工作区\"}}"
+	],
+	[
+		"You now have full access to all GitLens Pro features for ${t<1?\"<1 more day\":",
+		"你现在可以完整使用所有 GitLens Pro 功能，期限还剩 ${t<1?\"不足 1 天\":"
+	],
+	[
+		"Branch names: No clear convention detected. Use descriptive kebab-case names.",
+		"分支名称：未检测到明确的约定。请使用描述性的 kebab-case 名称。"
+	],
+	[
+		"You have uncommitted changes in the working tree.\n\nDo you still want to undo",
+		"Working Tree 中存在未提交的更改。\n\n仍要撤销"
+	],
+	[
+		"Unable to create branch '${e.name}'. A branch with that name already exists.",
+		"无法创建分支 '${e.name}'。同名分支已存在。"
+	],
+	[
+		"Force ${this.title}${s?\" (with lease and if includes)\":r?\" (with lease)\":\"\"}",
+		"强制${this.title}${s?\"（带租约且包含时）\":r?\"（带租约）\":\"\"}"
+	],
+	[
+		"Commit messages: No clear convention detected. Use clear, concise messages.",
+		"提交消息：未检测到明确的约定。请使用清晰、简洁的消息。"
+	],
+	[
+		"Merged Locally into ${o.name}`,actionLabel:`Push ${m.localBranchOnly.name}`",
+		"已本地合并到 ${o.name}`,actionLabel:`推送 ${m.localBranchOnly.name}`"
+	],
+	[
+		"${t} due to conflicts. Resolve the conflicts first and continue the rebase",
+		"${t}，因为存在冲突。请先解决冲突，然后继续变基"
+	],
+	[
+		"${t} due to conflicts. Resolve the conflicts first and continue the revert",
+		"${t}，因为存在冲突。请先解决冲突，然后继续回退"
+	],
+	[
+		"${t} because you don't have permission to push to this remote repository.",
+		"${t}，因为你没有权限推送到此远程仓库。"
+	],
+	[
+		"${t} due to conflicts. Resolve the conflicts first and continue the merge",
+		"${t}，因为存在冲突。请先解决冲突，然后继续合并"
+	],
+	[
+		"Pull ${ou(\"commit\",this.branchState.behind)} from\n\t\t\t${this.upstream}${i}",
+		"从 ${this.upstream}${i} 拉取 ${this.branchState.behind} 个提交"
+	],
+	[
+		"Revealing ${(0,e7.M4)(e,{icon:!1,quoted:!0})} in the Repositories view...",
+		"正在仓库视图中显示 ${(0,e7.M4)(e,{icon:!1,quoted:!0})}..."
+	],
+	[
+		"Revealing ${(0,te.M4)(e,{icon:!1,quoted:!0})} in the Repositories view...",
+		"正在仓库视图中显示 ${(0,te.M4)(e,{icon:!1,quoted:!0})}..."
+	],
+	[
+		"Will apply the changes from ${(0,et.M4)(e.reference)} to the working tree",
+		"将应用 ${(0,et.M4)(e.reference)} 的更改到工作树"
+	],
+	[
+		"Unable to find a repository for '${e.name}'.\nWould you like to locate it?",
+		"无法找到对应的仓库 '${e.name}'。\n是否手动定位？"
+	],
+	[
+		"_${t.connected?\"connected\":\"not connected\"}${t.isDefault?\", default\":\"\"}_",
+		"_${t.connected?\"已连接\":\"未连接\"}${t.isDefault?\"、默认\":\"\"}_"
+	],
+	[
+		"ou(this.resultsLabel,this.total,{infix:this.resultsHasMore?\"+ \":void 0})",
+		"ou(this.resultsLabel,this.total,{infix:this.resultsHasMore?\"+ \":void 0,plural:this.resultsLabel})"
+	],
+	[
+		"Some commit IDs appear multiple times. Each must be unique.\n\nDuplicates:",
+		"某些提交 ID 出现了多次。每个 ID 必须唯一。\n\n重复项："
+	],
+	[
+		"Choose commits to cherry-pick into ${(0,et.M4)(e.destination,{icon:!1})}",
+		"选择要拣选到 ${(0,et.M4)(e.destination,{icon:!1})} 的提交"
+	],
+	[
+		"${i?\"missing upstream\":\"up to date with\"} \\\\\n $(git-branch) \\`${t}\\`${h}",
+		"${i?\"缺失上游\":\"已同步至\"} \\\\\n $(git-branch) \\`${t}\\`${h}"
+	],
+	[
+		"${t?\"missing upstream\":\"up to date with\"} \\\\\n $(git-branch) \\`${e}\\`${s}",
+		"${t?\"缺失上游\":\"已同步至\"} \\\\\n $(git-branch) \\`${e}\\`${s}"
+	],
+	[
+		"-day Pro trial for full access to all GitLens Pro features, or sign in.",
+		" 天 Pro 试用，即可完整使用所有 GitLens Pro 功能，或直接登录。"
+	],
+	[
+		"Will create a new branch named ${e.name} from ${(0,et.M4)(e.reference)}",
+		"将基于 ${(0,et.M4)(e.reference)} 创建新分支 ${e.name}"
+	],
+	[
+		"<p>Stay in flow, ship faster, and never lose track of what matters.</p>",
+		"<p>保持心流，更快交付，不错过任何重要事项。</p>"
+	],
+	[
+		"${eJ(\"pull request\",i)} ${i>1?\"require\":\"requires\"}\n\t\t\t\t\t\t\t\t\tfollow-up",
+		"${i} 个拉取请求需要跟进"
+	],
+	[
+		"${ou(\"pull request\",o)} ${o>1?\"require\":\"requires\"}\n\t\t\t\t\t\t\t\t\tfollow-up",
+		"${o} 个拉取请求需要跟进"
+	],
+	[
+		"${t_(\"pull request\",i)} ${i>1?\"require\":\"requires\"}\n\t\t\t\t\t\t\t\t\tfollow-up",
+		"${i} 个拉取请求需要跟进"
+	],
+	[
+		"Stay in control. Review and edit AI suggestions before finalizing, and",
+		"一切尽在掌控。在最终确定前审查并编辑 AI 建议，并且"
+	],
+	[
+		"<p>Checked out in a worktree and has working (uncommitted) changes</p>",
+		"<p>已在 worktree 中检出，且有工作区（未提交）更改</p>"
+	],
+	[
+		">Compare Branch (the feature or topic branch containing the changes)<",
+		">比较分支（包含更改的功能或主题分支）<"
+	],
+	[
+		">See who changed a line, when and why — without leaving your editor.<",
+		">查看某行代码由谁更改、何时更改以及为何更改 — 无需离开编辑器。<"
+	],
+	[
+		"<p>Keep everything at your fingertips with Launchpad & Worktrees.</p>",
+		"<p>借助启动台与 Worktrees，一切尽在指尖。</p>"
+	],
+	[
+		"Unable to delete worktree because there are UNCOMMITTED changes in '",
+		"无法删除 Worktree，因为存在未提交的更改于 '"
+	],
+	[
+		"Are you sure you want to externally open the changes for each of the",
+		"确定要在外部逐个打开更改吗，共"
+	],
+	[
+		"Filtering and partial apply require HEAD to be at the source's tip (",
+		"筛选和部分应用要求 HEAD 位于源的顶端 ("
+	],
+	[
+		"Working changes left in a conflicted state \\u2014 resolve in stash \"",
+		"工作更改处于冲突状态 \\u2014 请在贮藏中解决 \""
+	],
+	[
+		"Workspace file created for ${t.name}. Would you like to open it now?",
+		"已为 ${t.name} 创建工作区文件。是否立即打开？"
+	],
+	[
+		"Do you want to upgrade for full access to all GitLens Pro features?",
+		"是否升级以完整使用所有 GitLens Pro 功能？"
+	],
+	[
+		"title:`Open Issue or Pull Request #<num> from ${i} on ${this.name}`",
+		"title:`在 ${this.name} 上打开来自 ${i} 的议题或拉取请求 #<num>`"
+	],
+	[
+		"Pro features are currently disabled. Would you like to enable them?",
+		"Pro 功能当前已禁用。是否启用？"
+	],
+	[
+		">Base Reference Branch (the target or baseline for the comparison)<",
+		">基准引用分支（比较的目标或基线）<"
+	],
+	[
+		"Choose a commit to merge into ${(0,et.M4)(e.destination,{icon:!1})}",
+		"选择要合并到 ${(0,et.M4)(e.destination,{icon:!1})} 的提交"
+	],
+	[
+		"Search matched ${i} of ${o} files\nClick to highlight matching files",
+		"搜索匹配到 ${i}/${o} 个文件\n点击以高亮匹配的文件"
+	],
+	[
+		"Search matched ${i} of ${o} files\nClick to show only matching files",
+		"搜索匹配到 ${i}/${o} 个文件\n点击以仅显示匹配的文件"
+	],
+	[
+		"o.push(\"Edited\"):null!=t.readAt&&this.readHeat(t)>0&&o.push(\"Read\")",
+		"o.push(\"已编辑\"):null!=t.readAt&&this.readHeat(t)>0&&o.push(\"已读取\")"
+	],
+	[
+		"Select a ${r?\"仓库或 worktree\":\"repository\"} to ${t.toLowerCase()} to",
+		"选择要${t.toLowerCase()}的${r?\"仓库或 Worktree\":\"仓库\"}"
+	],
+	[
+		">Stay in flow, ship faster, and never lose track of what matters.<",
+		">保持心流，更快交付，绝不错过重要事项。<"
+	],
+	[
+		"Unable to ${i}: you can only rewrite commits on the current branch",
+		"无法 ${i}：只能在当前分支上重写提交"
+	],
+	[
+		"${null!=i.publish?\"Publishing \":\"Pushing \"}${i.reference.name}...",
+		"${null!=i.publish?\"正在发布 \":\"正在推送 \"}${i.reference.name}..."
+	],
+	[
+		"\\`${this.branch.name}\\` hasn't been published to ${c??\"a remote\"}",
+		"\\`${this.branch.name}\\` 尚未发布到 ${c??\"远程\"}"
+	],
+	[
+		"Unable to ${i}: some selected commits are not loaded in the graph",
+		"无法 ${i}：部分选定的提交未在提交图中加载"
+	],
+	[
+		"Copy Working${e.source?.name?\" Worktree\":\"\"} Changes to Worktree",
+		"复制${e.source?.name?\" Worktree \":\"\"}工作区更改到 Worktree"
+	],
+	[
+		"Unable to create branch '${e.name}'. The branch name is invalid.",
+		"无法创建分支 '${e.name}'。分支名无效。"
+	],
+	[
+		"Revealing ${(0,e7.M4)(e,{icon:!1,quoted:!0})} in the side bar...",
+		"正在侧边栏中显示 ${(0,e7.M4)(e,{icon:!1,quoted:!0})}..."
+	],
+	[
+		"Revealing ${(0,te.M4)(e,{icon:!1,quoted:!0})} in the side bar...",
+		"正在侧边栏中显示 ${(0,te.M4)(e,{icon:!1,quoted:!0})}..."
+	],
+	[
+		">Keep everything at your fingertips with Launchpad & Worktrees.<",
+		">借助启动台和 Worktrees，一切尽在指尖。<"
+	],
+	[
+		"Will remove the upstream tracking from ${(0,et.M4)(e.reference)}",
+		"将移除 ${(0,et.M4)(e.reference)} 的上游跟踪"
+	],
+	[
+		"\"Merge base — where this branch diverged from its merge target.\"",
+		"\"合并基准 — 此分支与其合并目标的分叉点。\""
+	],
+	[
+		"${i} is in a detached state, i.e. checked out to a commit or tag",
+		"${i} 处于分离状态（即检出到某个提交或标签）"
+	],
+	[
+		"Unable to show blame. Invalid or missing blame.ignoreRevsFile (",
+		"无法显示 Blame。无效或缺失的 blame.ignoreRevsFile ("
+	],
+	[
+		"${t} as it is behind its remote counterpart. Try pulling first.",
+		"${t}，因为它落后于远程对应分支。请先拉取。"
+	],
+	[
+		"${t} because you don't have permission to modify affected files",
+		"${t}，因为你没有权限修改受影响的文件"
+	],
+	[
+		"Are you sure you want to delete Cloud Patch '${e.draft.title}'?",
+		"确定要删除云补丁 '${e.draft.title}' 吗？"
+	],
+	[
+		">Working changes have changed since this review was generated.<",
+		">自此审查生成以来，工作更改已发生变化。<"
+	],
+	[
+		"Unlock this feature for privately hosted repos with GitLens Pro",
+		"使用 GitLens Pro 解锁私有托管仓库的此功能"
+	],
+	[
+		"Do you want to reset the stored key for the current provider (",
+		"是否重置当前提供商已存储的密钥 ("
+	],
+	[
+		"${t} because local changes to some files would be overwritten.",
+		"${t}，因为部分文件的本地更改将被覆盖。"
+	],
+	[
+		"${t} because you are trying to rebase onto multiple branches.",
+		"${t}，因为你正尝试变基到多个分支。"
+	],
+	[
+		">Working changes have changed since this plan was generated.<",
+		">自此计划生成以来，工作更改已发生变化。<"
+	],
+	[
+		">Working tree data changed since this comparison was loaded.<",
+		">自加载此比较以来，Working Tree 数据已发生变化。<"
+	],
+	[
+		"Revealing contributor '${e.name} in the Repositories view...",
+		"正在仓库视图中显示贡献者 '${e.name}..."
+	],
+	[
+		"Unable to resend verification email; Status: ${s.statusText}",
+		"无法重新发送验证邮件；状态: ${s.statusText}"
+	],
+	[
+		".title} at ${(0,et.M4)(e.reference,{capitalize:!0,icon:!1})}",
+		".title}：${(0,et.M4)(e.reference,{capitalize:!0,icon:!1})}"
+	],
+	[
+		"Your ${i_.Kt}-day preview of the ${(0,e5.V)(e)} has expired.",
+		"你的 ${i_.Kt} 天${(0,e5.V)(e)}预览已到期。"
+	],
+	[
+		"Your ${iD.Kt}-day preview of the ${(0,e4.V)(e)} has expired.",
+		"你的 ${iD.Kt} 天${(0,e4.V)(e)}预览已到期。"
+	],
+	[
+		"\"This removes the selected commits from the current branch.\"",
+		"\"这将从当前分支中移除所选提交。\""
+	],
+	[
+		"You now have full access to all GitLens Pro features for ${",
+		"你现在可以完整使用所有 GitLens Pro 功能，期限还剩 ${"
+	],
+	[
+		"-day Pro trial for full access to all GitLens Pro features?",
+		" 天 Pro 试用，以完整使用所有 GitLens Pro 功能？"
+	],
+	[
+		">Pull request for the branch the change set is sitting on.<",
+		">该更改集所在分支的拉取请求。<"
+	],
+	[
+		">Thanks for installing GitLens and trying out GitLens Pro.<",
+		">感谢安装 GitLens 并试用 GitLens Pro。<"
+	],
+	[
+		"Are you sure you want to disable the rich integration with",
+		"确定要禁用富集成吗，对象为"
+	],
+	[
+		"Your API key doesn't seem to have access to the selected '",
+		"你的 API 密钥似乎无权访问所选的 '"
+	],
+	[
+		"Where your development and agentic workflows come together",
+		"让你的开发与智能体工作流汇聚于此"
+	],
+	[
+		"Are you sure you want to discard the unstaged changes in \"",
+		"确定要丢弃以下文件中未暂存的更改吗：\""
+	],
+	[
+		"Using local CLI binary \\u2014 skipping auto-install/update",
+		"使用本地 CLI 二进制文件 \\u2014 跳过自动安装/更新"
+	],
+	[
+		"Open Issue or Pull Request #${t} from ${e} on ${this.name}",
+		"打开 ${this.name} 上 ${e} 的议题或拉取请求 #${t}"
+	],
+	[
+		"Are you sure you want to open the changes for each of the",
+		"确定要逐个打开更改吗，共"
+	],
+	[
+		"title:`Open Issue or Pull Request #<num> on ${this.name}`",
+		"title:`在 ${this.name} 上打开议题或拉取请求 #<num>`"
+	],
+	[
+		"Some branches are not included in the ordering.\n\nMissing:",
+		"某些分支未包含在排序中。\n\n缺少："
+	],
+	[
+		"Some commits are not assigned to any partition.\n\nMissing:",
+		"某些提交未分配到任何拆分。\n\n缺少："
+	],
+	[
+		"t.isDefault&&o.push(\"default\"),t.opened&&o.push(\"active\")",
+		"t.isDefault&&o.push(\"默认\"),t.opened&&o.push(\"活动\")"
+	],
+	[
+		"Cancelled request to ${(0,c.u5)(e)}: (${t.provider.name})",
+		"已取消对 ${(0,c.u5)(e)} 的请求: (${t.provider.name})"
+	],
+	[
+		"Cancelled request to ${(0,o.u5)(e)}: (${t.provider.name})",
+		"已取消对 ${(0,o.u5)(e)} 的请求: (${t.provider.name})"
+	],
+	[
+		"Unable to ${i}: the oldest selected commit has no parent.",
+		"无法 ${i}：最早选定的提交没有父提交。"
+	],
+	[
+		"${t} because the remote repository could not be reached.",
+		"${t}，因为无法连接到远程仓库。"
+	],
+	[
+		"Skipping GK config write \\u2014 expected git directory '",
+		"跳过 GK 配置写入 \\u2014 预期的 git 目录 '"
+	],
+	[
+		"${t} because you have not yet set up your Git identity.",
+		"${t}，因为你尚未设置 Git 身份信息。"
+	],
+	[
+		"Your '${o}' credentials do not have the required access",
+		"你的 '${o}' 凭据没有所需的访问权限"
+	],
+	[
+		"Your '${n}' credentials do not have the required access",
+		"你的 '${n}' 凭据没有所需的访问权限"
+	],
+	[
+		"Some commit IDs don't match any known commit.\n\nUnknown:",
+		"某些提交 ID 与任何已知提交都不匹配。\n\n未知："
+	],
+	[
+		"filter-placeholder=\"Filter ${t.title.toLowerCase()}...\"",
+		"filter-placeholder=\"筛选${t.title}...\""
+	],
+	[
+		"t.rebasing&&h.push(\"rebasing\"),h.push(\"current branch\")",
+		"t.rebasing&&h.push(\"变基中\"),h.push(\"当前分支\")"
+	],
+	[
+		"h.push(\"in an opened worktree\"):h.push(\"in a worktree\")",
+		"h.push(\"位于已打开的 worktree 中\"):h.push(\"位于 worktree 中\")"
+	],
+	[
+		"?.uri?` to \\`${this.view.container.git.getRelativePath(",
+		"?.uri?`，位于 \\`${this.view.container.git.getRelativePath("
+	],
+	[
+		"Choose a branch${e.showTags?\" or tag\":\"\"} to switch to",
+		"选择要切换到的分支${e.showTags?\"或标签\":\"\"}"
+	],
+	[
+		"CLI binary missing at startup \\u2014 forcing reinstall",
+		"启动时缺少 CLI 二进制文件 \\u2014 强制重新安装"
+	],
+	[
+		"Unable to ${i}: the selection includes a merge commit.",
+		"无法 ${i}：所选内容包含合并提交。"
+	],
+	[
+		"${t} because the remote repository rejected the push.",
+		"${t}，因为远程仓库拒绝了此次推送。"
+	],
+	[
+		"Your '${o}' credentials are either invalid or expired",
+		"你的 '${o}' 凭据无效或已过期"
+	],
+	[
+		"Your '${n}' credentials are either invalid or expired",
+		"你的 '${n}' 凭据无效或已过期"
+	],
+	[
+		">Start an agent on a worktree to see it appear here.<",
+		">在 Worktree 上启动智能体后，它将显示在此处。<"
+	],
+	[
+		"case\"working\":return\"Working\";case\"idle\":return\"Idle\"",
+		"case\"working\":return\"工作中\";case\"idle\":return\"空闲\""
+	],
+	[
+		"Unable to ${i}: select a contiguous range of commits.",
+		"无法 ${i}：请选择连续的提交范围。"
+	],
+	[
+		"Would you like to create a Pull Request for branch '",
+		"是否要创建拉取请求，分支 '"
+	],
+	[
+		"${t} because some local changes would be overwritten",
+		"${t}，因为部分本地更改将被覆盖"
+	],
+	[
+		"${t} because your local changes would be overwritten",
+		"${t}，因为你的本地更改将被覆盖"
+	],
+	[
+		"Revealing contributor '${e.name}' in the side bar...",
+		"正在侧边栏中显示贡献者 '${e.name}'..."
+	],
+	[
+		"Unable to get organizations; Status: ${s.statusText}",
+		"无法获取组织；状态: ${s.statusText}"
+	],
+	[
+		"'${o}' authentication is required for this operation",
+		"此操作需要 '${o}' 身份验证"
+	],
+	[
+		"'${n}' authentication is required for this operation",
+		"此操作需要 '${n}' 身份验证"
+	],
+	[
+		">Unlock more powerful tools — Try GitLens Pro again<",
+		">解锁更强大的工具 — 再次试用 GitLens Pro<"
+	],
+	[
+		"Are you sure you want to discard unstaged changes in",
+		"确定要丢弃未暂存的更改吗，位于"
+	],
+	[
+		"Forcing CLI reinstall on settings change (insiders =",
+		"因设置更改而强制重新安装 CLI (insiders ="
+	],
+	[
+		"Commit is on ${o} ${\"branch\"===e?\"branches\":\"tags\"}",
+		"提交位于 ${o} 个${\"branch\"===e?\"分支\":\"标签\"}"
+	],
+	[
+		"Commit is on ${c} ${\"branch\"===t?\"branches\":\"tags\"}",
+		"提交位于 ${c} 个${\"branch\"===t?\"分支\":\"标签\"}"
+	],
+	[
+		">Tied to the branch via stored issue associations.<",
+		">通过已存储的议题关联与该分支绑定。<"
+	],
+	[
+		">Shortcuts apply while the Commit Graph has focus.<",
+		">快捷键在提交图获得焦点时生效。<"
+	],
+	[
+		"Encountered unidirectional transform during encode:",
+		"编码期间遇到单向转换："
+	],
+	[
+		"Open Merge Request !<num> from ${i} on ${this.name}",
+		"打开 ${this.name} 上 ${i} 的合并请求 !<num>"
+	],
+	[
+		"${i.pull?\"Pulling\":\"Fetching\"} ${i.branch.name}...",
+		"${i.pull?\"正在拉取\":\"正在获取\"} ${i.branch.name}..."
+	],
+	[
+		"Locating Repositories for '${e.workspace.name}'...",
+		"正在为 '${e.workspace.name}' 定位仓库..."
+	],
+	[
+		"`${(0,s.td)(\"file\",p.length,{zero:\"No\"})} changed`",
+		"`${p.length} 个文件更改`"
+	],
+	[
+		"Signed\nClick to verify signature in Commit Details",
+		"已签名\n点击以在提交详情中验证签名"
+	],
+	[
+		"Are you sure you want to discard staged changes in",
+		"确定要丢弃已暂存的更改吗，位于"
+	],
+	[
+		"Match the style of these original commit messages:",
+		"匹配以下原始提交消息的风格："
+	],
+	[
+		"Internal error during descendant re-parenting: ref",
+		"重新设置后代父级时出现内部错误：引用"
+	],
+	[
+		"Commit messages follow Conventional Commits format",
+		"提交消息遵循 Conventional Commits 格式"
+	],
+	[
+		"Open Merge Request !${t} from ${e} on ${this.name}",
+		"打开 ${this.name} 上 ${e} 的合并请求 !${t}"
+	],
+	[
+		"Showing ${i} of ${o} files\nClick to show all files",
+		"正在显示 ${i}/${o} 个文件\n点击以显示全部文件"
+	],
+	[
+		"o.push(\"Editing\"):!0===t.reading?o.push(\"Reading\")",
+		"o.push(\"正在编辑\"):!0===t.reading?o.push(\"正在读取\")"
+	],
+	[
+		"${i} is a local branch which hasn't been published",
+		"${i} 是尚未发布的本地分支"
+	],
+	[
+		"actionLabel:\"Review\",event:\"review-branch-changes\"",
+		"actionLabel:\"审查\",event:\"review-branch-changes\""
+	],
+	[
+		"Unable to fully clean up the delete worktree in '",
+		"无法完全清理已删除的 Worktree 于 '"
+	],
+	[
+		"How would you like to open the workspace file for",
+		"你希望如何打开工作区文件，属于"
+	],
+	[
+		"Are you sure you want to view the changes for all",
+		"确定要查看全部更改吗，共"
+	],
+	[
+		"${t} because the path or reference does not exist",
+		"${t}，因为该路径或引用不存在"
+	],
+	[
+		"${t}. Could not connect to the remote repository.",
+		"${t}。无法连接到远程仓库。"
+	],
+	[
+		"Generating pull request details with ${e.name}...",
+		"正在使用 ${e.name} 生成拉取请求详情..."
+	],
+	[
+		"Revealing worktree '${e.name}' in the side bar...",
+		"正在侧边栏中显示 Worktree '${e.name}'..."
+	],
+	[
+		"${eJ(\"pull request\",i)} ${i>1?\"are\":\"is\"} blocked",
+		"${i} 个拉取请求已阻塞"
+	],
+	[
+		"${ou(\"pull request\",o)} ${o>1?\"are\":\"is\"} blocked",
+		"${o} 个拉取请求已阻塞"
+	],
+	[
+		"${t_(\"pull request\",i)} ${i>1?\"are\":\"is\"} blocked",
+		"${i} 个拉取请求已阻塞"
+	],
+	[
+		"Multiple organizations not supported for provider",
+		"提供方不支持多个组织："
+	],
+	[
+		"Commit signing has been configured globally using",
+		"提交签名已全局配置，使用"
+	],
+	[
+		"${this.doneCount}/${this.allCount} steps complete",
+		"已完成 ${this.doneCount}/${this.allCount} 步"
+	],
+	[
+		"title:`Open Pull Request #<num> on ${this.name}`",
+		"title:`在 ${this.name} 上打开拉取请求 #<num>`"
+	],
+	[
+		"${t} as some local changes would be overwritten.",
+		"${t}，因为部分本地更改将被覆盖。"
+	],
+	[
+		"${t} because the remote reference does not exist",
+		"${t}，因为该远程引用不存在"
+	],
+	[
+		"MCP config command returned non-JSON output (CLI",
+		"MCP 配置命令返回了非 JSON 输出 (CLI"
+	],
+	[
+		"Unexpected output from mcp install command: ${p}",
+		"MCP 安装命令产生了非预期输出: ${p}"
+	],
+	[
+		"Value must be greater than or equal to ${t.min}.",
+		"值必须大于或等于 ${t.min}。"
+	],
+	[
+		"${t} as some local changes would be overwritten",
+		"${t}，因为部分本地更改将被覆盖"
+	],
+	[
+		"Invalid branch name: ${e.slice(e.indexOf(\"'\"))}",
+		"无效的分支名: ${e.slice(e.indexOf(\"'\"))}"
+	],
+	[
+		"Revealing remote '${e.name}' in the side bar...",
+		"正在侧边栏中显示远程 '${e.name}'..."
+	],
+	[
+		"Are you sure you want to open ${s.length} URLs?",
+		"确定要打开 ${s.length} 个 URL 吗？"
+	],
+	[
+		"If this issue persists, please contact support.",
+		"如果此问题持续存在，请联系支持。"
+	],
+	[
+		"Publish ${this.branch.name} to ${c??\"a remote\"}",
+		"发布 ${this.branch.name} 到 ${c??\"远程\"}"
+	],
+	[
+		"\\xa0\\u2022\\xa0 fetched ${(0,z.PI)(new Date(e))}",
+		"\\xa0\\u2022\\xa0 上次抓取 ${(0,z.PI)(new Date(e))}"
+	],
+	[
+		">Older history loads dynamically as you scroll<",
+		">滚动时将动态加载更早的历史<"
+	],
+	[
+		"Disposing existing rebase editor controller for",
+		"正在释放现有的变基编辑器控制器："
+	],
+	[
+		"GitLens Compose left a working-changes stash (\"",
+		"GitLens 编排留下了一个工作更改贮藏 (\""
+	],
+	[
+		"Local branch, hasn't been published to a remote",
+		"本地分支，尚未发布到远程"
+	],
+	[
+		"Failed to convert to search query: \"${e.query}\"",
+		"转换为搜索查询失败：\"${e.query}\""
+	],
+	[
+		"${t} because a local ref could not be updated.",
+		"${t}，因为本地引用无法更新。"
+	],
+	[
+		"${t} because a local tag would be overwritten.",
+		"${t}，因为本地标签将被覆盖。"
+	],
+	[
+		">Choose a file or folder to slice by branches<",
+		">选择文件或文件夹以按分支切分<"
+	],
+	[
+		"\"Compose working changes into logical Commits\"",
+		"\"将工作更改编排为符合逻辑的提交\""
+	],
+	[
+		"${t?\"Merge\":i?\"Staged\":\"Uncommitted\"} changes",
+		"${t?\"合并\":i?\"已暂存\":\"未提交\"}更改"
+	],
+	[
+		"Open File at Revision \\u2022 Unable to open '",
+		"打开指定版本的文件 \\u2022 无法打开 '"
+	],
+	[
+		"Unable to create a pull request for branch \\`",
+		"无法为以下分支创建拉取请求 \\`"
+	],
+	[
+		"title:`Open Work Item #<num> on ${this.name}`",
+		"title:`在 ${this.name} 上打开工作项 #<num>`"
+	],
+	[
+		"${t} as a cherry-pick is already in progress.",
+		"${t}，因为已有拣选操作正在进行。"
+	],
+	[
+		"${t} because you are in a detached HEAD state",
+		"${t}，因为你处于分离 HEAD 状态"
+	],
+	[
+		"aria-label=\"Visualize folder history of ${t}\"",
+		"aria-label=\"可视化 ${t} 的文件夹历史\""
+	],
+	[
+		"aria-label=\"Visualize folder history of ${u}\"",
+		"aria-label=\"可视化 ${u} 的文件夹历史\""
+	],
+	[
+		"aria-label=\"Visualize folder history of ${e}\"",
+		"aria-label=\"可视化 ${e} 的文件夹历史\""
+	],
+	[
+		"aria-label=\"Visualize folder history of ${s}\"",
+		"aria-label=\"可视化 ${s} 的文件夹历史\""
+	],
+	[
+		"Will publish ${(0,et.M4)(h)}${t} to ${i.name}",
+		"将发布 ${(0,et.M4)(h)}${t} 到 ${i.name}"
+	],
+	[
+		">Unlock more powerful tools with GitLens Pro<",
+		">使用 GitLens Pro 解锁更强大的工具<"
+	],
+	[
+		"You may have a duplicate entry in your Cursor",
+		"你的 Cursor 中可能存在重复条目"
+	],
+	[
+		"Failed to parse pending deep link issue data:",
+		"解析待处理的深层链接议题数据失败："
+	],
+	[
+		"Are you sure you want to discard changes in \"",
+		"确定要丢弃以下文件中的更改吗：\""
+	],
+	[
+		"Skipping auto-install, reached max attempts (",
+		"跳过自动安装，已达最大尝试次数 ("
+	],
+	[
+		">See what's new in the Commit Graph &rarr;</a",
+		">查看提交图新特性 &rarr;</a"
+	],
+	[
+		"`${m.toLocaleString()} commit${1===m?\"\":\"s\"}`",
+		"`${m.toLocaleString()} 个提交`"
+	],
+	[
+		"Value must be less than or equal to ${t.max}.",
+		"值必须小于或等于 ${t.max}。"
+	],
+	[
+		"Unable to determine head commit for branch '",
+		"无法确定头部提交，分支 '"
+	],
+	[
+		"Unable to truncate context to fit within the",
+		"无法截断上下文以适应"
+	],
+	[
+		"Will create and switch to a new branch named",
+		"将创建并切换到新分支"
+	],
+	[
+		"${t} because a rebase is already in progress",
+		"${t}，因为已有变基操作正在进行"
+	],
+	[
+		"${t} because a revert is already in progress",
+		"${t}，因为已有回退操作正在进行"
+	],
+	[
+		"Will create and switch to a new local branch",
+		"将创建并切换到新本地分支"
+	],
+	[
+		"\"Compare any refs from your Graph selection\"",
+		"\"比较提交图选区中的任意引用\""
+	],
+	[
+		"Failed to parse response as valid JSON: ${t}",
+		"无法将响应解析为有效的 JSON: ${t}"
+	],
+	[
+		"Failed to parse response as valid JSON: ${r}",
+		"解析响应为有效 JSON 失败: ${r}"
+	],
+	[
+		"Leverage Git &amp; Integrations in AI chats",
+		"在 AI 聊天中利用 Git 与集成功能"
+	],
+	[
+		"No matching repositories found for provider",
+		"未找到匹配的仓库，提供商为"
+	],
+	[
+		"${t} because a merge is already in progress",
+		"${t}，因为已有合并操作正在进行"
+	],
+	[
+		"${t} without a remote repository specified.",
+		"${t}，因为未指定远程仓库。"
+	],
+	[
+		"Generating commit message with ${e.name}...",
+		"正在使用 ${e.name} 生成提交消息..."
+	],
+	[
+		"Revealing workspace ${e} in the side bar...",
+		"正在侧边栏中显示工作区 ${e}..."
+	],
+	[
+		"Open Issue #<num> from ${i} on ${this.name}",
+		"打开议题 #<num>（${i}，位于 ${this.name}）"
+	],
+	[
+		"`${h.toLocaleString()} file${1===h?\"\":\"s\"}`",
+		"`${h.toLocaleString()} 个文件`"
+	],
+	[
+		"Will create worktree directly in $(folder)",
+		"将直接创建 Worktree 于 $(folder)"
+	],
+	[
+		"Please choose where to open the repository",
+		"请选择仓库的打开位置"
+	],
+	[
+		"The prompt was truncated to fit within the",
+		"提示词已被截断以适应"
+	],
+	[
+		"${t} because there are uncommitted changes",
+		"${t}，因为存在未提交的更改"
+	],
+	[
+		"${t} because you have uncommitted changes.",
+		"${t}，因为你有未提交的更改。"
+	],
+	[
+		"Generating stash message with ${e.name}...",
+		"正在使用 ${e.name} 生成贮藏消息..."
+	],
+	[
+		">Installed — Claude surfaces agent status<",
+		">已安装 — Claude 会显示智能体状态<"
+	],
+	[
+		">Configure Claude to surface agent status<",
+		">配置 Claude 以显示智能体状态<"
+	],
+	[
+		"Unable to get user property for filter for",
+		"无法获取用于筛选的用户属性："
+	],
+	[
+		"Failed to parse pending deep link PR data:",
+		"解析待处理的深层链接 PR 数据失败："
+	],
+	[
+		"Commit signing is already configured using",
+		"提交签名已配置，使用"
+	],
+	[
+		"<strong>Install Claude Code Hooks</strong>",
+		"<strong>安装 Claude Code Hooks</strong>"
+	],
+	[
+		"Open Issue #${t} from ${e} on ${this.name}",
+		"打开 ${this.name} 上 ${e} 的议题 #${t}"
+	],
+	[
+		"${this.name} Merge Request !${r} from ${i}",
+		"${this.name} 合并请求 !${r}（来自 ${i}）"
+	],
+	[
+		">&larr; Back to the GitLens walkthrough</a",
+		">&larr; 返回 GitLens 演练</a"
+	],
+	[
+		"Unable to get organizations due to error: ",
+		"无法获取组织，错误："
+	],
+	[
+		"Are you sure you want to open each of the",
+		"确定要逐个打开这"
+	],
+	[
+		"Unable to create the new worktree because",
+		"无法创建新的 Worktree，原因为"
+	],
+	[
+		"Unable to find the specified base branch:",
+		"无法找到指定的基准分支:"
+	],
+	[
+		"Unable to find the base branch for branch",
+		"无法找到基准分支，对应分支"
+	],
+	[
+		"title:`Open Issue #<num> on ${this.name}`",
+		"title:`在 ${this.name} 上打开议题 #<num>`"
+	],
+	[
+		"Generating search query with ${e.name}...",
+		"正在使用 ${e.name} 生成搜索查询..."
+	],
+	[
+		"Will pause before committing the merge of",
+		"将在提交合并前暂停，合并"
+	],
+	[
+		">No issues found. The changes look good!<",
+		">未发现问题。这些更改看起来不错！<"
+	],
+	[
+		"Home initialization aborted during phase:",
+		"主页初始化已中止，所在阶段："
+	],
+	[
+		"Multiple partitions use the branch name '",
+		"多个拆分使用了分支名称 '"
+	],
+	[
+		"${i.length} session${1===i.length?\"\":\"s\"}",
+		"${i.length} 个会话"
+	],
+	[
+		"Unable to show blame. Invalid revision (",
+		"无法显示 Blame。无效的修订 ("
+	],
+	[
+		"Unsupported host app \\u2014 hostAppName=",
+		"不支持的宿主应用 \\u2014 hostAppName="
+	],
+	[
+		"${ou(\"commit\",c)} in comparison ${o}${i}",
+		"比较 ${o} 中的 ${ou(\"个提交\",c,{plural:\"个提交\"})}${i}"
+	],
+	[
+		"${t} because it has no upstream branch.",
+		"${t}，因为它没有上游分支。"
+	],
+	[
+		"${t} because the branch name is invalid",
+		"${t}，因为分支名无效"
+	],
+	[
+		"${t} because there are unmerged changes",
+		"${t}，因为存在未合并的更改"
+	],
+	[
+		"${t} because you have unstaged changes.",
+		"${t}，因为你有未暂存的更改。"
+	],
+	[
+		"${e.headRef?.name??\"this pull request\"}",
+		"${e.headRef?.name??\"此拉取请求\"}"
+	],
+	[
+		"Will create a merge commit when merging",
+		"合并时将创建一个合并提交，合并"
+	],
+	[
+		"${eJ(\"pull request\",i)} ${o[0].message}",
+		"${i} 个拉取请求${o[0].message===\"needs reviewers\"||o[0].message===\"need reviewers\"?\"需要评审者\":o[0].message===\"has failed CI checks\"||o[0].message===\"have failed CI checks\"?\"存在失败的 CI 检查\":o[0].message===\"has conflicts\"||o[0].message===\"have conflicts\"?\"存在冲突\":o[0].message}"
+	],
+	[
+		"${ou(\"pull request\",o)} ${c[0].message}",
+		"${o} 个拉取请求${c[0].message===\"needs reviewers\"||c[0].message===\"need reviewers\"?\"需要评审者\":c[0].message===\"has failed CI checks\"||c[0].message===\"have failed CI checks\"?\"存在失败的 CI 检查\":c[0].message===\"has conflicts\"||c[0].message===\"have conflicts\"?\"存在冲突\":c[0].message}"
+	],
+	[
+		"${t_(\"pull request\",i)} ${o[0].message}",
+		"${i} 个拉取请求${o[0].message===\"needs reviewers\"||o[0].message===\"need reviewers\"?\"需要评审者\":o[0].message===\"has failed CI checks\"||o[0].message===\"have failed CI checks\"?\"存在失败的 CI 检查\":o[0].message===\"has conflicts\"||o[0].message===\"have conflicts\"?\"存在冲突\":o[0].message}"
+	],
+	[
+		"Unable to send review findings to chat:",
+		"无法将审查结果发送到聊天："
+	],
+	[
+		"Home initialization timed out in phase:",
+		"主页初始化超时，所在阶段："
+	],
+	[
+		"\"$(warning) Unable to fully load items\"",
+		"\"$(warning) 无法完全加载项目\""
+	],
+	[
+		"${t[\"needs-input\"]} need input</strong>",
+		"${t[\"needs-input\"]} 个需要输入</strong>"
+	],
+	[
+		"Search For Pull Request \\xa0\\u2022\\xa0",
+		"搜索拉取请求 \\xa0\\u2022\\xa0"
+	],
+	[
+		"Unable to open the virtual repository:",
+		"无法打开虚拟仓库:"
+	],
+	[
+		"Open Folder Changes with Branch or Tag",
+		"与分支或标签比较文件夹更改"
+	],
+	[
+		"Unable to create changeset for draft '",
+		"无法创建变更集，草稿 '"
+	],
+	[
+		"Compare ${this.compareWithWorkingTree?",
+		"比较 ${this.compareWithWorkingTree?"
+	],
+	[
+		"${t} because the argument is ambiguous",
+		"${t}，因为参数有歧义"
+	],
+	[
+		"Generating changelog with ${e.name}...",
+		"正在使用 ${e.name} 生成更新日志..."
+	],
+	[
+		"Will create and switch to a new branch",
+		"将创建并切换到新分支"
+	],
+	[
+		"${w.length>1?\"need\":\"needs\"} reviewers",
+		"需要评审者"
+	],
+	[
+		"Local branch, hasn't been published to",
+		"本地分支，尚未发布到"
+	],
+	[
+		"Unable to read conflicting files after",
+		"无法读取冲突文件，在执行以下操作之后："
+	],
+	[
+		"CLI binary not found at expected path:",
+		"未在预期路径找到 CLI 二进制文件："
+	],
+	[
+		"let h=o.length?o.join(\" + \"):\"changes\"",
+		"let h=o.length?o.join(\" + \"):\"更改\""
+	],
+	[
+		"Value must be a multiple of ${t.step}.",
+		"值必须是 ${t.step} 的倍数。"
+	],
+	[
+		"Unable to ${n.toLowerCase()} commits: ",
+		"无法 ${n.toLowerCase()} 提交："
+	],
+	[
+		"Unable to open changesets for draft '",
+		"无法打开变更集，草稿 '"
+	],
+	[
+		"Cannot recompose remote-only branch '",
+		"无法重组仅远程分支 '"
+	],
+	[
+		"Launchpad \\xa0\\u2022\\xa0 Pull Request",
+		"启动台 \\xa0\\u2022\\xa0 拉取请求"
+	],
+	[
+		"Will switch to and fast-forward local",
+		"将切换到并快进本地"
+	],
+	[
+		"Choose a worktree to copy your staged",
+		"选择一个 Worktree，以复制你的已暂存"
+	],
+	[
+		"${t} because the reference is invalid",
+		"${t}，因为该引用无效"
+	],
+	[
+		"${t} because you have unmerged files.",
+		"${t}，因为你有未合并的文件。"
+	],
+	[
+		"${eJ(\"pull request\",i)} can be merged",
+		"${i} 个拉取请求可合并"
+	],
+	[
+		"${ou(\"pull request\",o)} can be merged",
+		"${o} 个拉取请求可合并"
+	],
+	[
+		"${t_(\"pull request\",i)} can be merged",
+		"${i} 个拉取请求可合并"
+	],
+	[
+		"Failed to create worktree for branch:",
+		"为分支创建 Worktree 失败："
+	],
+	[
+		"Will change the upstream tracking for",
+		"将更改上游跟踪："
+	],
+	[
+		"Compose does not support scope type '",
+		"编排不支持作用域类型 '"
+	],
+	[
+		"Failed to refresh CLI discovery file:",
+		"刷新 CLI 发现文件失败："
+	],
+	[
+		"Unable to determine git directory for",
+		"无法确定 git 目录，对于"
+	],
+	[
+		"MCP install results \\u2014 succeeded:",
+		"MCP 安装结果 \\u2014 成功："
+	],
+	[
+		"\"drafts\",\"Cloud Patches\",\"draftsView\"",
+		"\"drafts\",\"云补丁\",\"draftsView\""
+	],
+	[
+		"Merged into ${o.name}`,actionLabel:g,",
+		"已合并到 ${o.name}`,actionLabel:g,"
+	],
+	[
+		"<span>What's new in GitLens 18</span>",
+		"<span>GitLens 18 新特性</span>"
+	],
+	[
+		">Open the Overview Sidebar</gl-button",
+		">打开概览侧栏</gl-button"
+	],
+	[
+		"WIP changes on \\`${this.branchName}\\`",
+		"\\`${this.branchName}\\` 上的 WIP 更改"
+	],
+	[
+		"Unable to create a new worktree in '",
+		"无法创建新的 Worktree 于 '"
+	],
+	[
+		"Before deleting the current branch '",
+		"在删除当前分支 '"
+	],
+	[
+		"Will create a new worktree for local",
+		"将创建新的 Worktree，用于本地"
+	],
+	[
+		"Will forcibly create a new tag named",
+		"将强制创建新标签，名为"
+	],
+	[
+		"Failed to validate repository state:",
+		"验证仓库状态失败:"
+	],
+	[
+		"Unable to open changeset for draft '",
+		"无法打开变更集，草稿 '"
+	],
+	[
+		"${t} because the tag name is invalid",
+		"${t}，因为标签名无效"
+	],
+	[
+		"Explaining changes with ${e.name}...",
+		"正在使用 ${e.name} 解释更改..."
+	],
+	[
+		"${w.length>1?\"have\":\"has\"} conflicts",
+		"存在冲突"
+	],
+	[
+		"Repository is not in a safe state: '",
+		"仓库未处于安全状态：'"
+	],
+	[
+		"Disposing rebase editor controller (",
+		"正在释放变基编辑器控制器（"
+	],
+	[
+		"CLI not ready \\u2014 install.status=",
+		"CLI 未就绪 \\u2014 install.status="
+	],
+	[
+		"Unmergable intersection. Error path:",
+		"无法合并的交集。错误路径："
+	],
+	[
+		"d2h-file-list-title\">Files changed (",
+		"d2h-file-list-title\">已更改文件 ("
+	],
+	[
+		"\"$(warning) Authentication Required\"",
+		"\"$(warning) 需要身份验证\""
+	],
+	[
+		"`Supports ${r.join(\", \")}, and ${o}`",
+		"`支持 ${r.join(\"、\")}和${o}`"
+	],
+	[
+		"${ou(\"file\",t.files)} changed</span>",
+		"${t.files} 个文件更改</span>"
+	],
+	[
+		"t.current&&c.push(\"current branch\")",
+		"t.current&&c.push(\"当前分支\")"
+	],
+	[
+		"Create Worktree for New Branch from",
+		"为新分支创建 Worktree，基于"
+	],
+	[
+		"This request will use approximately",
+		"此请求将使用约"
+	],
+	[
+		"Unable to apply the patch on base '",
+		"无法应用补丁，基准 '"
+	],
+	[
+		"${t} as it cannot be fast-forwarded",
+		"${t}，因为无法快进"
+	],
+	[
+		"${t} because it is an empty commit.",
+		"${t}，因为这是一个空提交。"
+	],
+	[
+		"${t} because it is not fully merged",
+		"${t}，因为它尚未完全合并"
+	],
+	[
+		"ou(this.resultsLabel,0,{zero:\"No\"})",
+		"ou(\"结果\",0,{zero:\"无\",infix:\"\",plural:\"结果\"})"
+	],
+	[
+		">Referenced in the commit message.<",
+		">在提交消息中被引用。<"
+	],
+	[
+		"Associate Issue with Branch\\xa0\\xA0",
+		"将议题关联到分支\\xa0\\xA0"
+	],
+	[
+		"No organizations found for provider",
+		"未找到提供方的组织："
+	],
+	[
+		"Will fetch and prune all remotes of",
+		"将抓取并清理所有远程："
+	],
+	[
+		"Will unstage your changes and reset",
+		"将取消暂存你的更改并重置"
+	],
+	[
+		"Failed to discard unstaged changes:",
+		"丢弃未暂存更改失败："
+	],
+	[
+		"Failed to discard staged changes in",
+		"丢弃已暂存更改失败于"
+	],
+	[
+		"Failed to configure commit signing:",
+		"配置提交签名失败："
+	],
+	[
+		"<strong>GitLens Pro</strong> trial.",
+		"<strong>GitLens Pro</strong> 试用。"
+	],
+	[
+		"\n\t\t\t\t\tVisualize Repository History\n",
+		"\n\t\t\t\t\t可视化仓库历史\n"
+	],
+	[
+		"\tRecent <span class=\"group__count\">",
+		"\t最近 <span class=\"group__count\">"
+	],
+	[
+		"ks={files:\"FILES\",commits:\"COMMITS\"",
+		"ks={files:\"文件\",commits:\"提交\""
+	],
+	[
+		"return`commit \\`${lg(t.sha)}\\`${i}`",
+		"return`提交 \\`${lg(t.sha)}\\`${i}`"
+	],
+	[
+		"Before deleting the worktree for '",
+		"删除 Worktree 前，分支 '"
+	],
+	[
+		"Create & Switch to New Branch from",
+		"创建并切换到新分支，基于"
+	],
+	[
+		"Unable to setup the GitKraken MCP:",
+		"无法设置 GitKraken MCP:"
+	],
+	[
+		"} Issue or Pull Request ${i}#${r}`",
+		"} 议题或拉取请求 ${i}#${r}`"
+	],
+	[
+		"and any upstream tracking branches",
+		"及所有上游跟踪分支"
+	],
+	[
+		"Explaining ${c} changes in ${p}...",
+		"正在解释 ${c} 个更改（${p}）..."
+	],
+	[
+		">Some integrations failed to load<",
+		">部分集成加载失败<"
+	],
+	[
+		">Create PR Titles & Descriptions:<",
+		">创建 PR 标题和描述：<"
+	],
+	[
+		">Hover over blame annotations to:<",
+		">悬停在 Blame 注释上即可：<"
+	],
+	[
+		"Detached Worktree at $(git-commit)",
+		"分离的 Worktree 位于 $(git-commit)"
+	],
+	[
+		"Added on the target (conflict with",
+		"在目标上被添加（冲突于"
+	],
+	[
+		"Will discard ALL changes and reset",
+		"将丢弃所有更改并重置"
+	],
+	[
+		"No Launchpad item found matching '",
+		"未找到匹配的启动台项 '"
+	],
+	[
+		"Error sending Launchpad item data:",
+		"发送启动台项数据时出错："
+	],
+	[
+		"Starting CLI installation (attempt",
+		"正在开始 CLI 安装（尝试"
+	],
+	[
+		"When in doubt, use fewer branches.",
+		"拿不准时，使用更少的分支。"
+	],
+	[
+		"Duplicate partition branch name: '",
+		"重复的拆分分支名称：'"
+	],
+	[
+		"this.host.title=\"Cloud Suggestion\"",
+		"this.host.title=\"云建议\""
+	],
+	[
+		"<span>&mdash; not connected</span>",
+		"<span>&mdash; 未连接</span>"
+	],
+	[
+		"Command failed with exit code ${r}",
+		"命令执行失败，退出码 ${r}"
+	],
+	[
+		"Confirm Switch to Worktree \\u2022",
+		"确认切换到 Worktree \\u2022"
+	],
+	[
+		"Will create worktree in $(folder)",
+		"将创建 Worktree 于 $(folder)"
+	],
+	[
+		"Empty response from Ollama model:",
+		"Ollama 模型返回空响应:"
+	],
+	[
+		"Unable to find a repository for '",
+		"无法找到对应的仓库 '"
+	],
+	[
+		"Open Folder Changes with Revision",
+		"与版本比较文件夹更改"
+	],
+	[
+		"Open File \\u2022 Unable to open '",
+		"打开文件 \\u2022 无法打开 '"
+	],
+	[
+		"No pull request associated with '",
+		"没有关联的拉取请求，对应 '"
+	],
+	[
+		" with ${this._compareWith.label??",
+		" 与 ${this._compareWith.label??"
+	],
+	[
+		"case\"tag\":i=`${t.label?\"tag \":\"\"}",
+		"case\"tag\":i=`${t.label?\"标签 \":\"\"}"
+	],
+	[
+		"Fetching ${e.length} repositories",
+		"正在获取 ${e.length} 个仓库"
+	],
+	[
+		"Commit '${e.commitSha}' not found",
+		"未找到提交 '${e.commitSha}'"
+	],
+	[
+		"Will push ${e.repos.length} repos",
+		"将推送 ${e.repos.length} 个仓库"
+	],
+	[
+		"${t} is missing its upstream ${i}",
+		"${t} 缺失其上游 ${i}"
+	],
+	[
+		"${i} is missing its upstream ${o}",
+		"${i} 缺失其上游 ${o}"
+	],
+	[
+		"${r} is missing its upstream ${o}",
+		"${o} 缺失其上游 ${o}"
+	],
+	[
+		"${i} is missing its upstream ${r}",
+		"${i} 缺失其上游 ${r}"
+	],
+	[
+		"Auto-fetch handled by VS Code Git",
+		"自动抓取由 VS Code Git 处理"
+	],
+	[
+		"Unable to load agent branch data.",
+		"无法加载智能体分支数据。"
+	],
+	[
+		"Transient request failure (status",
+		"瞬态请求失败（状态"
+	],
+	[
+		"Failed to discard staged changes:",
+		"丢弃已暂存的更改失败："
+	],
+	[
+		"Commit signing validation failed:",
+		"提交签名验证失败："
+	],
+	[
+		"Some integrations failed to load:",
+		"部分集成加载失败："
+	],
+	[
+		"Failed to resolve target branch '",
+		"解析目标分支失败 '"
+	],
+	[
+		"MCP install succeeded for agent '",
+		"MCP 安装成功，智能体 '"
+	],
+	[
+		"Changes to pull from ${this.ref2}",
+		"待拉取的更改，来自 ${this.ref2}"
+	],
+	[
+		"case\"agents\":t=\"robot\",i=\"Agents\"",
+		"case\"agents\":t=\"robot\",i=\"智能体\""
+	],
+	[
+		"fV(t,i,o,c){let h=c?` on ${c}`:\"\"",
+		"fV(t,i,o,c){let h=c?`（${c}）`:\"\""
+	],
+	[
+		"Unable to ${r} ${i}: ${s.message}",
+		"无法${r} ${i}: ${s.message}"
+	],
+	[
+		"Unable to sign out of GitKraken:",
+		"无法退出登录 GitKraken:"
+	],
+	[
+		"Please provide a new message for",
+		"请提供新的消息用于"
+	],
+	[
+		"Failed to parse Ollama response:",
+		"解析 Ollama 响应失败:"
+	],
+	[
+		"Adding repositories to workspace",
+		"正在将仓库添加到工作区"
+	],
+	[
+		"Cloud Patch successfully created",
+		"Cloud Patch 创建成功"
+	],
+	[
+		"Failed to recompose from commit:",
+		"从提交重组失败:"
+	],
+	[
+		"Merged Locally into Merge Target",
+		"已在本地合并到合并目标"
+	],
+	[
+		"title:\"Inspect\",contextKeyPrefix",
+		"title:\"检查\",contextKeyPrefix"
+	],
+	[
+		"'${t}' isn't a valid branch name",
+		"'${t}' 不是有效的分支名"
+	],
+	[
+		"'${t}' isn't a valid remote name",
+		"'${t}' 不是有效的远程名"
+	],
+	[
+		"Pulling ${e.length} repositories",
+		"正在拉取 ${e.length} 个仓库"
+	],
+	[
+		"Pushing ${e.length} repositories",
+		"正在推送 ${e.length} 个仓库"
+	],
+	[
+		"Welcome to your ${s.name} Trial.",
+		"欢迎使用 ${s.name} 试用版。"
+	],
+	[
+		"Jump to Reference ${h$.Dot} ${i}",
+		"跳转到引用 ${h$.Dot} ${i}"
+	],
+	[
+		">Complete Your Entire Workflow:<",
+		">完成你的整个工作流：<"
+	],
+	[
+		">Compare with previous versions<",
+		">与早期版本进行比较<"
+	],
+	[
+		"Unsupported filters for provider",
+		"提供方不支持的筛选条件："
+	],
+	[
+		"Loading remote provider config '",
+		"正在加载远程提供方配置 '"
+	],
+	[
+		"Will keep your changes and reset",
+		"将保留你的更改并重置"
+	],
+	[
+		"Failed to resolve repository for",
+		"无法解析仓库："
+	],
+	[
+		"Failed to open rebase editor for",
+		"无法打开变基编辑器："
+	],
+	[
+		"No cached compose plan for key '",
+		"没有已缓存的编排计划，键 '"
+	],
+	[
+		"Failed to publish CLI discovery:",
+		"发布 CLI 发现信息失败："
+	],
+	[
+		"Failed to delete undo manifest '",
+		"删除撤销清单失败 '"
+	],
+	[
+		"Multiple branches use the name '",
+		"多个分支使用了名称 '"
+	],
+	[
+		"When in doubt, do not partition.",
+		"拿不准时，不要进行拆分。"
+	],
+	[
+		"Failed to unregister MCP server:",
+		"注销 MCP 服务器失败："
+	],
+	[
+		"Failed to fetch files for commit",
+		"获取提交的文件失败"
+	],
+	[
+		"${t_(\"file\",t.changed)} changed`",
+		"${t.changed} 个文件更改`"
+	],
+	[
+		"${t_(\"file\",t.deleted)} deleted`",
+		"${t.deleted} 个文件删除`"
+	],
+	[
+		"${ou(\"file\",t.deleted)} deleted<",
+		"${t.deleted} 个文件删除<"
+	],
+	[
+		"Message copied to the clipboard",
+		"消息已复制到剪贴板"
+	],
+	[
+		"Unable to sign in to GitKraken:",
+		"无法登录 GitKraken:"
+	],
+	[
+		"Are you sure you want to remove",
+		"确定要移除"
+	],
+	[
+		"Unable to get users for draft '",
+		"无法获取用户，草稿 '"
+	],
+	[
+		"Unable to add users for draft '",
+		"无法添加用户，草稿 '"
+	],
+	[
+		"Unable to open details for PR #",
+		"无法打开拉取请求详情 #"
+	],
+	[
+		"Open Changes with Branch or Tag",
+		"与分支或标签比较更改"
+	],
+	[
+		"Unable to find main repository(",
+		"无法找到主仓库("
+	],
+	[
+		"No repository detected. To view",
+		"未检测到仓库。要查看"
+	],
+	[
+		"} Issue or Pull Request #<num>`",
+		"} 议题或拉取请求 #<num>`"
+	],
+	[
+		"prefix:`Has Uncommitted Changes",
+		"prefix:`存在未提交更改"
+	],
+	[
+		"'${e}' isn't a valid remote URL",
+		"'${e}' 不是有效的远程 URL"
+	],
+	[
+		"`${(0,r.td)(\"line\",o)} deleted`",
+		"`${o} 行删除`"
+	],
+	[
+		"`${(0,r.td)(\"line\",n)} deleted`",
+		"`${n} 行删除`"
+	],
+	[
+		"`${(0,K.td)(\"file\",t)} changed`",
+		"`${t} 个文件更改`"
+	],
+	[
+		"`${(0,K.td)(\"file\",e)} changed`",
+		"`${e} 个文件更改`"
+	],
+	[
+		">Learn more in the Help Center<",
+		">在帮助中心了解更多<"
+	],
+	[
+		"Switch to Another Repository...",
+		"切换到其他仓库..."
+	],
+	[
+		"No issues found in these files.",
+		"在这些文件中未发现问题。"
+	],
+	[
+		">Explain Commits and Branches:<",
+		">解释提交和分支：<"
+	],
+	[
+		"Will reset the merge target for",
+		"将重置合并目标："
+	],
+	[
+		"Path is not a git repository: '",
+		"路径不是 Git 仓库：'"
+	],
+	[
+		"Unable to push to commit \\u2014",
+		"无法推送到提交 \\u2014"
+	],
+	[
+		"Failed to show existing panel (",
+		"显示现有面板失败 ("
+	],
+	[
+		"No undo manifest found for ID '",
+		"找不到撤销清单，ID '"
+	],
+	[
+		"Visual History timeline showing",
+		"可视化历史时间线显示"
+	],
+	[
+		"Failed to remove migrated key '",
+		"移除已迁移的键失败 '"
+	],
+	[
+		"Running MCP install command for",
+		"正在运行 MCP 安装命令，目标："
+	],
+	[
+		"Downloading CLI proxy (version:",
+		"正在下载 CLI 代理（版本："
+	],
+	[
+		"Could not delete internal ref '",
+		"无法删除内部引用 '"
+	],
+	[
+		"&nbsp;No autolinks found</span>",
+		"&nbsp;未找到自动链接</span>"
+	],
+	[
+		"<p>Checked out in a worktree</p",
+		"<p>已在 worktree 中检出</p"
+	],
+	[
+		"(e,t,i,r){let s=r?` on ${r}`:\"\"",
+		"(e,t,i,r){let s=r?`（${r}）`:\"\""
+	],
+	[
+		"Unable to apply the patch onto ",
+		"无法将补丁应用到 "
+	],
+	[
+		"Will create a new branch named",
+		"将创建新分支"
+	],
+	[
+		"Unable to delete worktree in '",
+		"无法删除 Worktree 于 '"
+	],
+	[
+		"Will create a new worktree for",
+		"将创建新的 Worktree 用于"
+	],
+	[
+		"Do you want to start your free",
+		"是否开始你的免费"
+	],
+	[
+		"Are you sure you want to merge",
+		"确定要合并"
+	],
+	[
+		"Action is not supported on the",
+		"该操作不受支持，环境为"
+	],
+	[
+		"Cannot use the reserved name '",
+		"不能使用保留名称 '"
+	],
+	[
+		"Publish ${h.name} to ${i.name}",
+		"发布 ${h.name} 到 ${i.name}"
+	],
+	[
+		"${t} because it already exists",
+		"${t}，因为它已存在"
+	],
+	[
+		"${t} because it does not exist",
+		"${t}，因为它不存在"
+	],
+	[
+		"${t} because the ref is locked",
+		"${t}，因为该引用已被锁定"
+	],
+	[
+		"Unable to initialize Git; ${i}",
+		"无法初始化 Git；${i}"
+	],
+	[
+		">Try the All-New Commit Graph<",
+		">试用全新的提交图<"
+	],
+	[
+		">Get Started with GitLens Pro<",
+		">开始使用 GitLens Pro<"
+	],
+	[
+		">View previous file revisions<",
+		">查看文件的早期修订<"
+	],
+	[
+		">Jump to commits in the Graph<",
+		">跳转到提交图中的提交<"
+	],
+	[
+		"Unable to get current user for",
+		"无法获取当前用户："
+	],
+	[
+		"Unsupported input for provider",
+		"提供方不支持的输入："
+	],
+	[
+		"MCP install failed for agent '",
+		"智能体 MCP 安装失败：'"
+	],
+	[
+		"Unable to locate worktree path",
+		"无法定位 Worktree 路径"
+	],
+	[
+		"Provider id mismatch: expected",
+		"提供方 ID 不匹配：期望"
+	],
+	[
+		"Failed to discard changes in \"",
+		"丢弃更改失败于 \""
+	],
+	[
+		"Invalid subcommand: expected '",
+		"无效的子命令：应为 '"
+	],
+	[
+		"Signature verification failed:",
+		"签名验证失败："
+	],
+	[
+		"RPC connection timed out after",
+		"RPC 连接超时，已等待"
+	],
+	[
+		"Unexpected CLI version output:",
+		"意外的 CLI 版本输出："
+	],
+	[
+		"Local CLI binary not found at:",
+		"未在以下位置找到本地 CLI 二进制文件："
+	],
+	[
+		"ComposeGitPort is missing op '",
+		"ComposeGitPort 缺少操作 '"
+	],
+	[
+		"Unable to read commit info for",
+		"无法读取以下提交的信息："
+	],
+	[
+		"Failed to register MCP server:",
+		"注册 MCP 服务器失败："
+	],
+	[
+		"`${W.deletions} lines deleted`",
+		"`删除 ${W.deletions} 行`"
+	],
+	[
+		"${(0,r.td)(\"file\",s)} changed`",
+		"${s} 个文件更改`"
+	],
+	[
+		"${(0,r.td)(\"file\",n)} deleted`",
+		"${n} 个文件删除`"
+	],
+	[
+		"${(0,r.td)(\"file\",o)} deleted`",
+		"${o} 个文件删除`"
+	],
+	[
+		"Unable to locate repository '",
+		"无法定位仓库 '"
+	],
+	[
+		"GitHub Authentication  \\u2022",
+		"GitHub 身份验证  \\u2022"
+	],
+	[
+		"Requires a classic token with",
+		"需要经典令牌，且具备"
+	],
+	[
+		"Unable to reactivate trial: (",
+		"无法重新激活试用: ("
+	],
+	[
+		"Click to Switch GitLens Modes",
+		"点击切换 GitLens 模式"
+	],
+	[
+		"Double-click to open issue on",
+		"双击打开议题于"
+	],
+	[
+		"GitLab Authentication  \\u2022",
+		"GitLab 身份验证  \\u2022"
+	],
+	[
+		"Unable to find a remote for '",
+		"无法找到远程，对应 '"
+	],
+	[
+		"Unable to create worktree for",
+		"无法创建 Worktree 用于"
+	],
+	[
+		"Worktree for $(git-branch) \\`",
+		"Worktree，分支 $(git-branch) \\`"
+	],
+	[
+		"Comparing ${this._ref.label??",
+		"正在比较 ${this._ref.label??"
+	],
+	[
+		"`Autolinked ${e.description}`",
+		"`自动链接的 ${e.description}`"
+	],
+	[
+		"'${t}' isn't a valid tag name",
+		"'${t}' 不是有效的标签名"
+	],
+	[
+		"\"Switching to\":\"Checking out\"",
+		"\"正在切换到\":\"正在检出\""
+	],
+	[
+		"o=this.isBehind?\"Pull\":\"Push\"",
+		"o=this.isBehind?\"拉取\":\"推送\""
+	],
+	[
+		"`${(0,r.td)(\"line\",s)} added`",
+		"`${s} 行新增`"
+	],
+	[
+		"`${(0,r.td)(\"file\",i)} added`",
+		"`${i} 个文件新增`"
+	],
+	[
+		"Choose which worktree to open",
+		"选择要打开的 Worktree"
+	],
+	[
+		"No local repository found for",
+		"未找到本地仓库："
+	],
+	[
+		"Will set the merge target for",
+		"将设置合并目标："
+	],
+	[
+		"Repository could not be found",
+		"找不到仓库"
+	],
+	[
+		"Failed to move file to trash:",
+		"将文件移至回收站失败："
+	],
+	[
+		"Error starting work on issue:",
+		"开始处理议题时出错："
+	],
+	[
+		"Error sending Launchpad data:",
+		"发送启动台数据时出错："
+	],
+	[
+		"Fetching CLI proxy: platform=",
+		"正在获取 CLI 代理：platform="
+	],
+	[
+		">Install Claude Code Hooks</a",
+		">安装 Claude Code Hooks</a"
+	],
+	[
+		">Open Compare Mode</gl-button",
+		">打开比较模式</gl-button"
+	],
+	[
+		"empty-text=\"No files changed\"",
+		"empty-text=\"无文件更改\""
+	],
+	[
+		"Merged Locally into ${i.name}",
+		"已本地合并到 ${i.name}"
+	],
+	[
+		"Unable to switch to branch '",
+		"无法切换到分支 '"
+	],
+	[
+		"Cloning repository for link:",
+		"正在为链接克隆仓库:"
+	],
+	[
+		"Requires an integration with",
+		"需要集成，对象为"
+	],
+	[
+		"Unable to apply patch onto '",
+		"无法应用补丁至 '"
+	],
+	[
+		"(\"day\",t,{infix:\" more \"})}.",
+		"(\"day\",t,{infix:\" more \"})}。"
+	],
+	[
+		"new r.TreeItem(\"Workspaces\",",
+		"new r.TreeItem(\"工作区\","
+	],
+	[
+		"`Showing ${r.length} of `:\"\"",
+		"`显示 ${r.length} / 共 `:\"\""
+	],
+	[
+		"${t} is up to date with ${i}",
+		"${t} 已与 ${i} 保持同步"
+	],
+	[
+		"${i} is up to date with ${o}",
+		"${i} 已与 ${o} 保持同步"
+	],
+	[
+		"${r} is up to date with ${o}",
+		"${r} 已与 ${o} 保持同步"
+	],
+	[
+		"${i} is up to date with ${r}",
+		"${i} 已与 ${r} 保持同步"
+	],
+	[
+		">Discover your Commit Graph<",
+		">探索你的提交图<"
+	],
+	[
+		"No pickable commits found on",
+		"未找到可拣选的提交于"
+	],
+	[
+		"Remote provider config for '",
+		"远程提供方配置：'"
+	],
+	[
+		"Current branch $(git-branch)",
+		"当前分支 $(git-branch)"
+	],
+	[
+		"Failed to discard changes in",
+		"丢弃更改失败于"
+	],
+	[
+		"Failed to register handler '",
+		"注册处理程序失败 '"
+	],
+	[
+		"Installing GitKraken MCP for",
+		"正在为以下对象安装 GitKraken MCP："
+	],
+	[
+		"No SHA found for commit ID '",
+		"找不到 SHA，提交 ID '"
+	],
+	[
+		"No changes found on branch '",
+		"分支上未找到更改 '"
+	],
+	[
+		">Try Compose Mode</gl-button",
+		">试用编排模式</gl-button"
+	],
+	[
+		"`${t} commit${1!==t?\"s\":\"\"}`",
+		"`${t} 个提交`"
+	],
+	[
+		"`${W.additions} lines added`",
+		"`新增 ${W.additions} 行`"
+	],
+	[
+		"worktrees:{title:\"Worktrees\"",
+		"worktrees:{title:\"Worktree\""
+	],
+	[
+		"text:\"Review\",collapsible:!0",
+		"text:\"审查\",collapsible:!0"
+	],
+	[
+		"`dddd, MMMM Do, YYYY [at] ${",
+		"`YYYY年M月D日 dddd ${"
+	],
+	[
+		"${t_(\"file\",t.added)} added`",
+		"${t.added} 个文件新增`"
+	],
+	[
+		"${ou(\"file\",t.added)} added<",
+		"${t.added} 个文件新增<"
+	],
+	[
+		"Will create a new tag named",
+		"将创建新标签，名为"
+	],
+	[
+		"AI-powered search (preview)",
+		"AI 智能搜索 (预览)"
+	],
+	[
+		"Unable to sign in to your (",
+		"无法登录你的 ("
+	],
+	[
+		"Blame will resume after a [",
+		"Blame 将在 ["
+	],
+	[
+		"Unable to find remote for '",
+		"无法找到远程，对应 '"
+	],
+	[
+		"Connect an integration with",
+		"连接集成，对象为"
+	],
+	[
+		"Click to add a remote for '",
+		"点击添加远程，对应 '"
+	],
+	[
+		"API key to use this feature",
+		"API 密钥以使用此功能"
+	],
+	[
+		"Failed to recompose branch:",
+		"重组分支失败:"
+	],
+	[
+		"Cannot abort as there is no",
+		"无法中止，因为没有"
+	],
+	[
+		" with <branch, tag, or ref>",
+		" 与 <分支、标签或引用>"
+	],
+	[
+		" with a branch, tag, or ref",
+		" 与分支、标签或引用"
+	],
+	[
+		"'. The tag name is invalid.",
+		"'。标签名无效。"
+	],
+	[
+		"${t} has diverged from ${i}",
+		"${t} 已与 ${i} 产生分叉"
+	],
+	[
+		"${i} has diverged from ${o}",
+		"${i} 已与 ${o} 产生分叉"
+	],
+	[
+		"${r} has diverged from ${o}",
+		"${r} 已与 ${o} 产生分叉"
+	],
+	[
+		"${i} has diverged from ${r}",
+		"${i} 已与 ${r} 产生分叉"
+	],
+	[
+		"Unable to load branch data.",
+		"无法加载分支数据。"
+	],
+	[
+		"You also have access to the",
+		"你还可以访问"
+	],
+	[
+		">No active agent sessions.<",
+		">没有活动的智能体会话。<"
+	],
+	[
+		"Will add and fetch remote '",
+		"将添加并抓取远程 '"
+	],
+	[
+		"Account validation failed (",
+		"账户验证失败（"
+	],
+	[
+		"CLI capability published on",
+		"CLI 能力已发布于"
+	],
+	[
+		"Could not checkout branch '",
+		"无法检出分支 '"
+	],
+	[
+		"No changes found in range '",
+		"范围内未找到更改 '"
+	],
+	[
+		"Failed \\u2014 Click to View",
+		"失败 \\u2014 点击查看"
+	],
+	[
+		">Open Home View</gl-button>",
+		">打开主页视图</gl-button>"
+	],
+	[
+		"${t.working} working</span>",
+		"${t.working} 个工作中</span>"
+	],
+	[
+		"${i} is in an unknown state",
+		"${i} 处于未知状态"
+	],
+	[
+		"comparison between ${o}${i}",
+		"${o} 之间的比较${i}"
+	],
+	[
+		"c>0&&o.push(ou(\"commit\",c))",
+		"c>0&&o.push(ou(\"个提交\",c,{plural:\"个提交\"}))"
+	],
+	[
+		"slot=\"title\">Files changed ",
+		"slot=\"title\">已更改的文件 "
+	],
+	[
+		"Workspace file created for",
+		"工作区文件已创建，属于"
+	],
+	[
+		"Unable to apply patch to '",
+		"无法应用补丁到 '"
+	],
+	[
+		"Open Changes with Revision",
+		"与版本比较更改"
+	],
+	[
+		"Unable to find repository(",
+		"无法找到仓库("
+	],
+	[
+		"Open File at Branch or Tag",
+		"在分支或标签处打开文件"
+	],
+	[
+		"new r.TreeItem(\"Branches\",",
+		"new r.TreeItem(\"分支\","
+	],
+	[
+		"${t.title} in New Worktree",
+		"${t.title}（新 Worktree）"
+	],
+	[
+		"` named ${e.createBranch}`",
+		"` ${e.createBranch}`"
+	],
+	[
+		">Continue the Walkthrough<",
+		">继续演练<"
+	],
+	[
+		">GitKraken DevEx platform<",
+		">GitKraken DevEx 平台<"
+	],
+	[
+		">Auto-composition Summary<",
+		">自动编排摘要<"
+	],
+	[
+		">No contributors in scope<",
+		">范围内无贡献者<"
+	],
+	[
+		">Get Started with GitLens<",
+		">开始使用 GitLens<"
+	],
+	[
+		">What's new in GitLens 18<",
+		">GitLens 18 新功能<"
+	],
+	[
+		"Unable to get gitDir for '",
+		"无法获取 gitDir：'"
+	],
+	[
+		"Reconnect your integration",
+		"重新连接你的集成"
+	],
+	[
+		"Unable to initialize view:",
+		"无法初始化视图："
+	],
+	[
+		"Partial failure: Retrieved",
+		"部分失败：已检索"
+	],
+	[
+		"Explaining changes between",
+		"正在解释更改，范围介于"
+	],
+	[
+		"Failed to discard changes:",
+		"丢弃更改失败："
+	],
+	[
+		"Failed to start IPC server",
+		"启动 IPC 服务器失败"
+	],
+	[
+		"Unknown sequencer command:",
+		"未知的序列器命令："
+	],
+	[
+		"Installing MCP for agent '",
+		"正在为智能体安装 MCP '"
+	],
+	[
+		"CLI core update (previous:",
+		"CLI 核心更新（先前版本："
+	],
+	[
+		"Issues often referenced as",
+		"议题通常被引用为"
+	],
+	[
+		"Get your ${t.name} API key",
+		"获取你的 ${t.name} API 密钥"
+	],
+	[
+		"group__label\">Current work",
+		"group__label\">当前工作项"
+	],
+	[
+		"o=t||\"Base\",c=i||\"Compare\"",
+		"o=t||\"基准\",c=i||\"比较\""
+	],
+	[
+		"`${i} file${1!==i?\"s\":\"\"}`",
+		"`${i} 个文件`"
+	],
+	[
+		"`${W.files} files changed`",
+		"`更改 ${W.files} 个文件`"
+	],
+	[
+		"branches:{title:\"Branches\"",
+		"branches:{title:\"分支\""
+	],
+	[
+		"uncommittedStaged??\"Index\"",
+		"uncommittedStaged??\"暂存区\""
+	],
+	[
+		"Failed to commit changes:",
+		"提交更改失败:"
+	],
+	[
+		"Failed to publish draft '",
+		"发布草稿失败 '"
+	],
+	[
+		"Unable to archive draft '",
+		"无法归档草稿 '"
+	],
+	[
+		"Changes in Pull Request #",
+		"拉取请求中的更改 #"
+	],
+	[
+		"Copy Remote File URL From",
+		"复制远程文件 URL，自"
+	],
+	[
+		"Choose a branch or tag to",
+		"选择分支或标签以"
+	],
+	[
+		"Create Pull Request Links",
+		"创建拉取请求链接"
+	],
+	[
+		"new r.TreeItem(\"Commits\",",
+		"new r.TreeItem(\"提交\","
+	],
+	[
+		"new r.TreeItem(\"Remotes\",",
+		"new r.TreeItem(\"远程\","
+	],
+	[
+		"new r.TreeItem(\"Stashes\",",
+		"new r.TreeItem(\"贮藏\","
+	],
+	[
+		">Show hidden breadcrumbs<",
+		">显示隐藏的面包屑<"
+	],
+	[
+		">Unable to load branches<",
+		">无法加载分支<"
+	],
+	[
+		">Explain\n\t\t\t\t\t\t\t\tChanges<",
+		">解释\n\t\t\t\t\t\t\t\t更改<"
+	],
+	[
+		">Compose Commits with AI<",
+		">使用 AI 组织提交<"
+	],
+	[
+		"Will interactively update",
+		"将交互式更新"
+	],
+	[
+		"Cannot use reserved key '",
+		"无法使用保留键 '"
+	],
+	[
+		"Will fetch all remotes of",
+		"将抓取所有远程："
+	],
+	[
+		"Choose a commit to rebase",
+		"选择要变基的提交"
+	],
+	[
+		"Error fetching Launchpad:",
+		"获取启动台数据时出错："
+	],
+	[
+		"Could not restore HEAD to",
+		"无法将 HEAD 恢复到"
+	],
+	[
+		"Cannot recompose branch '",
+		"无法重新编排分支 '"
+	],
+	[
+		"Enter a commit message to",
+		"输入提交消息以"
+	],
+	[
+		"\n\nHas Uncommitted Changes",
+		"\n\n有未提交更改"
+	],
+	[
+		"Unable to stash changes.",
+		"无法贮藏更改。"
+	],
+	[
+		"Unable to update draft '",
+		"无法更新草稿 '"
+	],
+	[
+		"Unable to explain branch",
+		"无法解释分支"
+	],
+	[
+		"Open File on Remote From",
+		"在远程打开文件，自"
+	],
+	[
+		"Stashing so many files (",
+		"一次贮藏过多文件 ("
+	],
+	[
+		"No explanation provided.",
+		"未提供说明。"
+	],
+	[
+		"Merged into Merge Target",
+		"已合并到合并目标"
+	],
+	[
+		"new r.TreeItem(\"Drafts\",",
+		"new r.TreeItem(\"草稿\","
+	],
+	[
+		"? This cannot be undone.",
+		"？此操作无法撤销。"
+	],
+	[
+		"Already have an account?",
+		"已有账户？"
+	],
+	[
+		"Generate changelog entry",
+		"生成变更日志条目"
+	],
+	[
+		">No repository selected<",
+		">未选择仓库<"
+	],
+	[
+		">Launchpad & Worktrees:<",
+		">启动台和 Worktrees：<"
+	],
+	[
+		"Thanks for starting your",
+		"感谢你开始"
+	],
+	[
+		">Unmatched Git Context:<",
+		">无与伦比的 Git 上下文：<"
+	],
+	[
+		">Configure Inline Blame<",
+		">配置行内 Blame<"
+	],
+	[
+		">Focus the Commit Graph<",
+		">聚焦提交图<"
+	],
+	[
+		">See My Working Changes<",
+		">查看我的工作更改<"
+	],
+	[
+		"Additional instructions:",
+		"附加指令："
+	],
+	[
+		"Choose a commit to reset",
+		"选择要重置的提交"
+	],
+	[
+		"No changes to generate a",
+		"没有更改，无法生成"
+	],
+	[
+		"Unable to find Command '",
+		"找不到命令 '"
+	],
+	[
+		"Selected commits between",
+		"已选择的提交介于"
+	],
+	[
+		"Showing existing panel (",
+		"正在显示现有面板 ("
+	],
+	[
+		"Potential Conflicts with",
+		"潜在冲突，与"
+	],
+	[
+		"Invalid element at key \"",
+		"无效的元素，位于键 \""
+	],
+	[
+		"Duplicate branch name: '",
+		"重复的分支名称：'"
+	],
+	[
+		"\n\nNo Uncommitted Changes",
+		"\n\n无未提交更改"
+	],
+	[
+		" Keyboard Shortcuts</h2>",
+		" 键盘快捷键</h2>"
+	],
+	[
+		"remotes:{title:\"Remotes\"",
+		"remotes:{title:\"远程\""
+	],
+	[
+		"stashes:{title:\"Stashes\"",
+		"stashes:{title:\"贮藏\""
+	],
+	[
+		" \\xa0(_${t.join(\", \")}_)",
+		" \\xa0(_${t.join(\"、\")}_)"
+	],
+	[
+		" \\xa0(_${h.join(\", \")}_)",
+		" \\xa0(_${h.join(\"、\")}_)"
+	],
+	[
+		"Will stash changes from",
+		"将贮藏更改，来自"
+	],
+	[
+		"Open Changes with Stash",
+		"与贮藏比较更改"
+	],
+	[
+		"Unable to copy changes:",
+		"无法复制更改:"
+	],
+	[
+		"This AI preview feature",
+		"此 AI 预览功能"
+	],
+	[
+		"Unable to snooze item '",
+		"无法暂缓该项 '"
+	],
+	[
+		"${t} as it was aborted.",
+		"${t}，因为操作已中止。"
+	],
+	[
+		"Branch '${i}' not found",
+		"未找到分支 '${i}'"
+	],
+	[
+		"Branch '${s}' not found",
+		"未找到分支 '${s}'"
+	],
+	[
+		"Start Work on an Issue…",
+		"开始处理议题…"
+	],
+	[
+		"Failed to review files.",
+		"审查文件失败。"
+	],
+	[
+		">Loading contributors…<",
+		">正在加载贡献者…<"
+	],
+	[
+		">Couldn't load changes<",
+		">无法加载更改<"
+	],
+	[
+		">Apply to new worktree<",
+		">应用到新的 Worktree<"
+	],
+	[
+		">Multi-WIP visibility:<",
+		">多 WIP 可见性：<"
+	],
+	[
+		"Failed to start review:",
+		"启动审查失败："
+	],
+	[
+		"Start PR Review\\xa0\\xA0",
+		"开始 PR 审查\\xa0\\xA0"
+	],
+	[
+		"Will fast-forward merge",
+		"将快进合并"
+	],
+	[
+		"Failed to read file for",
+		"读取文件失败："
+	],
+	[
+		"Generating commits with",
+		"正在生成提交，使用"
+	],
+	[
+		"Unknown provider type '",
+		"未知的提供方类型 '"
+	],
+	[
+		"Unable to create draft:",
+		"无法创建草稿："
+	],
+	[
+		"IPC server listening on",
+		"IPC 服务器正在监听"
+	],
+	[
+		"Discovery sweep: pruned",
+		"发现清理：已清除"
+	],
+	[
+		"Discovery sweep failed:",
+		"发现清理失败："
+	],
+	[
+		"Failed to migrate key '",
+		"迁移键失败 '"
+	],
+	[
+		"Error during MCP setup:",
+		"MCP 设置期间出错："
+	],
+	[
+		"Using local CLI binary:",
+		"使用本地 CLI 二进制文件："
+	],
+	[
+		"CLI installed (version:",
+		"CLI 已安装（版本："
+	],
+	[
+		"MCP install for agent '",
+		"MCP 安装，智能体 '"
+	],
+	[
+		"Deleting internal ref '",
+		"正在删除内部引用 '"
+	],
+	[
+		"Invalid UUID version: \"",
+		"无效的 UUID 版本：\""
+	],
+	[
+		"Cannot recompose commit",
+		"无法重新编排提交"
+	],
+	[
+		"Empty patch for commit:",
+		"提交的补丁为空："
+	],
+	[
+		"Compose rewrite failed:",
+		"编排重写失败："
+	],
+	[
+		">Install GitKraken MCP<",
+		">安装 GitKraken MCP<"
+	],
+	[
+		"\n\t\t\t\t\t\tCompose Changes\n",
+		"\n\t\t\t\t\t\t编排更改\n"
+	],
+	[
+		"\n\t\t\t\t\t\t\t\t\tReview Files\n",
+		"\n\t\t\t\t\t\t\t\t\t审查文件\n"
+	],
+	[
+		"\n\t\t\t\t\tCode Suggestions\n",
+		"\n\t\t\t\t\t代码建议\n"
+	],
+	[
+		"?\"代码建议\":\"Cloud Patches\"",
+		"?\"代码建议\":\"云补丁\""
+	],
+	[
+		"${i} is a remote branch",
+		"${i} 是远程分支"
+	],
+	[
+		"Unable to open draft '",
+		"无法打开草稿 '"
+	],
+	[
+		"Unable to fast-forward",
+		"无法快进"
+	],
+	[
+		"Unable to create tag '",
+		"无法创建标签 '"
+	],
+	[
+		"The workspace file for",
+		"工作区文件，属于"
+	],
+	[
+		"Choose which remote to",
+		"选择远程以"
+	],
+	[
+		"Browse Repository from",
+		"浏览仓库自"
+	],
+	[
+		"Unable to open patch '",
+		"无法打开补丁 '"
+	],
+	[
+		"Unable to apply patch:",
+		"无法应用补丁:"
+	],
+	[
+		"Create Pull Request on",
+		"创建拉取请求于"
+	],
+	[
+		"Commit \\`$(git-commit)",
+		"提交 \\`$(git-commit)"
+	],
+	[
+		"uK)(\"Requires API Key\"",
+		"uK)(\"需要 API 密钥\""
+	],
+	[
+		"${t.label?\"stash \":\"\"}",
+		"${t.label?\"贮藏 \":\"\"}"
+	],
+	[
+		"new r.TreeItem(\"Tags\",",
+		"new r.TreeItem(\"标签\","
+	],
+	[
+		"\\u2014\\xa0\\xA0 on ${t}",
+		"\\u2014\\xa0\\xA0 位于 ${t}"
+	],
+	[
+		"${t} due to conflicts.",
+		"${t}，因为存在冲突。"
+	],
+	[
+		">Unable to load items<",
+		">无法加载条目<"
+	],
+	[
+		">Default Coding Agent<",
+		">默认编码智能体<"
+	],
+	[
+		">No commits to rebase<",
+		">没有可变基的提交<"
+	],
+	[
+		">Visual File History:<",
+		">可视化文件历史：<"
+	],
+	[
+		">AI Compose & Review:<",
+		">AI 编排与审查：<"
+	],
+	[
+		"Modified on the target",
+		"在目标上被修改"
+	],
+	[
+		"No PR found matching '",
+		"未找到匹配的 PR：'"
+	],
+	[
+		"Will safely hard reset",
+		"将安全地硬重置"
+	],
+	[
+		"WIP patch to clipboard",
+		"WIP 补丁到剪贴板"
+	],
+	[
+		"Failed to show panel (",
+		"显示面板失败 ("
+	],
+	[
+		"Pre-operation HEAD SHA",
+		"操作前的 HEAD SHA"
+	],
+	[
+		"Duplicate branch ID: '",
+		"重复的分支 ID：'"
+	],
+	[
+		"Original commit order:",
+		"原始提交顺序："
+	],
+	[
+		"Failed to drop stash \"",
+		"删除贮藏失败 \""
+	],
+	[
+		"Stage changes above to",
+		"在上方暂存更改以"
+	],
+	[
+		">Something went wrong<",
+		">出错了<"
+	],
+	[
+		">Comparing References<",
+		">正在比较引用<"
+	],
+	[
+		"agents:{title:\"Agents\"",
+		"agents:{title:\"智能体\""
+	],
+	[
+		"$(star-full) Favorited",
+		"$(star-full) 已收藏"
+	],
+	[
+		"Issue or Pull Request",
+		"议题或拉取请求"
+	],
+	[
+		"Choose a location for",
+		"选择一个位置用于"
+	],
+	[
+		"No worktrees found in",
+		"未找到 Worktree 于"
+	],
+	[
+		"Rich integration with",
+		"富集成，提供商"
+	],
+	[
+		"No content available.",
+		"没有可用内容。"
+	],
+	[
+		"Unable to update user",
+		"无法更新用户"
+	],
+	[
+		"This is IRREVERSIBLE!",
+		"此操作不可逆！"
+	],
+	[
+		"Unable to toggle file",
+		"无法切换文件"
+	],
+	[
+		"No commits generated.",
+		"未生成任何提交。"
+	],
+	[
+		"${t} is ahead of ${i}",
+		"${t} 领先于 ${i}"
+	],
+	[
+		"${i} is ahead of ${o}",
+		"${i} 领先于 ${o}"
+	],
+	[
+		"${r} is ahead of ${o}",
+		"${r} 领先于 ${o}"
+	],
+	[
+		"${i} is ahead of ${r}",
+		"${i} 领先于 ${r}"
+	],
+	[
+		"Start Review on a PR…",
+		"开始审查 PR…"
+	],
+	[
+		">Incoming / Outgoing<",
+		">传入 / 传出<"
+	],
+	[
+		">Composition Summary<",
+		">编排摘要<"
+	],
+	[
+		">AI Compose & Review<",
+		">AI 编排与审查<"
+	],
+	[
+		">Deep Visualizations<",
+		">深度可视化<"
+	],
+	[
+		"Amend Previous Commit",
+		"修补上一个提交"
+	],
+	[
+		">Has working changes<",
+		">有工作更改<"
+	],
+	[
+		">Orchestrate Agents:<",
+		">编排智能体：<"
+	],
+	[
+		">Focused Graph mode:<",
+		">聚焦提交图模式：<"
+	],
+	[
+		"Deleted on the target",
+		"在目标上被删除"
+	],
+	[
+		"Repository found in '",
+		"发现仓库于 '"
+	],
+	[
+		"Failed to start work:",
+		"开始工作失败："
+	],
+	[
+		"Unable to copy patch:",
+		"无法复制补丁："
+	],
+	[
+		"Discard skipped for \"",
+		"已跳过丢弃：\""
+	],
+	[
+		"Trash unsupported for",
+		"回收站不支持"
+	],
+	[
+		"Failed to show view (",
+		"显示视图失败 ("
+	],
+	[
+		"Duplicate commit IDs:",
+		"重复的提交 ID："
+	],
+	[
+		"Duplicate schema id \"",
+		"重复的 schema id \""
+	],
+	[
+		"No commits in range '",
+		"范围内没有提交 '"
+	],
+	[
+		"Cannot rewrite commit",
+		"无法重写提交"
+	],
+	[
+		"Branch names use type",
+		"分支名称使用类型"
+	],
+	[
+		"Failed to pop stash \"",
+		"弹出贮藏失败 \""
+	],
+	[
+		">Connect More Agents<",
+		">连接更多智能体<"
+	],
+	[
+		"${t.idle} idle</span>",
+		"${t.idle} 个空闲</span>"
+	],
+	[
+		"Merged into ${i.name}",
+		"已合并到 ${i.name}"
+	],
+	[
+		"No branches found in",
+		"未找到分支于"
+	],
+	[
+		"Please enter a valid",
+		"请输入有效的"
+	],
+	[
+		"Changes (partial) in",
+		"更改（部分）于"
+	],
+	[
+		"Will switch to local",
+		"将切换到本地"
+	],
+	[
+		"Changes to pull from",
+		"拉取更改自"
+	],
+	[
+		"Unable to pin item '",
+		"无法固定该项 '"
+	],
+	[
+		"Open Pull Request on",
+		"打开拉取请求于"
+	],
+	[
+		"GitLens upgraded to ",
+		"GitLens 已升级到 "
+	],
+	[
+		">Loading autolinks…<",
+		">正在加载自动链接…<"
+	],
+	[
+		"Draft PR description",
+		"草拟 PR 描述"
+	],
+	[
+		">Default time range<",
+		">默认时间范围<"
+	],
+	[
+		">Orchestrate Agents<",
+		">编排智能体<"
+	],
+	[
+		"Send Review to Agent",
+		"将审查发送给智能体"
+	],
+	[
+		"Learn more about the",
+		"了解更多关于"
+	],
+	[
+		"Non-UTF-8 encoding '",
+		"非 UTF-8 编码 '"
+	],
+	[
+		"Will fetch and prune",
+		"将抓取并清理"
+	],
+	[
+		"Will remove remote '",
+		"将移除远程 '"
+	],
+	[
+		"Will revert and edit",
+		"将还原并编辑"
+	],
+	[
+		"Cannot collect range",
+		"无法收集范围"
+	],
+	[
+		"Safety check failed:",
+		"安全检查失败："
+	],
+	[
+		"CLI handlers stopped",
+		"CLI 处理程序已停止"
+	],
+	[
+		"Unknown branch ID: '",
+		"未知的分支 ID：'"
+	],
+	[
+		"Unexpected refname '",
+		"意外的引用名称 '"
+	],
+	[
+		"GitLens Compose left",
+		"GitLens 编排留下了"
+	],
+	[
+		"Changes to Worktree",
+		"更改到 Worktree"
+	],
+	[
+		"No stashes found in",
+		"未找到贮藏于"
+	],
+	[
+		"Locating Repository",
+		"正在定位仓库"
+	],
+	[
+		"No remotes found in",
+		"未找到远程于"
+	],
+	[
+		"Unable to restore '",
+		"无法还原 '"
+	],
+	[
+		"Unable to abort the",
+		"无法中止该"
+	],
+	[
+		"Behind Merge Target",
+		"落后于合并目标"
+	],
+	[
+		" request timed out.",
+		" 请求超时。"
+	],
+	[
+		"\" *approximated\":\"\"",
+		"\"（约值）\":\"\""
+	],
+	[
+		"Delete Local & 远程分支",
+		"删除本地和远程分支"
+	],
+	[
+		"${t} is behind ${i}",
+		"${t} 落后于 ${i}"
+	],
+	[
+		"${i} is behind ${o}",
+		"${i} 落后于 ${o}"
+	],
+	[
+		"${r} is behind ${o}",
+		"${r} 落后于 ${o}"
+	],
+	[
+		"${i} is behind ${r}",
+		"${i} 落后于 ${r}"
+	],
+	[
+		">Unified Workspace<",
+		">统一工作区<"
+	],
+	[
+		">Loading branches…<",
+		">正在加载分支…<"
+	],
+	[
+		">Apply to a Branch<",
+		">应用到分支<"
+	],
+	[
+		">Open Compare Mode<",
+		">打开比较模式<"
+	],
+	[
+		"No commits found on",
+		"未找到提交于"
+	],
+	[
+		"No commits ahead of",
+		"没有提交领先于"
+	],
+	[
+		"Will edit and apply",
+		"将编辑并应用"
+	],
+	[
+		"No commits found in",
+		"未找到提交于"
+	],
+	[
+		"Will prune remote '",
+		"将清理远程 '"
+	],
+	[
+		"Unexpected command:",
+		"意外的命令："
+	],
+	[
+		"Context exceeds the",
+		"上下文超出了"
+	],
+	[
+		"Error reviewing PR:",
+		"审查 PR 时出错："
+	],
+	[
+		"CLI core version is",
+		"CLI 核心版本为"
+	],
+	[
+		"Failed to get valid",
+		"无法获取有效的"
+	],
+	[
+		"Staging op failed (",
+		"暂存操作失败 ("
+	],
+	[
+		"tooltip:\"Worktrees\"",
+		"tooltip:\"Worktree\""
+	],
+	[
+		"return`changes${i}`",
+		"return`更改${i}`"
+	],
+	[
+		"Response tail: ${r}",
+		"响应末尾: ${r}"
+	],
+	[
+		"Response tail: ${a}",
+		"响应末尾: ${a}"
+	],
+	[
+		"Response tail: ${n}",
+		"响应末尾: ${n}"
+	],
+	[
+		"a new branch named",
+		"新分支"
+	],
+	[
+		"a new local branch",
+		"新本地分支"
+	],
+	[
+		"Changes to push to",
+		"推送更改到"
+	],
+	[
+		"Current changes on",
+		"当前更改于"
+	],
+	[
+		"Open Repository on",
+		"打开仓库于"
+	],
+	[
+		"} Issue ${i}#${r}`",
+		"} 议题 ${i}#${r}`"
+	],
+	[
+		">Loading commits…<",
+		">正在加载提交…<"
+	],
+	[
+		"Apply / Pop Stash…",
+		"应用 / 弹出贮藏…"
+	],
+	[
+		">Parallelize Work<",
+		">并行化工作<"
+	],
+	[
+		"Reviewing files...",
+		"正在审查文件..."
+	],
+	[
+		">Cumulative Files<",
+		">累计文件<"
+	],
+	[
+		">Loading changes…<",
+		">正在加载更改…<"
+	],
+	[
+		">Open related PRs<",
+		">打开相关 PR<"
+	],
+	[
+		">Try Compose Mode<",
+		">试用编排模式<"
+	],
+	[
+		"Choose a commit to",
+		"选择一个提交以"
+	],
+	[
+		"Error fetching PR:",
+		"获取 PR 时出错："
+	],
+	[
+		"Start Work\\xa0\\xA0",
+		"开始工作\\xa0\\xA0"
+	],
+	[
+		"Failed to create '",
+		"创建失败：'"
+	],
+	[
+		"Unexpected output:",
+		"意外的输出："
+	],
+	[
+		"Could not recreate",
+		"无法重新创建"
+	],
+	[
+		"Open All Changes\n[",
+		"打开所有更改\n["
+	],
+	[
+		"`Supports ${r[0]}`",
+		"`支持 ${r[0]}`"
+	],
+	[
+		"tags:{title:\"Tags\"",
+		"tags:{title:\"标签\""
+	],
+	[
+		"tooltip:\"Branches\"",
+		"tooltip:\"分支\""
+	],
+	[
+		"actionLabel:\"Pull\"",
+		"actionLabel:\"拉取\""
+	],
+	[
+		"actionLabel:\"Push\"",
+		"actionLabel:\"推送\""
+	],
+	[
+		"Folder Changes in",
+		"文件夹更改于"
+	],
+	[
+		"Unable to explain",
+		"无法解释"
+	],
+	[
+		"Confirm Switch to",
+		"确认切换到"
+	],
+	[
+		"The worktree in '",
+		"该 Worktree 位于 '"
+	],
+	[
+		"Please enter your",
+		"请输入你的"
+	],
+	[
+		"No stashes with '",
+		"没有贮藏包含 '"
+	],
+	[
+		"Unable to merge '",
+		"无法合并 '"
+	],
+	[
+		"Unable to clone '",
+		"无法克隆 '"
+	],
+	[
+		"uK)(\"Suggestions\"",
+		"uK)(\"建议\""
+	],
+	[
+		"Reverse Direction",
+		"反转方向"
+	],
+	[
+		"You're now on the",
+		"你现在正在使用"
+	],
+	[
+		">Try Review Mode<",
+		">试用审查模式<"
+	],
+	[
+		"Failed to resolve",
+		"无法解析"
+	],
+	[
+		"The branch name '",
+		"分支名称 '"
+	],
+	[
+		"Will add remote '",
+		"将添加远程 '"
+	],
+	[
+		"Working changes (",
+		"工作更改（"
+	],
+	[
+		"Failed to restore",
+		"恢复失败"
+	],
+	[
+		"Unable to commit:",
+		"无法提交："
+	],
+	[
+		"Disposing panel (",
+		"正在释放面板 ("
+	],
+	[
+		"Working directory",
+		"工作目录"
+	],
+	[
+		"Invalid revision:",
+		"无效的修订版本："
+	],
+	[
+		"Could not restore",
+		"无法恢复"
+	],
+	[
+		"Restoring HEAD to",
+		"正在将 HEAD 恢复到"
+	],
+	[
+		"Missing branches:",
+		"缺少的分支："
+	],
+	[
+		"Roll back failed:",
+		"回滚失败："
+	],
+	[
+		"Working Changes (",
+		"工作更改 ("
+	],
+	[
+		"No commits behind",
+		"没有落后的提交"
+	],
+	[
+		">Working Changes<",
+		">工作更改<"
+	],
+	[
+		"tooltip:\"Remotes\"",
+		"tooltip:\"远程\""
+	],
+	[
+		"tooltip:\"Stashes\"",
+		"tooltip:\"贮藏\""
+	],
+	[
+		"Will checkout to",
+		"将切换到"
+	],
+	[
+		"A branch named '",
+		"分支名 '"
+	],
+	[
+		"Switch & Suggest",
+		"切换并建议"
+	],
+	[
+		"Click to compare",
+		"点击以比较"
+	],
+	[
+		"Paused at commit",
+		"已暂停于提交"
+	],
+	[
+		"Rebase paused at",
+		"变基已暂停于"
+	],
+	[
+		"Mode change from",
+		"模式更改自"
+	],
+	[
+		"Similarity index",
+		"相似度"
+	],
+	[
+		"A remote named '",
+		"远程名 '"
+	],
+	[
+		"No tags found in",
+		"未找到标签于"
+	],
+	[
+		"Unable to open '",
+		"无法打开 '"
+	],
+	[
+		"Unknown Assignee",
+		"未知指派人"
+	],
+	[
+		"Unknown Reviewer",
+		"未知审查者"
+	],
+	[
+		"} Change #<num>`",
+		"} 变更 #<num>`"
+	],
+	[
+		"?\"are blocked\":g",
+		"?\"已阻塞\":g"
+	],
+	[
+		"Reviewing Commit",
+		"正在审查提交"
+	],
+	[
+		"Create Worktree…",
+		"创建 Worktree…"
+	],
+	[
+		"Summarize branch",
+		"总结分支"
+	],
+	[
+		">Command Center<",
+		">指挥中心<"
+	],
+	[
+		">See what's new<",
+		">查看新增功能<"
+	],
+	[
+		">Open Home View<",
+		">打开主页视图<"
+	],
+	[
+		"Modified on both",
+		"在双方均被修改"
+	],
+	[
+		"Issue not found:",
+		"未找到议题："
+	],
+	[
+		"Couldn't restore",
+		"无法恢复"
+	],
+	[
+		"This will DELETE",
+		"这将删除"
+	],
+	[
+		"Resolving view (",
+		"正在解析视图 ("
+	],
+	[
+		"Disposing view (",
+		"正在释放视图 ("
+	],
+	[
+		"Could not delete",
+		"无法删除"
+	],
+	[
+		"Missing commits:",
+		"缺少的提交："
+	],
+	[
+		"Unknown commits:",
+		"未知的提交："
+	],
+	[
+		"Provide either '",
+		"请提供 '"
+	],
+	[
+		"Common prefixes:",
+		"常见前缀："
+	],
+	[
+		">Open Launchpad<",
+		">打开启动台<"
+	],
+	[
+		"tooltip:\"Agents\"",
+		"tooltip:\"智能体\""
+	],
+	[
+		"altLabel:\"Fetch\"",
+		"altLabel:\"抓取\""
+	],
+	[
+		"Choose a branch",
+		"选择一个分支"
+	],
+	[
+		"Custom Autolink",
+		"自定义自动链接"
+	],
+	[
+		"Changes between",
+		"更改对比"
+	],
+	[
+		"Merge Request !",
+		"合并请求 !"
+	],
+	[
+		"Searching for \"",
+		"正在搜索 \""
+	],
+	[
+		"This AI feature",
+		"此 AI 功能"
+	],
+	[
+		"Up to date with",
+		"已同步至"
+	],
+	[
+		"Cloud Workspace",
+		"云工作区"
+	],
+	[
+		"Start your free",
+		"开始你的免费"
+	],
+	[
+		"No changes in '",
+		"无更改于 '"
+	],
+	[
+		"Changes Summary",
+		"更改摘要"
+	],
+	[
+		"Select a Branch",
+		"选择分支"
+	],
+	[
+		"uK)(\"Reviewers\"",
+		"uK)(\"审查者\""
+	],
+	[
+		"t=\"Filtered\",n=",
+		"t=\"已筛选\",n="
+	],
+	[
+		"} Issue #<num>`",
+		"} 议题 #<num>`"
+	],
+	[
+		"用于 a new branch",
+		"用于新分支"
+	],
+	[
+		"All Access 全功能周",
+		"全功能周"
+	],
+	[
+		">Graph Options<",
+		">提交图选项<"
+	],
+	[
+		">Bare worktree<",
+		">裸 Worktree<"
+	],
+	[
+		">Active Branch<",
+		">活动分支<"
+	],
+	[
+		">Commit Graph:<",
+		">提交图：<"
+	],
+	[
+		"Will force push",
+		"将强制推送"
+	],
+	[
+		"Deleted on both",
+		"在双方均被删除"
+	],
+	[
+		"Choose a Branch",
+		"选择分支"
+	],
+	[
+		"No Fast-forward",
+		"禁止快进"
+	],
+	[
+		"Showing panel (",
+		"正在显示面板 ("
+	],
+	[
+		"Git queue wait:",
+		"Git 队列等待："
+	],
+	[
+		"Click to switch",
+		"点击以切换"
+	],
+	[
+		"Awaiting input:",
+		"等待输入："
+	],
+	[
+		">Draft Commits<",
+		">草稿提交<"
+	],
+	[
+		">Files Changed<",
+		">已更改文件<"
+	],
+	[
+		">GitKraken AI:<",
+		">GitKraken AI：<"
+	],
+	[
+		"label=\"Compare\"",
+		"label=\"比较\""
+	],
+	[
+		">Compare</span>",
+		">比较</span>"
+	],
+	[
+		"altLabel:\"Pull\"",
+		"altLabel:\"拉取\""
+	],
+	[
+		">Branch</label>",
+		">分支</label>"
+	],
+	[
+		"You are now on",
+		"你现在使用的是"
+	],
+	[
+		"Will switch to",
+		"将切换到"
+	],
+	[
+		"Invalid Range:",
+		"无效的范围:"
+	],
+	[
+		"Unable to diff",
+		"无法对比"
+	],
+	[
+		"Unknown Author",
+		"未知作者"
+	],
+	[
+		"Unable to open",
+		"无法打开"
+	],
+	[
+		"Search matched",
+		"搜索匹配到"
+	],
+	[
+		"uK)(\"Branches\"",
+		"uK)(\"分支\""
+	],
+	[
+		"uK)(\"Checkout\"",
+		"uK)(\"签出\""
+	],
+	[
+		"\" sign up and\"",
+		"\" 注册并\""
+	],
+	[
+		"Publish (push)",
+		"发布（推送）"
+	],
+	[
+		"Create Branch…",
+		"创建分支…"
+	],
+	[
+		"Switch Branch…",
+		"切换分支…"
+	],
+	[
+		">AI workflows<",
+		">AI 工作流<"
+	],
+	[
+		">Focus Branch<",
+		">聚焦分支<"
+	],
+	[
+		">GitLens Home<",
+		">GitLens 主页<"
+	],
+	[
+		">Explain (AI)<",
+		">解释 (AI)<"
+	],
+	[
+		"Will result in",
+		"将产生"
+	],
+	[
+		"Search results",
+		"搜索结果"
+	],
+	[
+		"Failed to copy",
+		"复制失败："
+	],
+	[
+		"Showing view (",
+		"正在显示视图 ("
+	],
+	[
+		"Couldn't reach",
+		"无法连接"
+	],
+	[
+		"Source branch:",
+		"源分支："
+	],
+	[
+		"Pull Request #",
+		"拉取请求 #"
+	],
+	[
+		"Allowed types:",
+		"允许的类型："
+	],
+	[
+		"Undo Commit on",
+		"撤销提交，位于"
+	],
+	[
+		">Open Session<",
+		">打开会话<"
+	],
+	[
+		">Agent Kanban<",
+		">智能体看板<"
+	],
+	[
+		">Commit Graph<",
+		">提交图<"
+	],
+	[
+		"tooltip:\"Tags\"",
+		"tooltip:\"标签\""
+	],
+	[
+		"Merge Request",
+		"合并请求"
+	],
+	[
+		"Will forcibly",
+		"将强制"
+	],
+	[
+		"GitLens Mode:",
+		"GitLens 模式:"
+	],
+	[
+		"Bare Worktree",
+		"裸 Worktree"
+	],
+	[
+		"Open Issue on",
+		"打开议题于"
+	],
+	[
+		"uK)(\"Actions\"",
+		"uK)(\"操作\""
+	],
+	[
+		"uK)(\"Compare\"",
+		"uK)(\"比较\""
+	],
+	[
+		"Will push${a}",
+		"将推送${a}"
+	],
+	[
+		"Lines Changed",
+		"更改的行数"
+	],
+	[
+		">Focus Areas<",
+		">重点领域<"
+	],
+	[
+		"A tag named '",
+		"已存在名为 '"
+	],
+	[
+		"Added on both",
+		"在双方均被添加"
+	],
+	[
+		"Repository is",
+		"仓库"
+	],
+	[
+		"Branch name '",
+		"分支名称 '"
+	],
+	[
+		"IPC handler '",
+		"IPC 处理程序 '"
+	],
+	[
+		"Installed for",
+		"已安装于"
+	],
+	[
+		"Undo blocked:",
+		"撤销被阻止："
+	],
+	[
+		"HEAD was on '",
+		"HEAD 之前位于 '"
+	],
+	[
+		"Pull request:",
+		"拉取请求："
+	],
+	[
+		"label:\"Fetch\"",
+		"label:\"抓取\""
+	],
+	[
+		"Copy Link to",
+		"复制链接到"
+	],
+	[
+		"GitLab Issue",
+		"GitLab 议题"
+	],
+	[
+		"Code Changes",
+		"代码更改"
+	],
+	[
+		"Click to see",
+		"点击查看"
+	],
+	[
+		"API Key Page",
+		"API 密钥页面"
+	],
+	[
+		"uK)(\"Status\"",
+		"uK)(\"状态\""
+	],
+	[
+		"uK)(\"Browse\"",
+		"uK)(\"浏览\""
+	],
+	[
+		"uK)(\"Remote\"",
+		"uK)(\"远程\""
+	],
+	[
+		"uK)(\"Branch\"",
+		"uK)(\"分支\""
+	],
+	[
+		"`${i} found`",
+		"`已找到 ${i}`"
+	],
+	[
+		"You're using",
+		"你正在使用"
+	],
+	[
+		"Base branch:",
+		"基础分支："
+	],
+	[
+		"Open Issue #",
+		"打开议题 #"
+	],
+	[
+		"Don't Commit",
+		"不提交"
+	],
+	[
+		"Will publish",
+		"将发布"
+	],
+	[
+		"There are no",
+		"没有任何"
+	],
+	[
+		"Renamed file",
+		"已重命名文件"
+	],
+	[
+		">No changes<",
+		">无更改<"
+	],
+	[
+		"label:\"Pull\"",
+		"label:\"拉取\""
+	],
+	[
+		"label:\"Push\"",
+		"label:\"推送\""
+	],
+	[
+		" and rebase",
+		" 并变基"
+	],
+	[
+		"Cannot open",
+		"无法打开"
+	],
+	[
+		"Will rename",
+		"将重命名"
+	],
+	[
+		"Checkout to",
+		"切换到"
+	],
+	[
+		"Will delete",
+		"将删除"
+	],
+	[
+		"Copy Staged",
+		"复制已暂存"
+	],
+	[
+		"No matching",
+		"没有匹配的"
+	],
+	[
+		"Rename from",
+		"重命名自"
+	],
+	[
+		"No branches",
+		"没有分支"
+	],
+	[
+		"Last commit",
+		"最后提交于"
+	],
+	[
+		"Go to slide",
+		"跳转到幻灯片"
+	],
+	[
+		"uK)(\"Local\"",
+		"uK)(\"本地\""
+	],
+	[
+		"uK)(\"Files\"",
+		"uK)(\"文件\""
+	],
+	[
+		">Start New<",
+		">新建<"
+	],
+	[
+		"Cannot take",
+		"无法接受"
+	],
+	[
+		"None of the",
+		"没有任何"
+	],
+	[
+		"Will update",
+		"将更新"
+	],
+	[
+		"Modified on",
+		"修改于"
+	],
+	[
+		"Last active",
+		"上次活动"
+	],
+	[
+		"All & Prune",
+		"全部并清理"
+	],
+	[
+		"Will squash",
+		"将压缩"
+	],
+	[
+		"Will revert",
+		"将还原"
+	],
+	[
+		"Resolve all",
+		"全部解决"
+	],
+	[
+		"CLI agent '",
+		"CLI 智能体 '"
+	],
+	[
+		"Branch ID '",
+		"分支 ID '"
+	],
+	[
+		"Showing all",
+		"正在显示全部"
+	],
+	[
+		">Copy Link<",
+		">复制链接<"
+	],
+	[
+		"Will stash",
+		"将贮藏"
+	],
+	[
+		"Changes in",
+		"更改于"
+	],
+	[
+		"Connect to",
+		"连接到"
+	],
+	[
+		"Will merge",
+		"将合并"
+	],
+	[
+		"Connect an",
+		"连接一个"
+	],
+	[
+		"Upgrade to",
+		"升级到"
+	],
+	[
+		"uK)(\"Open\"",
+		"uK)(\"打开\""
+	],
+	[
+		"uK)(\"Tags\"",
+		"uK)(\"标签\""
+	],
+	[
+		"Will apply",
+		"将应用"
+	],
+	[
+		"Will fetch",
+		"将抓取"
+	],
+	[
+		"Enter your",
+		"输入你的"
+	],
+	[
+		"History of",
+		"历史记录："
+	],
+	[
+		"The nested",
+		"嵌套的"
+	],
+	[
+		"Deleted on",
+		"删除于"
+	],
+	[
+		"Failed for",
+		"失败于"
+	],
+	[
+		"Agent \\xb7",
+		"智能体 \\xb7"
+	],
+	[
+		">Loading…<",
+		">正在加载…<"
+	],
+	[
+		"Rename to",
+		"重命名为"
+	],
+	[
+		"Branch is",
+		"分支"
+	],
+	[
+		"Will push",
+		"将推送"
+	],
+	[
+		"Safe Hard",
+		"安全硬重置"
+	],
+	[
+		"API Key](",
+		"API 密钥]("
+	],
+	[
+		"There are",
+		"共有"
+	],
+	[
+		"AI model:",
+		"AI 模型："
+	],
+	[
+		">Go Back<",
+		">返回<"
+	],
+	[
+		"Load all",
+		"加载全部"
+	],
+	[
+		"Open the",
+		"打开"
+	],
+	[
+		"Added on",
+		"添加于"
+	],
+	[
+		"Click to",
+		"点击以"
+	],
+	[
+		"API key",
+		"API 密钥"
+	],
+	[
+		"API Key",
+		"API 密钥"
+	],
+	[
+		"Not in",
+		"不在"
+	],
+	[
+		"Authentication Required\n\n${i}\n\n重新连接你的集成",
+		"需要身份验证\n\n${i}\n\n重新连接你的集成"
+	],
+	[
+		"\\u2014 Reconnect your integration",
+		"\\u2014 重新连接你的集成"
+	],
+	[
+		"Unable to fetch${e.branch?` branch '${e.branch}'`:\"\"}${e.remote?` from ${e.remote}`:\"\"}",
+		"无法拉取${e.branch?` 分支 '${e.branch}'`:\"\"}${e.remote?`，来源 ${e.remote}`:\"\"}"
+	],
+	[
+		"Unable to merge${e.ref?` '${e.ref}'`:\"\"}",
+		"无法合并${e.ref?` '${e.ref}'`:\"\"}"
+	],
+	[
+		"Merge${e.ref?` of '${e.ref}'`:\"\"} was aborted",
+		"合并${e.ref?` '${e.ref}'`:\"\"} 已中止"
+	],
+	[
+		"Unable to push${e.branch?` branch '${e.branch}'`:\"\"}${e.remote?` to ${e.remote}`:\"\"}",
+		"无法推送${e.branch?` 分支 '${e.branch}'`:\"\"}${e.remote?` 到 ${e.remote}`:\"\"}"
+	],
+	[
+		"Unable to rebase${e.upstream?` onto '${e.upstream}'`:\"\"}",
+		"无法变基${e.upstream?` 到 '${e.upstream}'`:\"\"}"
+	],
+	[
+		"Rebase${e.upstream?` onto '${e.upstream}'`:\"\"} was aborted",
+		"变基${e.upstream?` 到 '${e.upstream}'`:\"\"} 已中止"
+	],
+	[
+		"Unable to resend verification email; status=(",
+		"无法重新发送验证邮件；状态=("
+	],
+	[
+		"Unable to resolve link - missing basic properties: ",
+		"无法解析链接 - 缺少基本属性："
+	],
+	[
+		"Unable to ${e.action} branch ${e.branch?`'${e.branch}'`:\"\"}`:`Unable to perform action ${e.branch?`with branch '${e.branch}'`:\"on branch\"}",
+		"无法${e.action}分支 ${e.branch?`'${e.branch}'`:\"\"}`:`无法对${e.branch?`分支 '${e.branch}'`:\"分支\"}执行操作"
+	],
+	[
+		"Unable to ${e.action} tag ${e.tag?`'${e.tag}'`:\"\"}`:`Unable to perform action${e.tag?` with tag '${e.tag}'`:\"on tag\"}",
+		"无法${e.action}标签 ${e.tag?`'${e.tag}'`:\"\"}`:`无法对${e.tag?`标签 '${e.tag}'`:\"标签\"}执行操作"
+	],
+	[
+		"Unable to perform action ${e.branch?`with branch '${e.branch}'`:\"on branch\"}",
+		"无法对${e.branch?`分支 '${e.branch}'`:\"分支\"}执行操作"
+	],
+	[
+		"Unable to perform action${e.tag?` with tag '${e.tag}'`:\"on tag\"}",
+		"无法对${e.tag?`标签 '${e.tag}'`:\"标签\"}执行操作"
+	],
+	[
+		"Unable to checkout${e.ref?` '${e.ref}'`:\"\"}",
+		"无法签出${e.ref?` '${e.ref}'`:\"\"}"
+	],
+	[
+		"Unable to cherry-pick${e.revs?.length?1===e.revs.length?` commit '${e.revs[0]}'`:` ${(0,s.td)(\"commit\",e.revs.length)}`:\"\"}",
+		"无法拣选${e.revs?.length?1===e.revs.length?`提交 '${e.revs[0]}'`:` ${(0,s.td)(\"commit\",e.revs.length)}`:\"\"}"
+	],
+	[
+		"Unable to revert${e.refs?.length?` ${e.refs.join(\", \")}`:\"\"}",
+		"无法还原${e.refs?.length?` ${e.refs.join(\", \")}`:\"\"}"
+	],
+	[
+		"Unable to show${e.path?` '${e.path}'`:\" file\"}${e.rev?` at revision '${e.rev}'`:\"\"}",
+		"无法显示${e.path?` '${e.path}'`:\"文件\"}${e.rev?`（修订版本 '${e.rev}'）`:\"\"}"
+	],
+	[
+		"Unable to delete remote branch${e.branch?` '${e.branch}'`:\"\"}${e.remote?` from ${e.remote}`:\"\"}, the remote reference does not exist",
+		"无法删除远程分支${e.branch?` '${e.branch}'`:\"\"}${e.remote?`（来自 ${e.remote}）`:\"\"}，远程引用不存在"
+	],
+	[
+		"Unable to force push${e.branch?` branch '${e.branch}'`:\"\"}${e.remote?` to ${e.remote}`:\"\"} because some refs failed to push or the push was ",
+		"无法强制推送${e.branch?`分支 '${e.branch}'`:\"\"}${e.remote?`到 ${e.remote}`:\"\"}，因为部分引用推送失败或推送被"
+	],
+	[
+		"Unable to delete stash@{${i.stashNumber}}${i.message?`: ${i.message}`:\"\"}",
+		"无法删除贮藏 stash@{${i.stashNumber}}${i.message?`：${i.message}`:\"\"}"
+	],
+	[
+		"Unable to fully load items\n\n${e.status}: ${String(e)}`:`Unable to fully load items\n\n${String(e)}",
+		"无法完整加载项目\n\n${e.status}: ${String(e)}`:`无法完整加载项目\n\n${String(e)}"
+	],
+	[
+		"Unable to find a remote for PR #${e.id}.`}\nWould you like to add a remote for '${n.provider.repoDomain}?",
+		"未找到 PR #${e.id} 对应的远程仓库。`}\n是否要为 '${n.provider.repoDomain} 添加远程仓库？"
+	],
+	[
+		"Failed to process commits for branch ",
+		"处理分支的提交失败 "
+	],
+	[
+		"rR(\"doneBtnText\")||\"Done\"",
+		"rR(\"doneBtnText\")||\"完成\""
+	],
+	[
+		"tooltip=\"Refresh Launchpad\"",
+		"tooltip=\"刷新启动台\""
+	]
+]

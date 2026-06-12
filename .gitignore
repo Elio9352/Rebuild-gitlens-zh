@@ -1,0 +1,6 @@
+# 汉化脚本本地运行产物
+*.vsix
+gitlens-*-extracted/
+
+# 系统文件
+.DS_Store

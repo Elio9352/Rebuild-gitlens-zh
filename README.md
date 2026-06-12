@@ -11,6 +11,7 @@
 - 支持手动指定版本或自动获取最新版本
 - 自动检测本地是否已存在对应 tag，避免重复打包
 - 自动安装依赖并打包生成 vsix 安装包
+- 自动生成简体中文汉化版 vsix（post-build 字符串替换，约 9700 处运行时翻译）
 - 自动创建 GitHub Release，包含变更日志
 
 ## 触发方式
@@ -49,7 +50,16 @@ schedule:
 5. **代码检出** - 切换到指定版本的代码状态
 6. **依赖安装** - 执行 `pnpm install` 安装项目依赖
 7. **打包构建** - 执行 `pnpm package` 生成 vsix 安装包
-8. **发布 Release** - 在当前仓库创建对应版本的 GitHub Release，上传 vsix 文件
+8. **汉化打包** - 运行 `scripts/localize/localize-gitlens-vsix.mjs` 对 vsix 做 post-build 字符串替换，生成 `gitlens-{version}-zh-CN.vsix`，并校验包完整性与汉化生效
+9. **发布 Release** - 在当前仓库创建对应版本的 GitHub Release，上传原版与汉化版 vsix 文件
+
+## 汉化说明
+
+汉化采用 post-build 方案：不修改上游源码，而是对编译后的 vsix 包做字符串替换（`package.json` UI 标签、`dist/*.js` 运行时字符串、walkthrough 文档等）。
+
+- 翻译表内嵌于 `scripts/localize/localize-gitlens-vsix.mjs`，补充翻译位于 `scripts/localize/runtime-extra-*.json`
+- 翻译表基于 v18.1.0 制作；上游新版本中未命中的字符串保持英文显示（优雅退化），可通过 CI Summary 中的替换统计观察覆盖率变化
+- 本地运行：`GITLENS_VERSION=18.1.0 node scripts/localize/localize-gitlens-vsix.mjs`（需当前目录存在 `gitlens-{version}.vsix`，依赖系统 `zip`/`unzip`，Node ≥ 20.11）
 
 ## 目录结构要求
 
@@ -64,7 +74,8 @@ schedule:
 ## 输出产物
 
 - **vsix 安装包**：位于仓库根目录，命名格式为 `gitlens-{version}.vsix`
-- **GitHub Release**：包含vsix 安装包
+- **汉化版 vsix 安装包**：命名格式为 `gitlens-{version}-zh-CN.vsix`
+- **GitHub Release**：包含原版与汉化版 vsix 安装包
 
 ## 注意事项
 
