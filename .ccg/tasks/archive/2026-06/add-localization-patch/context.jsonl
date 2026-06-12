@@ -1,0 +1,6 @@
+{"_example": "Fill with {\"file\": \"path\", \"reason\": \"why\"}. Seed rows are skipped."}
+{"file": ".github/workflows/build.yml", "reason": "CI 工作流，需在 pnpm package 后增加汉化步骤"}
+{"file": "patches/", "reason": "现有源码补丁目录（解锁 Pro），汉化采用 post-build 方式不放这里"}
+{"file": "/Users/qjh/Desktop/gitlens-localize/scripts/localize-gitlens-vsix.mjs", "reason": "汉化引擎源文件，需复制并参数化版本号（第5行硬编码 18.1.0）"}
+{"file": "/Users/qjh/Desktop/gitlens-localize/scripts/runtime-extra-literals.json", "reason": "运行时字面量翻译表，随脚本一起引入"}
+{"file": "/Users/qjh/Desktop/gitlens-localize/scripts/runtime-extra-fragments.json", "reason": "模板/片段翻译表，随脚本一起引入"}
