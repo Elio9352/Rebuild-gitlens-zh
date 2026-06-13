@@ -70,5 +70,309 @@
 	[
 		"Getting token failed: (⟦⟧) ⟦⟧",
 		"获取令牌失败：(⟦⟧) ⟦⟧"
+	],
+	[
+		"    ⟦⟧ suggested a code change ⟦⟧: \"⟦⟧\"",
+		"    ⟦⟧ 于 ⟦⟧ 建议了一项代码更改: \"⟦⟧\""
+	],
+	[
+		" activating in ⟦⟧ (⟦⟧) on the ⟦⟧; mode=⟦⟧,language='⟦⟧', logLevel='⟦⟧', defaultDateLocale='⟦⟧' (⟦⟧|⟦⟧|⟦⟧)",
+		" 正在 ⟦⟧ (⟦⟧) 中激活，运行于 ⟦⟧；mode=⟦⟧,language='⟦⟧', logLevel='⟦⟧', defaultDateLocale='⟦⟧' (⟦⟧|⟦⟧|⟦⟧)"
+	],
+	[
+		" was NOT activated because this pre-release version (⟦⟧) has expired",
+		" 未激活，因为此预发布版本 (⟦⟧) 已过期"
+	],
+	[
+		"\"⟦⟧\" still contains ⟦⟧. Staging will commit them as-is.",
+		"\"⟦⟧\" 仍包含 ⟦⟧。暂存时将按原样提交这些内容。"
+	],
+	[
+		"\\u2022 decompressed (⟦⟧) serialized params",
+		"\\u2022 已解压 (⟦⟧) 序列化参数"
+	],
+	[
+		"\\u2022 serialized bootstrap; length=⟦⟧",
+		"\\u2022 已序列化引导数据；length=⟦⟧"
+	],
+	[
+		"\\u2022 serialized params; length=⟦⟧",
+		"\\u2022 已序列化参数；length=⟦⟧"
+	],
+	[
+		"$(git-branch) ⟦⟧ has diverged from $(git-branch) ⟦⟧",
+		"$(git-branch) ⟦⟧ 已与 $(git-branch) ⟦⟧ 发生分叉"
+	],
+	[
+		"$(git-branch) ⟦⟧ has no upstream",
+		"$(git-branch) ⟦⟧ 没有上游分支"
+	],
+	[
+		"$(git-branch) ⟦⟧ is ahead of $(git-branch) ⟦⟧",
+		"$(git-branch) ⟦⟧ 领先于 $(git-branch) ⟦⟧"
+	],
+	[
+		"$(git-branch) ⟦⟧ is behind $(git-branch) ⟦⟧",
+		"$(git-branch) ⟦⟧ 落后于 $(git-branch) ⟦⟧"
+	],
+	[
+		"$(git-branch) ⟦⟧ is up to date with $(git-branch) ⟦⟧",
+		"$(git-branch) ⟦⟧ 与 $(git-branch) ⟦⟧ 保持同步"
+	],
+	[
+		"⟦⟧ changes in ⟦⟧",
+		"⟦⟧ 更改 (位于 ⟦⟧)"
+	],
+	[
+		"⟦⟧ has no commits",
+		"⟦⟧ 没有提交"
+	],
+	[
+		"⟦⟧ & Include Untracked",
+		"⟦⟧ 并包含未跟踪文件"
+	],
+	[
+		"⟦⟧ & Keep Staged",
+		"⟦⟧ 并保留已暂存"
+	],
+	[
+		"⟦⟧ and Fetch",
+		"⟦⟧ 并抓取"
+	],
+	[
+		"⟦⟧. Would you like to try reauthenticating⟦⟧?",
+		"⟦⟧。是否尝试重新进行身份验证⟦⟧？"
+	],
+	[
+		"⟦⟧. Would you like to try reauthenticating to provide additional access? Your token needs to have the 'api' scope to perform merge.",
+		"⟦⟧。是否尝试重新进行身份验证以提供更多访问权限？你的令牌需要具有 'api' 作用域才能执行合并。"
+	],
+	[
+		"⟦⟧. If the error persists, please enable debug logging and try again.",
+		"⟦⟧。如果该错误持续存在，请启用调试日志记录并重试。"
+	],
+	[
+		"⟦⟧. No repository could be found.",
+		"⟦⟧。未能找到任何仓库。"
+	],
+	[
+		"⟦⟧. See output channel for more details.",
+		"⟦⟧。请查看输出通道了解更多详细信息。"
+	],
+	[
+		"⟦⟧. The commit could not be found.",
+		"⟦⟧。未能找到该提交。"
+	],
+	[
+		"⟦⟧. The file is probably not under source control.",
+		"⟦⟧。该文件可能未纳入源代码管理。"
+	],
+	[
+		"⟦⟧. The line has uncommitted changes.",
+		"⟦⟧。该行有未提交的更改。"
+	],
+	[
+		"⟦⟧ Issue ⟦⟧<num>",
+		"⟦⟧ 议题 ⟦⟧<num>"
+	],
+	[
+		"⟦⟧ was closed as Pro features have been disabled.",
+		"⟦⟧ 已关闭，因为 Pro 功能已被禁用。"
+	],
+	[
+		"⟦⟧ & Update Branches",
+		"⟦⟧ 并更新分支"
+	],
+	[
+		"⟦⟧ with Rebase",
+		"⟦⟧ 并变基"
+	],
+	[
+		"⟦⟧ without Committing",
+		"⟦⟧ 但不提交"
+	],
+	[
+		"⟦⟧ stopped because of conflicts. Resolve them to continue, or abort the rebase to cancel.",
+		"⟦⟧ 已因冲突而停止。请解决冲突以继续，或中止变基以取消。"
+	],
+	[
+		"⟦⟧ agent(s) need attention",
+		"⟦⟧ 个智能体需要关注"
+	],
+	[
+		"⟦⟧ Resume it in a terminal?",
+		"⟦⟧ 是否在终端中恢复它？"
+	],
+	[
+		"AzureDevOps request failed: ⟦⟧",
+		"AzureDevOps 请求失败: ⟦⟧"
+	],
+	[
+		"Bitbucket request failed: ⟦⟧",
+		"Bitbucket 请求失败: ⟦⟧"
+	],
+	[
+		"Branch '⟦⟧' not found",
+		"未找到分支 '⟦⟧'"
+	],
+	[
+		"Choose a ⟦⟧ command",
+		"选择一个 ⟦⟧ 命令"
+	],
+	[
+		"Commit '⟦⟧' not found",
+		"未找到提交 '⟦⟧'"
+	],
+	[
+		"Commit ⟦⟧ (⟦⟧, ⟦⟧) has no previous commit.",
+		"提交 ⟦⟧ (⟦⟧, ⟦⟧) 没有上一个提交。"
+	],
+	[
+		"Commit message for changes by ⟦⟧",
+		"⟦⟧ 所做更改的提交消息"
+	],
+	[
+		"Compare ⟦⟧⟦⟧ with⟦⟧",
+		"比较 ⟦⟧⟦⟧ 与⟦⟧"
+	],
+	[
+		"Computing ⟦⟧ for ⟦⟧",
+		"正在计算 ⟦⟧ (⟦⟧)"
+	],
+	[
+		"Connect ⟦⟧ Integration",
+		"连接 ⟦⟧ 集成"
+	],
+	[
+		"DEBUGGING: GitKraken request failed: ⟦⟧",
+		"DEBUGGING: GitKraken 请求失败: ⟦⟧"
+	],
+	[
+		"DEBUGGING: GitKraken request failed: ⟦⟧ (⟦⟧)",
+		"DEBUGGING: GitKraken 请求失败: ⟦⟧ (⟦⟧)"
+	],
+	[
+		"Delete ⟦⟧ for ⟦⟧",
+		"删除 ⟦⟧ (属于 ⟦⟧)"
+	],
+	[
+		"Drop ⟦⟧ commits?",
+		"丢弃 ⟦⟧ 个提交？"
+	],
+	[
+		"Exit ⟦⟧ mode",
+		"退出 ⟦⟧ 模式"
+	],
+	[
+		"Explain ⟦⟧ Changes",
+		"解释 ⟦⟧ 更改"
+	],
+	[
+		"Failed to install Claude Hooks: ⟦⟧",
+		"安装 Claude Hooks 失败: ⟦⟧"
+	],
+	[
+		"Failed to uninstall Claude Hooks: ⟦⟧",
+		"卸载 Claude Hooks 失败: ⟦⟧"
+	],
+	[
+		"Fast-forward ⟦⟧",
+		"快进 ⟦⟧"
+	],
+	[
+		"GitLab request failed: ⟦⟧",
+		"GitLab 请求失败: ⟦⟧"
+	],
+	[
+		"GitLens requires a newer version of Git (>= ⟦⟧) than is currently installed (⟦⟧). Please install a more recent version of Git.",
+		"GitLens 需要更新版本的 Git (>= ⟦⟧)，而非当前安装的版本 (⟦⟧)。请安装更新版本的 Git。"
+	],
+	[
+		"Interactive ⟦⟧ & Update Branches",
+		"交互式 ⟦⟧ 并更新分支"
+	],
+	[
+		"Merge ⟦⟧ into ⟦⟧ instead",
+		"改为将 ⟦⟧ 合并到 ⟦⟧"
+	],
+	[
+		"Nothing to copy; no ⟦⟧ changes found",
+		"没有可复制的内容；未找到 ⟦⟧ 更改"
+	],
+	[
+		"Open Issue ⟦⟧<num> on ⟦⟧",
+		"打开议题 ⟦⟧<num> (位于 ⟦⟧)"
+	],
+	[
+		"Opening ⟦⟧ link...",
+		"正在打开 ⟦⟧ 链接..."
+	],
+	[
+		"Publish ⟦⟧ to ⟦⟧",
+		"将 ⟦⟧ 发布到 ⟦⟧"
+	],
+	[
+		"Pull ⟦⟧ from ⟦⟧",
+		"拉取 ⟦⟧ (来自 ⟦⟧)"
+	],
+	[
+		"Push ⟦⟧ to ⟦⟧",
+		"将 ⟦⟧ 推送到 ⟦⟧"
+	],
+	[
+		"Requires ⟦⟧ scopes",
+		"需要 ⟦⟧ 作用域"
+	],
+	[
+		"Squash ⟦⟧ commits into one?",
+		"将 ⟦⟧ 个提交压缩为一个？"
+	],
+	[
+		"Switching ⟦⟧ to ⟦⟧...",
+		"正在将 ⟦⟧ 切换到 ⟦⟧..."
+	],
+	[
+		"This agent session is owned by ⟦⟧. Resolve the request from there.",
+		"此智能体会话由 ⟦⟧ 所有。请在该处处理此请求。"
+	],
+	[
+		"This pre-release version (⟦⟧) of GitLens has expired. Please upgrade to a more recent pre-release, or switch to the release version.",
+		"此 GitLens 预发布版本 (⟦⟧) 已过期。请升级到更新的预发布版本，或切换到正式发布版本。"
+	],
+	[
+		"Unable to ⟦⟧ ⟦⟧: ⟦⟧",
+		"无法 ⟦⟧ ⟦⟧: ⟦⟧"
+	],
+	[
+		"Unable to get absolute uri between ⟦⟧ and ⟦⟧; Base path '⟦⟧' must be an absolute path",
+		"无法获取 ⟦⟧ 与 ⟦⟧ 之间的绝对 uri；基路径 '⟦⟧' 必须是绝对路径"
+	],
+	[
+		"Unable to get absolute uri between ⟦⟧ and ⟦⟧; Base path '⟦⟧' must be a uri",
+		"无法获取 ⟦⟧ 与 ⟦⟧ 之间的绝对 uri；基路径 '⟦⟧' 必须是 uri"
+	],
+	[
+		"Unable to get relative path between ⟦⟧ and ⟦⟧; Base path '⟦⟧' must be an absolute path",
+		"无法获取 ⟦⟧ 与 ⟦⟧ 之间的相对路径；基路径 '⟦⟧' 必须是绝对路径"
+	],
+	[
+		"Unable to get relative path between ⟦⟧ and ⟦⟧; Base path '⟦⟧' must be a uri",
+		"无法获取 ⟦⟧ 与 ⟦⟧ 之间的相对路径；基路径 '⟦⟧' 必须是 uri"
+	],
+	[
+		"waiting for ⟦⟧s",
+		"等待 ⟦⟧ 秒"
+	],
+	[
+		"⟦⟧ files",
+		"⟦⟧ 个文件"
+	],
+	[
+		"⟦⟧ file",
+		"⟦⟧ 个文件"
+	],
+	[
+		"from Commit ⟦⟧",
+		"从提交 ⟦⟧"
 	]
 ]

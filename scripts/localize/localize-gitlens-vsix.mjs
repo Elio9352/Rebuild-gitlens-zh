@@ -59,7 +59,7 @@ const exactTranslations = new Map(
 		Remotes: '远程',
 		Stashes: '贮藏',
 		Tags: '标签',
-		Worktrees: 'Worktrees',
+		Worktrees: '工作树',
 		Contributors: '贡献者',
 		Inspect: '检查',
 		'Pull Request': '拉取请求',
@@ -116,7 +116,7 @@ const exactTranslations = new Map(
 		'Connect GitKraken MCP to More Agents...': '将 GitKraken MCP 连接到更多智能体...',
 		'Enable Debug (Trace) Logging': '启用调试（跟踪）日志',
 		'Disable Debug (Trace) Logging': '禁用调试（跟踪）日志',
-		'Git Worktree...': 'Git Worktree...',
+		'Git Worktree...': 'Git 工作树...',
 		'Start PR Review': '开始 PR 审查',
 		'Always continue manually': '总是手动继续',
 		'Always open in an agent': '总是在智能体中打开',
@@ -137,7 +137,7 @@ const exactTranslations = new Map(
 		'Close Unchanged Files': '关闭未更改文件',
 		'Compare HEAD with...': '将 HEAD 与...比较',
 		'Compare References...': '比较引用...',
-		'Compare Working Tree with...': '将 Working Tree 与...比较',
+		'Compare Working Tree with...': '将工作树与...比较',
 		'Compose Commits (Preview)...': '编排提交（预览）...',
 		Maximize: '最大化',
 		Refresh: '刷新',
@@ -168,6 +168,87 @@ const exactTranslations = new Map(
 		Terminal: '终端',
 		Review: '评审',
 		Zen: '禅模式',
+		// === 命令标题翻译（修复半汉化问题）===
+		// Agent 相关
+		'Open AI Agent Session': '打开 AI 智能体会话',
+		'Switch Default Agent...': '切换默认智能体...',
+		// Worktree 相关
+		'Copy Working Changes to Worktree...': '复制工作区更改到工作树...',
+		'Checkout Pull Request in Worktree (GitLens)...': '在工作树中检出拉取请求 (GitLens)...',
+		'Git Create Worktree...': 'Git 创建工作树...',
+		'Git Delete Worktree...': 'Git 删除工作树...',
+		'Git Open Worktree...': 'Git 打开工作树...',
+		'Create Worktree...': '创建工作树...',
+		'Delete Worktree...': '删除工作树...',
+		'Delete Worktrees...': '删除工作树...',
+		'Open Worktree': '打开工作树',
+		'Open Worktree File': '打开工作树文件',
+		'Open Worktree in New Window': '在新窗口中打开工作树',
+		'Open Worktrees in New Window': '在新窗口中打开工作树',
+		'Open in Worktree': '在工作树中打开',
+		Worktree: '工作树',
+		// Working Tree 相关
+		'Compare Working Tree to Common Base': '比较工作树与公共基准',
+		'Compare Working Tree to Here': '比较工作树与此处',
+		'Compare Working Tree with': '比较工作树与',
+		'Compare with Working Tree': '与工作树比较',
+		'Compare Ancestry with Working Tree': '比较工作树公共基准',
+		'Open All Changes with Working Tree': '使用工作树打开所有更改',
+		'Open All Changes with Working Tree Individually': '分别使用工作树打开所有更改',
+		'Open All Changes with Working Tree': '使用工作树打开所有更改',
+		'Open All Changes with Working Tree Individually': '分别使用工作树打开所有更改',
+		'Directory Compare Working Tree with Here': '目录比较工作树与此处',
+		'Directory Compare with Working Tree': '将目录与工作树比较',
+		'Set Branch Comparison to Working Tree': '与工作树比较',
+		// Path 相关
+		'Copy Path': '复制路径',
+		'Copy Paths': '复制路径',
+		'Copy Relative Paths': '复制相对路径',
+		// 操作动词
+		'Reword Commit...': '改写提交消息...',
+		'Modify Commits from Here (Interactive Rebase)...': '修改提交从此处（交互式变基）...',
+		'Modify Commits (Interactive Rebase)...': '修改提交（交互式变基）...',
+		'Squash Commits...': '压缩提交...',
+		'Discard Changes...': '丢弃更改...',
+		'Pop Stash...': '弹出贮藏...',
+		'Git Pop Stash...': 'Git 弹出贮藏...',
+		'Apply / Pop Stash...': '应用 / 弹出贮藏...',
+		'Apply / Pop a Stash...': '应用 / 弹出贮藏...',
+		'Undo Commit on Worktree': '撤销工作树上的提交',
+		// Filter 相关
+		'Filter Repositories...': '筛选仓库...',
+		'Clear Author Filter': '清除作者筛选',
+		// 其他操作
+		'Git Copy Working Changes to Worktree...': 'Git 复制工作区更改到工作树...',
+		'Git Change Branch Merge Target...': 'Git 更改分支合并目标...',
+		'Simulate AI Provider (Debugging)': '模拟 AI 提供商（调试）',
+		'Remove Remote': '移除远程',
+		'Remove Remote...': '移除远程...',
+		'Git Remove Remote...': 'Git 移除远程...',
+		'Setup Commit Signing...': '设置提交签名...',
+		'Configure Inline Blame': '配置内联 Blame',
+		'Show Welcome View': '显示欢迎视图',
+		'Show Worktrees View': '显示工作树视图',
+		'Start Work with Agent': '使用智能体开始工作',
+		'Pin Branch to Edge': '固定分支到边缘',
+		'Unpin Branch from Edge': '从边缘取消固定分支',
+		'Stage Current Changes': '暂存当前更改',
+		'Stage Incoming Changes': '暂存传入更改',
+		'Simulate AI Provider (Debug)': '模拟 AI 提供商（调试）',
+		'Open on gitkraken.dev': '在 gitkraken.dev 上打开',
+		'Open Logs': '打开日志',
+		'Open Visual Folder History': '打开可视化文件夹历史',
+		'Close Welcome': '关闭欢迎',
+		'Hide Worktrees': '隐藏工作树',
+		'Show Worktrees': '显示工作树',
+		'Group Worktrees View': '分组工作树视图',
+		'Detach Worktrees View': '分离工作树视图',
+		'Hide Worktrees View': '隐藏工作树视图',
+		'Show Worktrees View': '显示工作树视图',
+		'Worktrees View Options': '工作树视图选项',
+		'Hide SHA Column': '隐藏 SHA 列',
+		'Show SHA Column': '显示 SHA 列',
+		'Copy SHA': '复制 SHA',
 	}),
 );
 
@@ -387,7 +468,7 @@ const phraseTranslations = [
 	['Change', '更改'],
 	['Revision', '修订'],
 	['Revisions', '修订'],
-	['Working Tree', 'Working Tree'],
+	['Working Tree', '工作树'],
 	['Working Changes', '工作区更改'],
 	['Uncommitted Changes', '未提交更改'],
 	['Unpushed Changes', '未推送更改'],
@@ -1834,6 +1915,10 @@ function finalizeVisibleText(value) {
 		.replace(/\bIssue\b/g, '议题')
 		.replace(/\bIssues\b/g, '议题')
 		.replace(/\bList\b/g, '列表')
+		// 必须在 Tree 替换之前处理 Working Tree，避免被拆分
+		.replace(/\bWorking Tree\b/g, '工作树')
+		.replace(/\bWorktree\b/g, '工作树')
+		.replace(/\bWorktrees\b/g, '工作树')
 		.replace(/\bTree\b/g, '树形')
 		.replace(/\bRemote\b/g, '远程')
 		.replace(/\bremote\b/g, '远程')
@@ -1841,9 +1926,8 @@ function finalizeVisibleText(value) {
 		.replace(/\bsupported 远程 services\b/g, '受支持的远程服务')
 		.replace(/\bremote names\b/g, '远程名称')
 		.replace(/\bremotes\b/g, '远程')
-		.replace(/\bworktrees\b/g, 'Worktrees')
-		.replace(/\bworktree\b/g, 'Worktree')
-		.replace(/\bworking tree\b/g, 'Working Tree')
+		.replace(/\bworktrees\b/g, '工作树')
+		.replace(/\bworktree\b/g, '工作树')
 		.replace(/\bblame\b/g, 'Blame')
 		.replace(/\bheatmap\b/g, '热力图')
 		.replace(/\bhover\b/g, '悬停提示')
@@ -1916,10 +2000,10 @@ function finalizeVisibleText(value) {
 		.replace(/显示 在 文件资源管理器/g, '在文件资源管理器中显示')
 		.replace(/比较 使用 所选/g, '与所选项比较')
 		.replace(/比较 使用 上游/g, '与上游比较')
-		.replace(/比较 Working Tree 公共基准/g, '与 Working Tree 公共基准比较')
-		.replace(/比较 Working Tree 此处/g, '与此处的 Working Tree 比较')
-		.replace(/打开 所有更改 使用 Working Tree/g, '使用 Working Tree 打开所有更改')
-		.replace(/打开 所有更改 使用 Working Tree，分别/g, '分别使用 Working Tree 打开所有更改')
+		.replace(/比较 Working Tree 公共基准/g, '比较工作树与公共基准')
+		.replace(/比较 Working Tree 此处/g, '比较工作树与此处')
+		.replace(/打开 所有更改 使用 Working Tree/g, '使用工作树打开所有更改')
+		.replace(/打开 所有更改 使用 Working Tree，分别/g, '分别使用工作树打开所有更改')
 		.replace(/显示 作者 列/g, '显示作者列')
 		.replace(/隐藏 作者 列/g, '隐藏作者列')
 		.replace(/显示 更改 列/g, '显示更改列')
@@ -2047,19 +2131,19 @@ const configurationDescriptionOverrides = new Map(
 const commandTitleOverrides = new Map(
 	Object.entries({
 		'gitlens.launchpad.indicator.toggle': '切换启动台指示器',
-		'gitlens.compareWorkingWith': '将 Working Tree 与...比较',
+		'gitlens.compareWorkingWith': '将工作树与...比较',
 		'gitlens.diffDirectory': '使用...打开目录比较 (difftool)',
 		'gitlens.gitCommands.remote.remove': 'Git 移除远程...',
 		'gitlens.gitCommands.stash.pop': 'Git 弹出贮藏...',
 		'gitlens.graph.columnDateTimeOn': '显示日期列',
 		'gitlens.graph.columnGraphOn': '显示图列',
-		'gitlens.graph.compareAncestryWithWorking': '比较 Working Tree 公共基准',
+		'gitlens.graph.compareAncestryWithWorking': '比较工作树与公共基准',
 		'gitlens.graph.compareWithHead': '与 HEAD 比较',
-		'gitlens.graph.compareWithWorking': '与 Working Tree 比较',
+		'gitlens.graph.compareWithWorking': '比较工作树与此处',
 		'gitlens.graph.copyRemoteCommitUrl.multi': '复制远程提交 URL',
 		'gitlens.graph.mergeBranchInto': '将分支合并到当前分支...',
-		'gitlens.graph.openChangedFileDiffsWithWorking': '使用 Working Tree 打开所有更改',
-		'gitlens.graph.openChangedFileDiffsWithWorkingIndividually': '分别使用 Working Tree 打开所有更改',
+		'gitlens.graph.openChangedFileDiffsWithWorking': '使用工作树打开所有更改',
+		'gitlens.graph.openChangedFileDiffsWithWorkingIndividually': '分别使用工作树打开所有更改',
 		'gitlens.graph.split': '拆分提交图',
 		'gitlens.graph.undoCommit': '撤销提交',
 		'gitlens.openAssociatedPullRequestOnRemote': '打开关联拉取请求',
@@ -2074,9 +2158,9 @@ const commandTitleOverrides = new Map(
 		'gitlens.views.browseRepoBeforeRevisionInNewWindow': '在新窗口中从此处之前浏览仓库',
 		'gitlens.views.clearComparison': '清除比较',
 		'gitlens.views.commits.setCommitsFilterAuthors': '按作者筛选提交...',
-		'gitlens.views.compareAncestryWithWorking': '比较 Working Tree 公共基准',
+		'gitlens.views.compareAncestryWithWorking': '比较工作树与公共基准',
 		'gitlens.views.compareWithHead': '与 HEAD 比较',
-		'gitlens.views.compareWithWorking': '与 Working Tree 比较',
+		'gitlens.views.compareWithWorking': '比较工作树与此处',
 		'gitlens.views.copyRemoteCommitUrl.multi': '复制远程提交 URL',
 		'gitlens.views.copyUrl.multi': '复制 URL',
 		'gitlens.views.fileHistory.changeBase': '更改基准...',
@@ -2086,9 +2170,9 @@ const commandTitleOverrides = new Map(
 		'gitlens.views.launchpad.viewOptionsTitle': '启动台视图选项',
 		'gitlens.views.lineHistory.changeBase': '更改基准...',
 		'gitlens.views.mergeBranchInto': '将分支合并到当前分支...',
-		'gitlens.views.openChangedFileDiffsWithWorking': '使用 Working Tree 打开所有更改',
-		'gitlens.views.openChangedFileDiffsWithWorkingIndividually': '分别使用 Working Tree 打开所有更改',
-		'gitlens.views.openDirectoryDiffWithWorking': '将目录与此处的 Working Tree 比较',
+		'gitlens.views.openChangedFileDiffsWithWorking': '使用工作树打开所有更改',
+		'gitlens.views.openChangedFileDiffsWithWorkingIndividually': '分别使用工作树打开所有更改',
+		'gitlens.views.openDirectoryDiffWithWorking': '将目录与工作树比较',
 		'gitlens.views.openInIntegratedTerminal': '在集成终端中打开',
 		'gitlens.views.openInTerminal': '在终端中打开',
 		'gitlens.views.openUrl.multi': '打开 URL',
@@ -2097,14 +2181,14 @@ const commandTitleOverrides = new Map(
 		'gitlens.views.removeRemote': '移除远程...',
 		'gitlens.views.revealRepositoryInExplorer': '在文件资源管理器中显示',
 		'gitlens.views.revealWorktreeInExplorer': '在文件资源管理器中显示',
-		'gitlens.views.scm.grouped.worktrees.detach': '分离 Worktrees 视图',
+		'gitlens.views.scm.grouped.worktrees.detach': '分离工作树视图',
 		'gitlens.views.scm.grouped.launchpad': '启动台',
 		'gitlens.views.scm.grouped.launchpad.attach': '分组启动台视图',
 		'gitlens.views.scm.grouped.launchpad.detach': '分离启动台视图',
 		'gitlens.views.scm.grouped.launchpad.visibility.hide': '隐藏启动台视图',
 		'gitlens.views.scm.grouped.launchpad.visibility.show': '显示启动台视图',
 		'gitlens.views.searchAndCompare.swapComparison': '交换比较',
-		'gitlens.views.setBranchComparisonToWorking': '与 Working Tree 比较',
+		'gitlens.views.setBranchComparisonToWorking': '与工作树比较',
 		'gitlens.views.setResultsCommitsFilterAuthors': '按作者筛选提交...',
 		'gitlens.views.setResultsFilesFilterOnLeft': '仅显示左侧文件',
 		'gitlens.views.setResultsFilesFilterOnRight': '仅显示右侧文件',
@@ -2122,6 +2206,13 @@ const commandTitleOverrides = new Map(
 		'gitlens.visualizeHistory.folder:scm': '打开可视化文件夹历史',
 		'gitlens.visualizeHistory.repo:scm': '可视化仓库历史',
 		'gitlens.visualizeHistory.repo:views': '可视化仓库历史',
+		'gitlens.graph.revealWorktreeInExplorer': '在文件资源管理器中显示',
+		'gitlens.openInIntegratedTerminal:graph': '在集成终端中打开',
+		'gitlens.reviewChanges:graph': '审查更改（预览）...',
+		'gitlens.startReview.openInAgent': '使用智能体开始 PR 审查',
+		'gitlens.graph.rewordCommit': '重写提交消息...',
+		'gitlens.graph.modifyCommits': '从此处修改提交（交互式变基）...',
+		'gitlens.graph.modifyCommits.multi': '修改提交（交互式变基）...',
 	}),
 );
 
@@ -2834,10 +2925,9 @@ const runtimeLiteralTranslations = new Map(
 		'Opening repository...': '正在打开仓库...',
 		'Missing Upstream': '缺少上游',
 		'Up to Date': '已是最新',
-		'Opened Worktree': '已打开 Worktree',
+		'Opened Worktree': '已打开工作树',
 		'Default Remote': '默认远程',
 		'Has Uncommitted Changes': '存在未提交更改',
-		'Working Tree': 'Working Tree',
 		'Commit message for changes by ${o}': '${o} 的更改提交消息',
 		'No commits found for the specified time period': '指定时间段内未找到提交',
 		'There are no editors open that can provide file history information.': '没有打开可提供文件历史信息的编辑器。',
@@ -5470,6 +5560,9 @@ const runtimeRegexTranslations = [
 		flexRegExp('The URL must contain a <code>&lt;num&gt;</code> for the reference value to be included in the link.'),
 		'URL 必须包含 <code>&lt;num&gt;</code>，引用值才会包含在链接中。',
 	],
+	// ===== Worktree 术语统一翻译 =====
+	[/(?<![a-zA-Z])Worktrees(?![A-Za-z])/g, '工作树'],
+	[/(?<![a-zA-Z])Worktree(?![A-Za-z])/g, '工作树'],
 ];
 
 const settingsHtmlFeatureTranslations = new Map(
@@ -6136,6 +6229,22 @@ function localizeRuntimeBundles() {
 			const result = replaceAllCounting(next, source, target);
 			next = result.value;
 			fileReplacements += result.count;
+		}
+
+		// ===== 后置正则：处理 fragment 替换引入的术语 =====
+		// Worktree/Worktrees 在 fragment 翻译结果中作为术语残留，需在 fragment 后再次替换
+		// 移除时间格式化中的 " ago" 后缀（中文不需要）
+		const postFragmentRegexes = [
+			[/(?<![a-zA-Z])Worktrees(?![A-Za-z])/g, '工作树'],
+			[/(?<![a-zA-Z])Worktree(?![A-Za-z])/g, '工作树'],
+			// 时间格式: "9秒前 ago" → "9秒前"
+			[/前 ago\b/g, '前'],
+		];
+		for (const [pattern, target] of postFragmentRegexes) {
+			const matches = next.match(pattern);
+			if (matches == null) continue;
+			next = next.replace(pattern, target);
+			fileReplacements += matches.length;
 		}
 
 		const normalized = normalizePreservedTerms(next);

@@ -4926,5 +4926,605 @@
 	[
 		"tooltip=\"Refresh Launchpad\"",
 		"tooltip=\"刷新启动台\""
+	],
+	[
+		">&nbsp;Associate Issue…<",
+		">&nbsp;关联议题…<"
+	],
+	[
+		">Agents<",
+		">智能体<"
+	],
+	[
+		">Base<",
+		">基准<"
+	],
+	[
+		">Cancel<",
+		">取消<"
+	],
+	[
+		">Commits<",
+		">提交<"
+	],
+	[
+		">Continue<",
+		">继续<"
+	],
+	[
+		">Contributors<",
+		">贡献者<"
+	],
+	[
+		">Current Tool<",
+		">当前工具<"
+	],
+	[
+		">Dismiss<",
+		">关闭<"
+	],
+	[
+		">Draft<",
+		">草稿<"
+	],
+	[
+		">Failed to load treemap data<",
+		">加载矩形树图数据失败<"
+	],
+	[
+		">File Rename<",
+		">文件重命名<"
+	],
+	[
+		">GitKraken MCP has been disabled via settings<",
+		">GitKraken MCP 已通过设置禁用<"
+	],
+	[
+		">Install<",
+		">安装<"
+	],
+	[
+		">Last Prompt<",
+		">上次提示<"
+	],
+	[
+		">Launchpad<",
+		">启动台<"
+	],
+	[
+		">Loading...<",
+		">正在加载...<"
+	],
+	[
+		">No agent sessions<",
+		">无智能体会话<"
+	],
+	[
+		">No files to visualize<",
+		">没有可供可视化的文件<"
+	],
+	[
+		">None<",
+		">无<"
+	],
+	[
+		">Nothing here<",
+		">这里没有内容<"
+	],
+	[
+		">Recent<",
+		">最近<"
+	],
+	[
+		">Refresh<",
+		">刷新<"
+	],
+	[
+		">Request<",
+		">请求<"
+	],
+	[
+		">Retry<",
+		">重试<"
+	],
+	[
+		">Section<",
+		">部分<"
+	],
+	[
+		">Skip<",
+		">跳过<"
+	],
+	[
+		">Uninstall<",
+		">卸载<"
+	],
+	[
+		"$(error) Conflicts with ${i}, and failed CI checks",
+		"$(error) 与 ${i} 存在冲突，且 CI 检查失败"
+	],
+	[
+		"$(error) Conflicts with ${i}, but passed CI checks",
+		"$(error) 与 ${i} 存在冲突，但 CI 检查通过"
+	],
+	[
+		"$(pass) No conflicts, and passed CI checks",
+		"$(pass) 无冲突，且 CI 检查通过"
+	],
+	[
+		"$(error) No conflicts, but failed CI checks",
+		"$(error) 无冲突，但 CI 检查失败"
+	],
+	[
+		"${t} still contains ${(0,g.td)(\"unresolved conflict marker\",r)}.\n\nStage anyway?",
+		"${t} 仍包含 ${(0,g.td)(\"个未解决的冲突标记\",r,{plural:\"个未解决的冲突标记\"})}。\n\n仍要暂存吗？"
+	],
+	[
+		"${t} still contains ${(0,w.td)(\"unresolved conflict marker\",a)}.\n\nStage anyway?",
+		"${t} 仍包含 ${(0,w.td)(\"个未解决的冲突标记\",a,{plural:\"个未解决的冲突标记\"})}。\n\n仍要暂存吗？"
+	],
+	[
+		"${(0,h.td)(\"file\",e)} still ${1===e?\"contains\":\"contain\"} unresolved conflict markers. Staging will commit them as-is.",
+		"${e} 个文件仍包含未解决的冲突标记。暂存时将按原样提交这些内容。"
+	],
+	[
+		"${(0,p.td)(\"file\",e)} still ${1===e?\"contains\":\"contain\"} unresolved conflict markers. Staging will commit them as-is.",
+		"${e} 个文件仍包含未解决的冲突标记。暂存时将按原样提交这些内容。"
+	],
+	[
+		"$(gitlens-code-suggestion) ${(0,u.td)(\"code suggestion\",e.codeSuggestions.value.length)}",
+		"$(gitlens-code-suggestion) ${e.codeSuggestions.value.length} 个代码建议"
+	],
+	[
+		"$(gitlens-code-suggestion) ${(0,c.td)(\"code suggestion\",t.codeSuggestionsCount)}",
+		"$(gitlens-code-suggestion) ${t.codeSuggestionsCount} 个代码建议"
+	],
+	[
+		"${e.isNew?\"(New since last view)\":\"\"}",
+		"${e.isNew?\"（自上次查看后新增）\":\"\"}"
+	],
+	[
+		"</strong> — Select Ahead or Behind to browse commits</span>",
+		"</strong> — 选择领先或落后以浏览提交</span>"
+	],
+	[
+		">开始 ${14} 天 Pro 试用</gl-button\n\t\t\t>\n\t\t\t&nbsp;or\n",
+		">开始 ${14} 天 Pro 试用</gl-button\n\t\t\t>\n\t\t\t&nbsp;或\n"
+	],
+	[
+		"content=\"Load All Branches &amp; Tags\"",
+		"content=\"加载所有分支和标签\""
+	],
+	[
+		">\n\t\t\t\t\tAuto-fetch\n\t\t\t\t</gl-checkbox>",
+		">\n\t\t\t\t\t自动抓取\n\t\t\t\t</gl-checkbox>"
+	],
+	[
+		"Each partition must contain a contiguous range of commits in the provided order. Please regroup into contiguous ranges.",
+		"每个分区必须按给定顺序包含连续范围的提交。请重新分组为连续范围。"
+	],
+	[
+		"(0,h.td)(\"unresolved conflict marker\",i)",
+		"(0,h.td)(\"个未解决的冲突标记\",i,{plural:\"个未解决的冲突标记\"})"
+	],
+	[
+		"(0,p.td)(\"unresolved conflict marker\",i)",
+		"(0,p.td)(\"个未解决的冲突标记\",i,{plural:\"个未解决的冲突标记\"})"
+	],
+	[
+		"<code>my commits from last week</code>",
+		"<code>我上周的提交</code>"
+	],
+	[
+		"<code>changes to package.json by eamodio last month</code>",
+		"<code>eamodio 上个月对 package.json 的更改</code>"
+	],
+	[
+		"renderTab(\"all\",\"All Files\",this.allFilesCount,\"File differences between the latest commits of both branches\")",
+		"renderTab(\"all\",\"所有文件\",this.allFilesCount,\"两个分支最新提交之间的文件差异\")"
+	],
+	[
+		"累计文件 — Select Ahead or Behind to browse commits",
+		"累计文件 — 选择领先或落后以浏览提交"
+	],
+	[
+		"aria-label=\"Compose Changes\"",
+		"aria-label=\"编写更改\""
+	],
+	[
+		">\n\t\t\t\t\t\t\t\t\t\tCompose Changes\n",
+		">\n\t\t\t\t\t\t\t\t\t\t编写更改\n"
+	],
+	[
+		"\"compose\"===t?\"Compose\":\"Review\"",
+		"\"compose\"===t?\"组织\":\"审查\""
+	],
+	[
+		"\"compose\"===t?\"Composing…\":\"Reviewing…\"",
+		"\"compose\"===t?\"正在组织…\":\"正在审查…\""
+	],
+	[
+		"`View ${c}`",
+		"`查看${c}`"
+	],
+	[
+		"`${c} Changes…`",
+		"`${c}更改…`"
+	],
+	[
+		"`${c} — Anchor Missing`",
+		"`${c} — 锚点缺失`"
+	],
+	[
+		"text:\"Compose\",collapsible",
+		"text:\"组织\",collapsible"
+	],
+	[
+		"Commit message (${i}Enter to commit)",
+		"提交信息（${i}Enter 提交）"
+	],
+	[
+		"复制已暂存 Changes (Patch)",
+		"复制已暂存更改（补丁）"
+	],
+	[
+		"Copy All Changes (Patch)",
+		"复制所有更改（补丁）"
+	],
+	[
+		"Copy Unstaged Changes (Patch)",
+		"复制未暂存更改（补丁）"
+	],
+	[
+		"Working Tree Changes",
+		"Working Tree 更改"
+	],
+	[
+		"Load Associated Issues and 拉取请求",
+		"加载关联的议题和拉取请求"
+	],
+	[
+		"Stash:\"Stash\"",
+		"Stash:\"贮藏\""
+	],
+	[
+		"Hide:\"Hide\"",
+		"Hide:\"隐藏\""
+	],
+	[
+		"Show:\"Show\"",
+		"Show:\"显示\""
+	],
+	[
+		"Show ${t?\"Stash\":\"提交\"} Actions",
+		"显示${t?\"贮藏\":\"提交\"}操作"
+	],
+	[
+		"Copy Stash Number",
+		"复制贮藏编号"
+	],
+	[
+		"Stash: ${D.message}",
+		"贮藏: ${D.message}"
+	],
+	[
+		">Compose Commits...<",
+		">组织提交...<"
+	],
+	[
+		"<strong>Compose Commits</strong>",
+		"<strong>组织提交</strong>"
+	],
+	[
+		"\t\t\t\t\t\t\tCompose\n\t\t\t\t\t\t</gl-button>",
+		"\t\t\t\t\t\t\t组织\n\t\t\t\t\t\t</gl-button>"
+	],
+	[
+		"button-label=\"Compose\"",
+		"button-label=\"组织\""
+	],
+	[
+		"renderTab(\"ahead\",\"领先\",this.aheadCount,`Commits in ${c} that are missing from ${o}`)",
+		"renderTab(\"ahead\",\"领先\",this.aheadCount,`${o} 中缺失的来自 ${c} 的提交`)"
+	],
+	[
+		"renderTab(\"behind\",\"落后\",this.behindCount,`Commits in ${o} that are missing from ${c}`)",
+		"renderTab(\"behind\",\"落后\",this.behindCount,`${c} 中缺失的来自 ${o} 的提交`)"
+	],
+	[
+		"fetch-popover__info\">\n\t\t\t\t\t\tFetch from\n",
+		"fetch-popover__info\">\n\t\t\t\t\t\t从\n"
+	],
+	[
+		" on ${thi",
+		" 上的 ${thi"
+	],
+	[
+		"Last fetched ${this.fetchedText}",
+		"上次抓取 ${this.fetchedText}"
+	],
+	[
+		"fetch-popover__hint\">Every ${t} while in view</div>",
+		"fetch-popover__hint\">在视图中每 ${t} 自动抓取</div>"
+	],
+	[
+		"fetch-popover__hint\">Every ${t}</div>\n\t\t\t",
+		"fetch-popover__hint\">每 ${t}</div>\n\t\t\t"
+	],
+	[
+		"ou(\"second\",t):ou(\"minute\",Math.round(t/60))",
+		"ou(\"秒\",t,{plural:\"秒\"}):ou(\"分钟\",Math.round(t/60),{plural:\"分钟\"})"
+	],
+	[
+		"\"Hide Details Panel\"",
+		"\"隐藏详情面板\""
+	],
+	[
+		"\"Show Details Panel\"",
+		"\"显示详情面板\""
+	],
+	[
+		"Show Details Panel on ${\"bottom\"===o?\"Bottom\":\"Right\"}",
+		"在${\"bottom\"===o?\"底部\":\"右侧\"}显示详情面板"
+	],
+	[
+		" Changes\\u2026",
+		"更改\\u2026"
+	],
+	[
+		" \\u2014 Anchor Missing",
+		" \\u2014 锚点丢失"
+	],
+	[
+		">Reviewing Changes",
+		">正在审查更改"
+	],
+	[
+		"Open All Changes with Working Tree)",
+		"打开所有更改（与工作树比较）)"
+	],
+	[
+		"Hold Shift to 与 Working Tree 比较",
+		"按住 Shift 与工作树比较"
+	],
+	[
+		">${t} added</span>",
+		">${t} 个新增</span>"
+	],
+	[
+		">${i} modified</span>",
+		">${i} 个修改</span>"
+	],
+	[
+		">${o} removed</span>",
+		">${o} 个删除</span>"
+	],
+	[
+		"} changed (${h})",
+		"} 已更改 (${h})"
+	],
+	[
+		"\"file changed\"",
+		"\"个文件已更改\""
+	],
+	[
+		"\"files changed\"",
+		"\"个文件已更改\""
+	],
+	[
+		"} changed`",
+		"} 已更改`"
+	],
+	[
+		"zero:\"No\"",
+		"zero:\"无\""
+	],
+	[
+		"Working Tree",
+		"工作树"
+	],
+	[
+		"{0} commit(s) behind and {1} commit(s) ahead of {2}\n Double-click to pull changes",
+		"{0} 个提交落后、{1} 个提交领先于 {2}\n 双击拉取更改"
+	],
+	[
+		"{0} commit(s) behind {1}\n Double-click to pull changes",
+		"{0} 个提交落后于 {1}\n 双击拉取更改"
+	],
+	[
+		"{0} commit(s) ahead of {1}\n Double-click to push changes",
+		"{0} 个提交领先于 {1}\n 双击推送更改"
+	],
+	[
+		"#{0}: {1}\n Double-click to open pull request on {2}",
+		"#{0}: {1}\n 双击在 {2} 上打开拉取请求"
+	],
+	[
+		">Stash</span>",
+		">贮藏</span>"
+	],
+	[
+		"\"Hide Search\"",
+		"\"隐藏搜索\""
+	],
+	[
+		"\"Show Search\"",
+		"\"显示搜索\""
+	],
+	[
+		":\"Stash\")",
+		":\"贮藏\")"
+	],
+	[
+		"Fetching${R.EO.Ellipsis}",
+		"正在拉取${R.EO.Ellipsis}"
+	],
+	[
+		"`Fetching ${i.remote?`${i.remote} of `:\"\"}${s?.name??\"\"}...`",
+		"`正在拉取 ${i.remote?`${i.remote} 的 `:\"\"}${s?.name??\"\"}...`"
+	],
+	[
+		"Open in Search &amp; Compare",
+		"在搜索与比较中打开"
+	],
+	[
+		"Cloud Patch",
+		"云补丁"
+	],
+	[
+		"`${t} ${this.prId?`#${this.prId}`:\"\"} is ${this.state}`",
+		"`${t} ${this.prId?`#${this.prId}`:\"\"} ${{\"merged\":\"已合并\",\"closed\":\"已关闭\",\"opened\":\"已打开\"}[this.state]||this.state}`"
+	],
+	[
+		"`Issue ${this.issueId?`#${this.issueId}`:\"\"} is ${this.state}`:\"Issue\"",
+		"`议题 ${this.issueId?`#${this.issueId}`:\"\"} ${{\"merged\":\"已合并\",\"closed\":\"已关闭\",\"opened\":\"已打开\"}[this.state]||this.state}`:\"议题\""
+	],
+	[
+		"\"issue\"===this.type?\"Issue\":\"Autolink\"",
+		"\"issue\"===this.type?\"议题\":\"自动链接\""
+	],
+	[
+		"ou(\"提交\",this.status.behind)",
+		"this.status.behind+\" 个提交\""
+	],
+	[
+		"ou(\"提交\",f)} Behind ${o.name}",
+		"f+\" 个提交\"} 落后于 ${o.name}"
+	],
+	[
+		"ou(\"提交\",i)",
+		"i+\" 个提交\""
+	],
+	[
+		">Rebase ${ds(this.conflicts.branch)} onto ${t}</span>",
+		">将 ${ds(this.conflicts.branch)} 变基到 ${t}</span>"
+	],
+	[
+		">Rebase ${ds(this.branch.name)} onto ${t}</span>",
+		">将 ${ds(this.branch.name)} 变基到 ${t}</span>"
+	],
+	[
+		">Merge ${t} into ${ds(this.conflicts.branch)}</span>",
+		">将 ${t} 合并到 ${ds(this.conflicts.branch)}</span>"
+	],
+	[
+		">Merge ${t} into ${ds(this.branch.name)}</span>",
+		">将 ${t} 合并到 ${ds(this.branch.name)}</span>"
+	],
+	[
+		"actionLabel:\"Rebase\"",
+		"actionLabel:\"变基\""
+	],
+	[
+		"actionLabel:\"Merge\"",
+		"actionLabel:\"合并\""
+	],
+	[
+		"t_(\"commit\",this.behind)} behind",
+		"this.behind} 个提交落后"
+	],
+	[
+		"t_(\"commit\",this.ahead)} ahead of",
+		"this.ahead} 个提交领先于"
+	],
+	[
+		"Open 工作树 in New Window",
+		"在新窗口中打开工作树"
+	],
+	[
+		"Open 工作树 in a New Window",
+		"在新窗口中打开工作树"
+	],
+	[
+		"Confirm Open 工作树",
+		"确认打开工作树"
+	],
+	[
+		"Open 工作树",
+		"打开工作树"
+	],
+	[
+		"this.status?tO` ${this.status}`:tz",
+		"this.status?tO` ${{merged:\"已合并\",closed:\"已关闭\",opened:\"已打开\",open:\"已打开\"}[this.status]||this.status}`:tz"
+	],
+	[
+		"by ${this.author}",
+		"由 ${this.author}"
+	],
+	[
+		"Compare 工作树 with",
+		"比较工作树与"
+	],
+	[
+		"Compare ${i.ref1} with",
+		"比较 ${i.ref1} 与"
+	],
+	[
+		"(or enter a revision prefixed with #)",
+		"（或输入以 # 开头的修订版本）"
+	],
+	[
+		"(or enter a range)",
+		"（或输入范围）"
+	],
+	[
+		"Compare ${this.branch.name}${this.compareWithWorkingTree?\" (working)\":\"\"} with",
+		"比较 ${this.branch.name}${this.compareWithWorkingTree?\"（工作区）\":\"\"} 与"
+	],
+	[
+		"Compare ${(0,r.M4)(u,{label:!1,icon:!1})} with",
+		"比较 ${(0,r.M4)(u,{label:!1,icon:!1})} 与"
+	],
+	[
+		"\"rebase\",\"rebase\",\"Rebase\"",
+		"\"rebase\",\"rebase\",\"变基\""
+	],
+	[
+		"Interactive ${this.title}",
+		"交互式${this.title}"
+	],
+	[
+		"by applying ${(0,u.td)(\"commit\",a)} on top of ${(0,et.M4)(e.destination,{label:!1})}",
+		"，将 ${(0,u.td)(\"个提交\",a,{plural:\"个提交\"})} 应用到 ${(0,et.M4)(e.destination,{label:!1})} 之上"
+	],
+	[
+		"and any branches pointing to rebased commits",
+		"以及指向已变基提交的所有分支"
+	],
+	[
+		"${this.title} ${(0,et.M4)(t.branch,{icon:!1,label:!1})} onto",
+		"${this.title} ${(0,et.M4)(t.branch,{icon:!1,label:!1})} 到"
+	],
+	[
+		"Pulling ${s?.name??\"\"}...",
+		"正在拉取 ${s?.name??\"\"}..."
+	],
+	[
+		"Jump to WIP",
+		"跳转到工作区"
+	],
+	[
+		"Jump to Working Changes",
+		"跳转到工作区更改"
+	],
+	[
+		"Working Changes",
+		"工作区更改"
+	],
+	[
+		"Clear Working Changes Filter",
+		"清除工作区更改筛选"
+	],
+	[
+		"Clear Commit Filter",
+		"清除提交筛选"
+	],
+	[
+		"<1e3?\"now\":`${oc(t,!0)} ago`",
+		"<1e3?\"刚刚\":`${oc(t,!0)}`"
+	],
+	[
+		"上次活动 ${o} ago",
+		"上次活动 ${o}"
 	]
 ]
