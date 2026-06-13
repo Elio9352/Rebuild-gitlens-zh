@@ -5526,5 +5526,29 @@
 	[
 		"上次活动 ${o} ago",
 		"上次活动 ${o}"
+	],
+	[
+		"${ou(\"commit\",this.branchState.ahead)} 推送到",
+		"${ou(\"个提交\",this.branchState.ahead,{plural:\"个提交\"})} 推送到"
+	],
+	[
+		"${ou(\"commit\",this.branchState.ahead)} ahead of",
+		"领先 ${ou(\"个提交\",this.branchState.ahead,{plural:\"个提交\"})} 于"
+	],
+	[
+		"${ou(\"commit\",this.branchState?.ahead)} 推送到",
+		"${ou(\"个提交\",this.branchState?.ahead,{plural:\"个提交\"})} 推送到"
+	],
+	[
+		"${ou(\"commit\",o)} (来自",
+		"${ou(\"个提交\",o,{plural:\"个提交\"})} (来自"
+	],
+	[
+		"${ou(\"commit\",i)} 推送到",
+		"${ou(\"个提交\",i,{plural:\"个提交\"})} 推送到"
+	],
+	[
+		"${ou(\"commit\",t.ahead)} to push",
+		"${ou(\"个提交\",t.ahead,{plural:\"个提交\"})} 待推送"
 	]
 ]
