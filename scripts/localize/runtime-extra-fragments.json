@@ -1,5 +1,73 @@
 [
 	[
+		"Connected to GitHub",
+		"已连接到 GitHub"
+	],
+	[
+		"Connected to GitLab",
+		"已连接到 GitLab"
+	],
+	[
+		"Connected to Bitbucket",
+		"已连接到 Bitbucket"
+	],
+	[
+		"Connected to Azure DevOps",
+		"已连接到 Azure DevOps"
+	],
+	[
+		" files modified",
+		" 个文件已修改"
+	],
+	[
+		" file modified",
+		" 个文件已修改"
+	],
+	[
+		" files modified",
+		" 个文件已修改"
+	],
+	[
+		" file modified",
+		" 个文件已修改"
+	],
+	[
+		"?` commits up to and including",
+		"?` ${c.upstream.state.ahead} 个提交（截至并包含"
+	],
+	[
+		"Force ${this.title}",
+		"强制${this.title}"
+	],
+	[
+		"label:`Force ${this.title}",
+		"label:`强制${this.title}"
+	],
+	[
+		"(with lease and if includes)",
+		"（带租约并包含时）"
+	],
+	[
+		"to origin/main",
+		"到 origin/main"
+	],
+	[
+		"\"Stashes\"",
+		"\"贮藏\""
+	],
+	[
+		"\"Tags\"",
+		"\"标签\""
+	],
+	[
+		"\"Push to ",
+		"\"推送到 "
+	],
+	[
+		"Visualizes the volume of additions and deletions per day. Computing this requires reading each commit's diff stats and can take a while on large repos.",
+		"可视化每天的新增和删除量。计算这个需要读取每个提交的差异统计，在大型仓库上可能需要一段时间。"
+	],
+	[
 		"Every active agent session shows up alongside your work. See a status pill for each session on the\n\t\t\t\tbranch cards in the Home view and Graph sidebar, or see associated agents in the details panel when\n\t\t\t\tviewing working changes. See what needs attention. Hover for the full picture. Take action &mdash;\n\t\t\t\tresume, respond, switch &mdash; straight from the status. No more rotating through terminal tabs or chat\n\t\t\t\tpanes to figure out which agent needs you.",
 		"每个活动的智能体会话都会显示在你的工作旁边。在主页视图和提交图侧栏的分支卡片上查看每个会话的状态标签，或在查看工作更改时在详情面板中查看关联的智能体。一眼看清需要关注的内容，悬停查看完整信息，并直接从状态执行操作 &mdash; 恢复、回复、切换。再也不用在终端标签页和聊天面板之间来回翻找哪个智能体需要你了。"
 	],
@@ -101,7 +169,7 @@
 	],
 	[
 		"Push ${ou(\"commit\",this.branchState.ahead)} to ${this.upstream}${i}\n\t\t\t<hr />\n\t\t\t${this.renderBranchPrefix()} ${ou(\"commit\",this.branchState.ahead)} ahead of ${this.upstream}",
-		"推送 ${this.branchState.ahead} 个提交到 ${this.upstream}${i}\n\t\t\t<hr />\n\t\t\t${this.renderBranchPrefix()} 领先 ${this.upstream} ${this.branchState.ahead} 个提交"
+		"推送 ${ou(\"个提交\",this.branchState.ahead,{plural:\"个提交\"})} 到 ${this.upstream}${i}\n\t\t\t<hr />\n\t\t\t${this.renderBranchPrefix()} 领先 ${ou(\"个提交\",this.branchState.ahead,{plural:\"个提交\"})} 于 ${this.upstream}"
 	],
 	[
 		"Navigate complex repositories with a searchable, color-coded\n\t\t\t\t\tcommit timeline. Instantly understand branch relationships, authorship patterns, and commit\n\t\t\t\t\tsequences.",
@@ -137,7 +205,7 @@
 	],
 	[
 		"${this.renderBranchPrefix()} ${ou(\"commit\",this.branchState.behind)} behind and\n\t\t\t\t\t${ou(\"commit\",this.branchState.ahead)} ahead of ${this.upstream}${i}",
-		"${this.renderBranchPrefix()} 落后 ${this.upstream}${i} ${this.branchState.behind} 个提交，领先 ${this.branchState.ahead} 个提交"
+		"${this.renderBranchPrefix()} 落后 ${this.upstream}${i} ${ou(\"个提交\",this.branchState.behind,{plural:\"个提交\"})}，领先 ${ou(\"个提交\",this.branchState.ahead,{plural:\"个提交\"})}"
 	],
 	[
 		"The GitLens Community edition lets you track code changes and see who made them with inline blame\n\t\t\t\tannotations, hovers, and more—completely free.",
@@ -301,7 +369,7 @@
 	],
 	[
 		"${this.renderBranchPrefix()} ${ou(\"commit\",this.branchState.behind)} behind\n\t\t\t\t${this.upstream}${i}",
-		"${this.renderBranchPrefix()} 落后 ${this.upstream}${i} ${this.branchState.behind} 个提交"
+		"${this.renderBranchPrefix()} 落后 ${ou(\"个提交\",this.branchState.behind,{plural:\"个提交\"})}\n\t\t\t\t${this.upstream}${i}"
 	],
 	[
 		"Roll back unavailable: no undo manifest was created. Your original working changes remain in stash \"",
@@ -381,15 +449,15 @@
 	],
 	[
 		"<span\n\t\t\t\t\t\t\t\t\t>${eJ(\"pull request\",i)} ${i>1?\"need\":\"needs\"} your\n\t\t\t\t\t\t\t\t\treview</span",
-		"<span\n\t\t\t\t\t\t\t\t\t>${i} 个拉取请求需要你评审</span"
+		"<span\n\t\t\t\t\t\t\t\t\t>${eJ(\"个拉取请求\",i,{plural:\"个拉取请求\"})} 需要你评审</span>"
 	],
 	[
 		"<span\n\t\t\t\t\t\t\t\t\t>${ou(\"pull request\",o)} ${o>1?\"need\":\"needs\"} your\n\t\t\t\t\t\t\t\t\treview</span",
-		"<span\n\t\t\t\t\t\t\t\t\t>${o} 个拉取请求需要你评审</span"
+		"<span\n\t\t\t\t\t\t\t\t\t>${ou(\"个拉取请求\",o,{plural:\"个拉取请求\"})} 需要你评审</span>"
 	],
 	[
 		"<span\n\t\t\t\t\t\t\t\t\t>${t_(\"pull request\",i)} ${i>1?\"need\":\"needs\"} your\n\t\t\t\t\t\t\t\t\treview</span",
-		"<span\n\t\t\t\t\t\t\t\t\t>${i} 个拉取请求需要你评审</span"
+		"<span\n\t\t\t\t\t\t\t\t\t>${t_(\"个拉取请求\",i,{plural:\"个拉取请求\"})} 需要你评审</span>"
 	],
 	[
 		"${t} because the remote contains work that you do not have locally. Try fetching first.",
@@ -517,7 +585,7 @@
 	],
 	[
 		"Force ${this.title}${s?\" (with lease and if includes)\":r?\" (with lease)\":\"\"}",
-		"强制${this.title}${s?\"（带租约且包含时）\":r?\"（带租约）\":\"\"}"
+		"强制${this.title}${s?\"（带租约并包含时）\":r?\"（带租约）\":\"\"}"
 	],
 	[
 		"Commit messages: No clear convention detected. Use clear, concise messages.",
@@ -545,7 +613,7 @@
 	],
 	[
 		"Pull ${ou(\"commit\",this.branchState.behind)} from\n\t\t\t${this.upstream}${i}",
-		"从 ${this.upstream}${i} 拉取 ${this.branchState.behind} 个提交"
+		"从 ${this.upstream}${i} 拉取 ${ou(\"个提交\",this.branchState.behind,{plural:\"个提交\"})}"
 	],
 	[
 		"Revealing ${(0,e7.M4)(e,{icon:!1,quoted:!0})} in the Repositories view...",
@@ -601,15 +669,15 @@
 	],
 	[
 		"${eJ(\"pull request\",i)} ${i>1?\"require\":\"requires\"}\n\t\t\t\t\t\t\t\t\tfollow-up",
-		"${i} 个拉取请求需要跟进"
+		"${eJ(\"个拉取请求\",i,{plural:\"个拉取请求\"})} 需要跟进"
 	],
 	[
 		"${ou(\"pull request\",o)} ${o>1?\"require\":\"requires\"}\n\t\t\t\t\t\t\t\t\tfollow-up",
-		"${o} 个拉取请求需要跟进"
+		"${ou(\"个拉取请求\",o,{plural:\"个拉取请求\"})} 需要跟进"
 	],
 	[
 		"${t_(\"pull request\",i)} ${i>1?\"require\":\"requires\"}\n\t\t\t\t\t\t\t\t\tfollow-up",
-		"${i} 个拉取请求需要跟进"
+		"${t_(\"个拉取请求\",i,{plural:\"个拉取请求\"})} 需要跟进"
 	],
 	[
 		"Stay in control. Review and edit AI suggestions before finalizing, and",
@@ -1101,15 +1169,15 @@
 	],
 	[
 		"${eJ(\"pull request\",i)} ${i>1?\"are\":\"is\"} blocked",
-		"${i} 个拉取请求已阻塞"
+		"${eJ(\"个拉取请求\",i,{plural:\"个拉取请求\"})} 已阻塞"
 	],
 	[
 		"${ou(\"pull request\",o)} ${o>1?\"are\":\"is\"} blocked",
-		"${o} 个拉取请求已阻塞"
+		"${ou(\"个拉取请求\",o,{plural:\"个拉取请求\"})} 已阻塞"
 	],
 	[
 		"${t_(\"pull request\",i)} ${i>1?\"are\":\"is\"} blocked",
-		"${i} 个拉取请求已阻塞"
+		"${t_(\"个拉取请求\",i,{plural:\"个拉取请求\"})} 已阻塞"
 	],
 	[
 		"Multiple organizations not supported for provider",
@@ -1501,15 +1569,15 @@
 	],
 	[
 		"${eJ(\"pull request\",i)} ${o[0].message}",
-		"${i} 个拉取请求${o[0].message===\"needs reviewers\"||o[0].message===\"need reviewers\"?\"需要评审者\":o[0].message===\"has failed CI checks\"||o[0].message===\"have failed CI checks\"?\"存在失败的 CI 检查\":o[0].message===\"has conflicts\"||o[0].message===\"have conflicts\"?\"存在冲突\":o[0].message}"
+		"${eJ(\"个拉取请求\",i,{plural:\"个拉取请求\"})}${o[0].message===\"needs reviewers\"||o[0].message===\"need reviewers\"?\"需要评审者\":o[0].message===\"needs assignees\"||o[0].message===\"need assignees\"?\"需要指派者\":o[0].message}"
 	],
 	[
 		"${ou(\"pull request\",o)} ${c[0].message}",
-		"${o} 个拉取请求${c[0].message===\"needs reviewers\"||c[0].message===\"need reviewers\"?\"需要评审者\":c[0].message===\"has failed CI checks\"||c[0].message===\"have failed CI checks\"?\"存在失败的 CI 检查\":c[0].message===\"has conflicts\"||c[0].message===\"have conflicts\"?\"存在冲突\":c[0].message}"
+		"${ou(\"个拉取请求\",o,{plural:\"个拉取请求\"})}${c[0].message===\"needs reviewers\"||c[0].message===\"need reviewers\"?\"需要评审者\":c[0].message===\"needs assignees\"||c[0].message===\"need assignees\"?\"需要指派者\":c[0].message}"
 	],
 	[
 		"${t_(\"pull request\",i)} ${o[0].message}",
-		"${i} 个拉取请求${o[0].message===\"needs reviewers\"||o[0].message===\"need reviewers\"?\"需要评审者\":o[0].message===\"has failed CI checks\"||o[0].message===\"have failed CI checks\"?\"存在失败的 CI 检查\":o[0].message===\"has conflicts\"||o[0].message===\"have conflicts\"?\"存在冲突\":o[0].message}"
+		"${t_(\"个拉取请求\",i,{plural:\"个拉取请求\"})}${o[0].message===\"needs reviewers\"||o[0].message===\"need reviewers\"?\"需要评审者\":o[0].message===\"needs assignees\"||o[0].message===\"need assignees\"?\"需要指派者\":o[0].message}"
 	],
 	[
 		"Unable to send review findings to chat:",
@@ -1617,15 +1685,15 @@
 	],
 	[
 		"${eJ(\"pull request\",i)} can be merged",
-		"${i} 个拉取请求可合并"
+		"${eJ(\"个拉取请求\",i,{plural:\"个拉取请求\"})} 可合并"
 	],
 	[
 		"${ou(\"pull request\",o)} can be merged",
-		"${o} 个拉取请求可合并"
+		"${ou(\"个拉取请求\",o,{plural:\"个拉取请求\"})} 可合并"
 	],
 	[
 		"${t_(\"pull request\",i)} can be merged",
-		"${i} 个拉取请求可合并"
+		"${t_(\"个拉取请求\",i,{plural:\"个拉取请求\"})} 可合并"
 	],
 	[
 		"Failed to create worktree for branch:",
@@ -1737,7 +1805,7 @@
 	],
 	[
 		"${ou(\"file\",t.files)} changed</span>",
-		"${t.files} 个文件更改</span>"
+		"${ou(\"个文件\",t.files,{plural:\"个文件\"})} 更改</span>"
 	],
 	[
 		"t.current&&c.push(\"current branch\")",
@@ -2129,15 +2197,15 @@
 	],
 	[
 		"${t_(\"file\",t.changed)} changed`",
-		"${t.changed} 个文件更改`"
+		"${t_(\"个文件\",t.changed,{plural:\"个文件\"})} 更改`"
 	],
 	[
 		"${t_(\"file\",t.deleted)} deleted`",
-		"${t.deleted} 个文件删除`"
+		"${t_(\"个文件\",t.deleted,{plural:\"个文件\"})} 删除`"
 	],
 	[
 		"${ou(\"file\",t.deleted)} deleted<",
-		"${t.deleted} 个文件删除<"
+		"${ou(\"个文件\",t.deleted,{plural:\"个文件\"})} 删除<"
 	],
 	[
 		"Message copied to the clipboard",
@@ -2633,11 +2701,11 @@
 	],
 	[
 		"${t_(\"file\",t.added)} added`",
-		"${t.added} 个文件新增`"
+		"${t_(\"个文件\",t.added,{plural:\"个文件\"})} 新增`"
 	],
 	[
 		"${ou(\"file\",t.added)} added<",
-		"${t.added} 个文件新增<"
+		"${ou(\"个文件\",t.added,{plural:\"个文件\"})} 新增<"
 	],
 	[
 		"Will create a new tag named",
@@ -5385,15 +5453,15 @@
 	],
 	[
 		"ou(\"提交\",this.status.behind)",
-		"this.status.behind+\" 个提交\""
+		"ou(\"个提交\",this.status.behind,{plural:\"个提交\"})"
 	],
 	[
 		"ou(\"提交\",f)} Behind ${o.name}",
-		"f+\" 个提交\"} 落后于 ${o.name}"
+		"ou(\"个提交\",f,{plural:\"个提交\"})} 落后于 ${o.name}"
 	],
 	[
 		"ou(\"提交\",i)",
-		"i+\" 个提交\""
+		"ou(\"个提交\",i,{plural:\"个提交\"})"
 	],
 	[
 		">Rebase ${ds(this.conflicts.branch)} onto ${t}</span>",
@@ -5421,11 +5489,11 @@
 	],
 	[
 		"t_(\"commit\",this.behind)} behind",
-		"this.behind} 个提交落后"
+		"t_(\"个提交\",this.behind,{plural:\"个提交\"})} 落后"
 	],
 	[
 		"t_(\"commit\",this.ahead)} ahead of",
-		"this.ahead} 个提交领先于"
+		"t_(\"个提交\",this.ahead,{plural:\"个提交\"})} 领先于"
 	],
 	[
 		"Open 工作树 in New Window",
@@ -5550,5 +5618,69 @@
 	[
 		"${ou(\"commit\",t.ahead)} to push",
 		"${ou(\"个提交\",t.ahead,{plural:\"个提交\"})} 待推送"
+	],
+	[
+		"Create 工作树 for Branch",
+		"为分支创建工作树"
+	],
+	[
+		"Create 工作树 for New Local Branch",
+		"为新本地分支创建工作树"
+	],
+	[
+		"Create 工作树 for Local Branch",
+		"为本地分支创建工作树"
+	],
+	[
+		"Create 工作树 for New Branch",
+		"为新分支创建工作树"
+	],
+	[
+		"Create 工作树 from New Local Branch",
+		"从新本地分支创建工作树"
+	],
+	[
+		"Create 工作树 from Local Branch",
+		"从本地分支创建工作树"
+	],
+	[
+		"Create 工作树 from New Branch",
+		"从新分支创建工作树"
+	],
+	[
+		"Create 工作树 from Branch",
+		"从分支创建工作树"
+	],
+	[
+		"Create 工作树 From",
+		"创建工作树的来源"
+	],
+	[
+		"Recompose ${this.recompose.branchName}",
+		"重组 ${this.recompose.branchName}"
+	],
+	[
+		"Recompose ${t}",
+		"重组 ${t}"
+	],
+	[
+		"is ${eJ(\"commit\",e.behind)}\n\t\t\t\t\t\tbehind and ${eJ(\"commit\",e.ahead)} ahead of",
+		"落后 ${eJ(\"个提交\",e.behind,{plural:\"个提交\"})}、领先 ${eJ(\"个提交\",e.ahead,{plural:\"个提交\"})} 于"
+	],
+	[
+		"is ${eJ(\"commit\",e.ahead)}\n\t\t\t\t\t\tahead of",
+		"领先 ${eJ(\"个提交\",e.ahead,{plural:\"个提交\"})} 于"
+	],
+	[
+		"Unpin this Commit<br />Restores Automatic Following",
+		"取消固定此提交<br />恢复自动跟随"
+	],
+	[
+		"Pin this Commit<br />Suspends Automatic Following",
+		"固定此提交<br />暂停自动跟随"
+	],
+	[
+		"eJ(\"working change\",e.working)",
+		"eJ(\"个工作区更改\",e.working,{plural:\"个工作区更改\"})"
 	]
 ]
