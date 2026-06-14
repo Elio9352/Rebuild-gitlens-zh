@@ -81,7 +81,7 @@
 	],
 	[
 		"<strong>Multi-WIP visibility:</strong> every worktree's working changes are visible at the same time, in\n\t\t\t\tthe same Graph. <strong>Focused Graph mode:</strong> when you're heads-down on one branch, scope the\n\t\t\t\tGraph to just the commits that matter &mdash; the bigger picture is always one click away.",
-		"<strong>多 WIP 可见性：</strong>所有 Worktree 的工作更改同时显示在同一个提交图中。<strong>聚焦图模式：</strong>当你专注于某个分支时，可以将提交图限定到真正相关的提交 &mdash; 全局视角始终一键可达。"
+		"<strong>多 WIP 可见性：</strong>所有 工作树 的工作更改同时显示在同一个提交图中。<strong>聚焦图模式：</strong>当你专注于某个分支时，可以将提交图限定到真正相关的提交 &mdash; 全局视角始终一键可达。"
 	],
 	[
 		"Select a commit or multi-select rows in the Graph and jump straight into Compare mode in the details\n\t\t\t\tpanel. Branch vs. branch, commit vs. commit, working changes vs. anything &mdash; just select and\n\t\t\t\tcompare. It's the fastest way to get eyes on the exact diff you care about.",
@@ -101,7 +101,7 @@
 	],
 	[
 		"The <strong>Commit Graph</strong> brings your development and agentic workflows together. Parallelize\n\t\t\t\tyour work — manage multiple active worktrees, orchestrate concurrent agents, and execute your entire Git\n\t\t\t\tlifecycle without context-switching.",
-		"<strong>提交图</strong>将你的开发流程与智能体工作流融合在一起。并行推进工作 — 管理多个活动的 Worktree、编排并发智能体，并在不切换上下文的情况下完成整个 Git 生命周期。"
+		"<strong>提交图</strong>将你的开发流程与智能体工作流融合在一起。并行推进工作 — 管理多个活动的 工作树、编排并发智能体，并在不切换上下文的情况下完成整个 Git 生命周期。"
 	],
 	[
 		"e.missing?t=\"missing\":(s&&(t+=`${(0,r.td)(\"commit\",s,{infix:a?\"$(arrow-down) \":void 0})} behind`),i&&(t+=`${0===t.length?\"\":u}${(0,r.td)(\"commit\",i,{infix:a?\"$(arrow-up) \":void 0})} ahead`,h.includes(e.name.split(\"/\")[0])&&(t+=\" of\")))",
@@ -121,7 +121,7 @@
 	],
 	[
 		"Review changes, stage files, create or compose commits, and\n\t\t\t\t\t\t\tresolve conflicts. On a clean worktree the Details Panel guides your next steps—like\n\t\t\t\t\t\t\tpulling, pushing, or drafting a PR",
-		"审查更改、暂存文件、创建或编排提交，并\n\t\t\t\t\t\t\t解决冲突。在干净的 Worktree 上，详情面板会引导你的后续步骤——例如\n\t\t\t\t\t\t\t拉取、推送或草拟 PR"
+		"审查更改、暂存文件、创建或编排提交，并\n\t\t\t\t\t\t\t解决冲突。在干净的 工作树 上，详情面板会引导你的后续步骤——例如\n\t\t\t\t\t\t\t拉取、推送或草拟 PR"
 	],
 	[
 		"The new Review mode in the details panel reads through any commits or WIP and surfaces severity-tagged\n\t\t\t\tinsights and a summary of changes, so you can ensure nothing's missed before you ship.",
@@ -141,11 +141,11 @@
 	],
 	[
 		"Juggle multiple active worktrees and agent sessions\n\t\t\t\t\t\t\twithin a single view. Focus the graph on specific changes instantly to review and track\n\t\t\t\t\t\t\twhere agents are working in real-time",
-		"在单一视图中同时管理多个活动的 Worktree 和智能体\n\t\t\t\t\t\t\t会话。即时将提交图聚焦到特定更改，以实时审查和跟踪\n\t\t\t\t\t\t\t智能体的工作位置"
+		"在单一视图中同时管理多个活动的 工作树 和智能体\n\t\t\t\t\t\t\t会话。即时将提交图聚焦到特定更改，以实时审查和跟踪\n\t\t\t\t\t\t\t智能体的工作位置"
 	],
 	[
 		"With agents running across multiple worktrees, working changes used to mean opening another window or\n\t\t\t\tdirectory just to remember what you (or your agent) left half-finished. Not anymore.",
-		"当智能体在多个 Worktree 中运行时，以前查看工作更改意味着要打开另一个窗口或\n\t\t\t\t目录，才能想起你（或你的智能体）有哪些未完成的工作。现在不必如此了。"
+		"当智能体在多个 工作树 中运行时，以前查看工作更改意味着要打开另一个窗口或\n\t\t\t\t目录，才能想起你（或你的智能体）有哪些未完成的工作。现在不必如此了。"
 	],
 	[
 		"Analyze repo evolution with the Visual History.\n\t\t\t\t\t\t\tPinpoint hotspots and trends or watch agent activity in real-time using the Files, Commits,\n\t\t\t\t\t\t\tand Agent Activity treemaps",
@@ -185,7 +185,7 @@
 	],
 	[
 		">Parallelize your workflow—manage multiple active worktrees, orchestrate concurrent agents, and\n\t\t\t\t\t\texecute your entire Git lifecycle without context-switching<",
-		">并行化你的工作流——管理多个活动的 Worktree、编排并发的智能体，并\n\t\t\t\t\t\t在不切换上下文的情况下执行完整的 Git 生命周期<"
+		">并行化你的工作流——管理多个活动的 工作树、编排并发的智能体，并\n\t\t\t\t\t\t在不切换上下文的情况下执行完整的 Git 生命周期<"
 	],
 	[
 		" Launch, monitor, and interact with agents from the\n\t\t\t\t\t\t\tgraph, Agents Side Bar, or Kanban board to approve permissions and view execution plans\n\t\t\t\t\t\t\tinline",
@@ -237,7 +237,7 @@
 	],
 	[
 		"`Working tree changes from ${lg(t.lhs)}`:\"\"===t.rhs?`Changes from ${lg(t.lhs)} to working tree`:`Changes from ${lg(t.lhs)} to ${lg(t.rhs)}`",
-		"`Working Tree 更改（自 ${lg(t.lhs)}）`:\"\"===t.rhs?`从 ${lg(t.lhs)} 到 Working Tree 的更改`:`从 ${lg(t.lhs)} 到 ${lg(t.rhs)} 的更改`"
+		"`工作树 更改（自 ${lg(t.lhs)}）`:\"\"===t.rhs?`从 ${lg(t.lhs)} 到 工作树 的更改`:`从 ${lg(t.lhs)} 到 ${lg(t.rhs)} 的更改`"
 	],
 	[
 		"Unable to complete the cherry-pick operation because ${i??\"it\"} resulted in an empty commit.\n\nDo you want to skip ${i??\"this commit\"}?",
@@ -321,7 +321,7 @@
 	],
 	[
 		"is already checked out.\n\nWould you like to create a new branch for this worktree or forcibly create it anyway?",
-		"已被检出。\n\n是否要为此 Worktree 创建新分支，还是强制创建？"
+		"已被检出。\n\n是否要为此 工作树 创建新分支，还是强制创建？"
 	],
 	[
 		"${t}. Your local changes would be overwritten. Please commit or stash your changes before switching branches.",
@@ -424,8 +424,8 @@
 		"你的 GitLens Pro 试用已重新激活！所有新的 Pro 功能可继续体验"
 	],
 	[
-		"<li><strong>Worktrees:</strong> code, test, and review on multiple branches in parallel</li>",
-		"<li><strong>Worktrees：</strong>在多个分支上并行编码、测试和评审</li>"
+		"<li><strong>工作树s:</strong> code, test, and review on multiple branches in parallel</li>",
+		"<li><strong>工作树s：</strong>在多个分支上并行编码、测试和评审</li>"
 	],
 	[
 		"Blame will resume after saving because there are unsaved changes and the file is over the [",
@@ -441,11 +441,11 @@
 	],
 	[
 		"Will create a new worktree for a new branch named ${e.name} from ${(0,et.M4)(e.reference)}",
-		"将基于 ${(0,et.M4)(e.reference)} 为新分支 ${e.name} 创建新的 Worktree"
+		"将基于 ${(0,et.M4)(e.reference)} 为新分支 ${e.name} 创建新的 工作树"
 	],
 	[
 		"Unable to delete worktree in '${r.fsPath}'.\n\nWould you like to try to forcibly delete it?",
-		"无法删除 Worktree 于 '${r.fsPath}'。\n\n是否尝试强制删除？"
+		"无法删除 工作树 于 '${r.fsPath}'。\n\n是否尝试强制删除？"
 	],
 	[
 		"<span\n\t\t\t\t\t\t\t\t\t>${eJ(\"pull request\",i)} ${i>1?\"need\":\"needs\"} your\n\t\t\t\t\t\t\t\t\treview</span",
@@ -520,8 +520,8 @@
 		" 获取 Jira、GitHub 等服务的自动富链接支持"
 	],
 	[
-		"<li><strong>Launchpad & Worktrees:</strong> manage PRs and branches in one hub</li>",
-		"<li><strong>启动台与 Worktrees：</strong>在一个中心管理 PR 和分支</li>"
+		"<li><strong>Launchpad & 工作树s:</strong> manage PRs and branches in one hub</li>",
+		"<li><strong>启动台与 工作树s：</strong>在一个中心管理 PR 和分支</li>"
 	],
 	[
 		" to linkify external references, like Jira or Zendesk tickets, in commit messages.",
@@ -541,7 +541,7 @@
 	],
 	[
 		"Choose a worktree to copy your working${e.source?.name?\" worktree\":\"\"} changes to",
-		"选择一个 Worktree，将你的${e.source?.name?\" Worktree \":\"\"}工作区更改复制过去"
+		"选择一个 工作树，将你的${e.source?.name?\" 工作树 \":\"\"}工作区更改复制过去"
 	],
 	[
 		"<li><strong>GitKraken AI:</strong> writes commits, PRs & changelogs for you.</li>",
@@ -577,7 +577,7 @@
 	],
 	[
 		"You have uncommitted changes in the working tree.\n\nDo you still want to undo",
-		"Working Tree 中存在未提交的更改。\n\n仍要撤销"
+		"工作树 中存在未提交的更改。\n\n仍要撤销"
 	],
 	[
 		"Unable to create branch '${e.name}'. A branch with that name already exists.",
@@ -696,12 +696,12 @@
 		">查看某行代码由谁更改、何时更改以及为何更改 — 无需离开编辑器。<"
 	],
 	[
-		"<p>Keep everything at your fingertips with Launchpad & Worktrees.</p>",
-		"<p>借助启动台与 Worktrees，一切尽在指尖。</p>"
+		"<p>Keep everything at your fingertips with Launchpad & 工作树s.</p>",
+		"<p>借助启动台与 工作树s，一切尽在指尖。</p>"
 	],
 	[
 		"Unable to delete worktree because there are UNCOMMITTED changes in '",
-		"无法删除 Worktree，因为存在未提交的更改于 '"
+		"无法删除 工作树，因为存在未提交的更改于 '"
 	],
 	[
 		"Are you sure you want to externally open the changes for each of the",
@@ -753,7 +753,7 @@
 	],
 	[
 		"Select a ${r?\"仓库或 worktree\":\"repository\"} to ${t.toLowerCase()} to",
-		"选择要${t.toLowerCase()}的${r?\"仓库或 Worktree\":\"仓库\"}"
+		"选择要${t.toLowerCase()}的${r?\"仓库或 工作树\":\"仓库\"}"
 	],
 	[
 		">Stay in flow, ship faster, and never lose track of what matters.<",
@@ -776,8 +776,8 @@
 		"无法 ${i}：部分选定的提交未在提交图中加载"
 	],
 	[
-		"Copy Working${e.source?.name?\" Worktree\":\"\"} Changes to Worktree",
-		"复制${e.source?.name?\" Worktree \":\"\"}工作区更改到 Worktree"
+		"Copy Working${e.source?.name?\" 工作树\":\"\"} Changes to 工作树",
+		"复制${e.source?.name?\" 工作树 \":\"\"}工作区更改到 工作树"
 	],
 	[
 		"Unable to create branch '${e.name}'. The branch name is invalid.",
@@ -792,8 +792,8 @@
 		"正在侧边栏中显示 ${(0,te.M4)(e,{icon:!1,quoted:!0})}..."
 	],
 	[
-		">Keep everything at your fingertips with Launchpad & Worktrees.<",
-		">借助启动台和 Worktrees，一切尽在指尖。<"
+		">Keep everything at your fingertips with Launchpad & 工作树s.<",
+		">借助启动台和 工作树s，一切尽在指尖。<"
 	],
 	[
 		"Will remove the upstream tracking from ${(0,et.M4)(e.reference)}",
@@ -849,7 +849,7 @@
 	],
 	[
 		">Working tree data changed since this comparison was loaded.<",
-		">自加载此比较以来，Working Tree 数据已发生变化。<"
+		">自加载此比较以来，工作树 数据已发生变化。<"
 	],
 	[
 		"Revealing contributor '${e.name} in the Repositories view...",
@@ -1013,7 +1013,7 @@
 	],
 	[
 		">Start an agent on a worktree to see it appear here.<",
-		">在 Worktree 上启动智能体后，它将显示在此处。<"
+		">在 工作树 上启动智能体后，它将显示在此处。<"
 	],
 	[
 		"case\"working\":return\"Working\";case\"idle\":return\"Idle\"",
@@ -1141,7 +1141,7 @@
 	],
 	[
 		"Unable to fully clean up the delete worktree in '",
-		"无法完全清理已删除的 Worktree 于 '"
+		"无法完全清理已删除的 工作树 于 '"
 	],
 	[
 		"How would you like to open the workspace file for",
@@ -1165,7 +1165,7 @@
 	],
 	[
 		"Revealing worktree '${e.name}' in the side bar...",
-		"正在侧边栏中显示 Worktree '${e.name}'..."
+		"正在侧边栏中显示 工作树 '${e.name}'..."
 	],
 	[
 		"${eJ(\"pull request\",i)} ${i>1?\"are\":\"is\"} blocked",
@@ -1425,7 +1425,7 @@
 	],
 	[
 		"Will create worktree directly in $(folder)",
-		"将直接创建 Worktree 于 $(folder)"
+		"将直接创建 工作树 于 $(folder)"
 	],
 	[
 		"Please choose where to open the repository",
@@ -1493,7 +1493,7 @@
 	],
 	[
 		"Unable to create the new worktree because",
-		"无法创建新的 Worktree，原因为"
+		"无法创建新的 工作树，原因为"
 	],
 	[
 		"Unable to find the specified base branch:",
@@ -1673,7 +1673,7 @@
 	],
 	[
 		"Choose a worktree to copy your staged",
-		"选择一个 Worktree，以复制你的已暂存"
+		"选择一个 工作树，以复制你的已暂存"
 	],
 	[
 		"${t} because the reference is invalid",
@@ -1697,7 +1697,7 @@
 	],
 	[
 		"Failed to create worktree for branch:",
-		"为分支创建 Worktree 失败："
+		"为分支创建 工作树 失败："
 	],
 	[
 		"Will change the upstream tracking for",
@@ -1741,7 +1741,7 @@
 	],
 	[
 		"Unable to create a new worktree in '",
-		"无法创建新的 Worktree 于 '"
+		"无法创建新的 工作树 于 '"
 	],
 	[
 		"Before deleting the current branch '",
@@ -1749,7 +1749,7 @@
 	],
 	[
 		"Will create a new worktree for local",
-		"将创建新的 Worktree，用于本地"
+		"将创建新的 工作树，用于本地"
 	],
 	[
 		"Will forcibly create a new tag named",
@@ -1812,8 +1812,8 @@
 		"t.current&&c.push(\"当前分支\")"
 	],
 	[
-		"Create Worktree for New Branch from",
-		"为新分支创建 Worktree，基于"
+		"Create 工作树 for New Branch from",
+		"为新分支创建 工作树，基于"
 	],
 	[
 		"This request will use approximately",
@@ -1893,7 +1893,7 @@
 	],
 	[
 		"Before deleting the worktree for '",
-		"删除 Worktree 前，分支 '"
+		"删除 工作树 前，分支 '"
 	],
 	[
 		"Create & Switch to New Branch from",
@@ -1928,8 +1928,8 @@
 		">悬停在 Blame 注释上即可：<"
 	],
 	[
-		"Detached Worktree at $(git-commit)",
-		"分离的 Worktree 位于 $(git-commit)"
+		"Detached 工作树 at $(git-commit)",
+		"分离的 工作树 位于 $(git-commit)"
 	],
 	[
 		"Added on the target (conflict with",
@@ -1972,12 +1972,12 @@
 		"命令执行失败，退出码 ${r}"
 	],
 	[
-		"Confirm Switch to Worktree \\u2022",
-		"确认切换到 Worktree \\u2022"
+		"Confirm Switch to 工作树 \\u2022",
+		"确认切换到 工作树 \\u2022"
 	],
 	[
 		"Will create worktree in $(folder)",
-		"将创建 Worktree 于 $(folder)"
+		"将创建 工作树 于 $(folder)"
 	],
 	[
 		"Empty response from Ollama model:",
@@ -2349,11 +2349,11 @@
 	],
 	[
 		"Unable to delete worktree in '",
-		"无法删除 Worktree 于 '"
+		"无法删除 工作树 于 '"
 	],
 	[
 		"Will create a new worktree for",
-		"将创建新的 Worktree 用于"
+		"将创建新的 工作树 用于"
 	],
 	[
 		"Do you want to start your free",
@@ -2421,7 +2421,7 @@
 	],
 	[
 		"Unable to locate worktree path",
-		"无法定位 Worktree 路径"
+		"无法定位 工作树 路径"
 	],
 	[
 		"Provider id mismatch: expected",
@@ -2513,11 +2513,11 @@
 	],
 	[
 		"Unable to create worktree for",
-		"无法创建 Worktree 用于"
+		"无法创建 工作树 用于"
 	],
 	[
-		"Worktree for $(git-branch) \\`",
-		"Worktree，分支 $(git-branch) \\`"
+		"工作树 for $(git-branch) \\`",
+		"工作树，分支 $(git-branch) \\`"
 	],
 	[
 		"Comparing ${this._ref.label??",
@@ -2549,7 +2549,7 @@
 	],
 	[
 		"Choose which worktree to open",
-		"选择要打开的 Worktree"
+		"选择要打开的 工作树"
 	],
 	[
 		"No local repository found for",
@@ -2688,8 +2688,8 @@
 		"`新增 ${W.additions} 行`"
 	],
 	[
-		"worktrees:{title:\"Worktrees\"",
-		"worktrees:{title:\"Worktree\""
+		"worktrees:{title:\"工作树s\"",
+		"worktrees:{title:\"工作树\""
 	],
 	[
 		"text:\"Review\",collapsible:!0",
@@ -2860,8 +2860,8 @@
 		"new r.TreeItem(\"分支\","
 	],
 	[
-		"${t.title} in New Worktree",
-		"${t.title}（新 Worktree）"
+		"${t.title} in New 工作树",
+		"${t.title}（新 工作树）"
 	],
 	[
 		"` named ${e.createBranch}`",
@@ -3104,8 +3104,8 @@
 		">未选择仓库<"
 	],
 	[
-		">Launchpad & Worktrees:<",
-		">启动台和 Worktrees：<"
+		">Launchpad & 工作树s:<",
+		">启动台和 工作树s：<"
 	],
 	[
 		"Thanks for starting your",
@@ -3237,7 +3237,7 @@
 	],
 	[
 		">Apply to new worktree<",
-		">应用到新的 Worktree<"
+		">应用到新的 工作树<"
 	],
 	[
 		">Multi-WIP visibility:<",
@@ -3493,7 +3493,7 @@
 	],
 	[
 		"No worktrees found in",
-		"未找到 Worktree 于"
+		"未找到 工作树 于"
 	],
 	[
 		"Rich integration with",
@@ -3732,8 +3732,8 @@
 		"GitLens 编排留下了"
 	],
 	[
-		"Changes to Worktree",
-		"更改到 Worktree"
+		"Changes to 工作树",
+		"更改到 工作树"
 	],
 	[
 		"No stashes found in",
@@ -3848,8 +3848,8 @@
 		"暂存操作失败 ("
 	],
 	[
-		"tooltip:\"Worktrees\"",
-		"tooltip:\"Worktree\""
+		"tooltip:\"工作树s\"",
+		"tooltip:\"工作树\""
 	],
 	[
 		"return`changes${i}`",
@@ -3985,7 +3985,7 @@
 	],
 	[
 		"The worktree in '",
-		"该 Worktree 位于 '"
+		"该 工作树 位于 '"
 	],
 	[
 		"Please enter your",
@@ -4156,8 +4156,8 @@
 		"正在审查提交"
 	],
 	[
-		"Create Worktree…",
-		"创建 Worktree…"
+		"Create 工作树…",
+		"创建 工作树…"
 	],
 	[
 		"Summarize branch",
@@ -4305,7 +4305,7 @@
 	],
 	[
 		">Bare worktree<",
-		">裸 Worktree<"
+		">裸 工作树<"
 	],
 	[
 		">Active Branch<",
@@ -4508,8 +4508,8 @@
 		"GitLens 模式:"
 	],
 	[
-		"Bare Worktree",
-		"裸 Worktree"
+		"Bare 工作树",
+		"裸 工作树"
 	],
 	[
 		"Open Issue on",
@@ -5244,8 +5244,8 @@
 		"复制未暂存更改（补丁）"
 	],
 	[
-		"Working Tree Changes",
-		"Working Tree 更改"
+		"工作树 Changes",
+		"工作树 更改"
 	],
 	[
 		"Load Associated Issues and 拉取请求",
@@ -5348,11 +5348,11 @@
 		">正在审查更改"
 	],
 	[
-		"Open All Changes with Working Tree)",
+		"Open All Changes with 工作树)",
 		"打开所有更改（与工作树比较）)"
 	],
 	[
-		"Hold Shift to 与 Working Tree 比较",
+		"Hold Shift to 与 工作树 比较",
 		"按住 Shift 与工作树比较"
 	],
 	[
@@ -5388,7 +5388,7 @@
 		"zero:\"无\""
 	],
 	[
-		"Working Tree",
+		"工作树",
 		"工作树"
 	],
 	[
@@ -5496,11 +5496,11 @@
 		"t_(\"个提交\",this.ahead,{plural:\"个提交\"})} 领先于"
 	],
 	[
-		"Open 工作树 in New Window",
+		"Open 工作树in New Window",
 		"在新窗口中打开工作树"
 	],
 	[
-		"Open 工作树 in a New Window",
+		"Open 工作树in a New Window",
 		"在新窗口中打开工作树"
 	],
 	[
@@ -5520,7 +5520,7 @@
 		"由 ${this.author}"
 	],
 	[
-		"Compare 工作树 with",
+		"Compare 工作树with",
 		"比较工作树与"
 	],
 	[
@@ -5620,39 +5620,39 @@
 		"${ou(\"个提交\",t.ahead,{plural:\"个提交\"})} 待推送"
 	],
 	[
-		"Create 工作树 for Branch",
+		"Create 工作树for Branch",
 		"为分支创建工作树"
 	],
 	[
-		"Create 工作树 for New Local Branch",
+		"Create 工作树for New Local Branch",
 		"为新本地分支创建工作树"
 	],
 	[
-		"Create 工作树 for Local Branch",
+		"Create 工作树for Local Branch",
 		"为本地分支创建工作树"
 	],
 	[
-		"Create 工作树 for New Branch",
+		"Create 工作树for New Branch",
 		"为新分支创建工作树"
 	],
 	[
-		"Create 工作树 from New Local Branch",
+		"Create 工作树from New Local Branch",
 		"从新本地分支创建工作树"
 	],
 	[
-		"Create 工作树 from Local Branch",
+		"Create 工作树from Local Branch",
 		"从本地分支创建工作树"
 	],
 	[
-		"Create 工作树 from New Branch",
+		"Create 工作树from New Branch",
 		"从新分支创建工作树"
 	],
 	[
-		"Create 工作树 from Branch",
+		"Create 工作树from Branch",
 		"从分支创建工作树"
 	],
 	[
-		"Create 工作树 From",
+		"Create 工作树From",
 		"创建工作树的来源"
 	],
 	[
