@@ -59,6 +59,8 @@ const exactTranslations = new Map(
 		Remotes: '远程',
 		Stashes: '贮藏',
 		Tags: '标签',
+		Worktrees: '工作树',
+		WORKTREES: '工作树',
 		工作树s: '工作树',
 		Contributors: '贡献者',
 		Inspect: '检查',
@@ -1938,6 +1940,9 @@ function finalizeVisibleText(value) {
 		.replace(/\bsupported 远程 services\b/g, '受支持的远程服务')
 		.replace(/\bremote names\b/g, '远程名称')
 		.replace(/\bremotes\b/g, '远程')
+		.replace(/_Worktrees_/g, '_工作树_')
+		.replace(/\bWorktrees\b/g, '工作树')
+		.replace(/\bWorktree\b/g, '工作树')
 		.replace(/\bworktrees\b/g, '工作树')
 		.replace(/\bworktree\b/g, '工作树')
 		.replace(/\bblame\b/g, 'Blame')
@@ -2264,7 +2269,7 @@ function getViewsWelcomeOverride(welcome) {
 	}
 
 	if (contents.includes('Reactivate') && contents.includes('工作树s')) {
-		return '[继续](command:gitlens.plus.reactivateProTrial?%7B%22source%22%3A%22worktrees%22%7D) 重新激活你的 Pro 试用，免费再体验 14 天 工作树s 和所有新版 Pro 功能！';
+		return '[继续](command:gitlens.plus.reactivateProTrial?%7B%22source%22%3A%22worktrees%22%7D) 重新激活你的 Pro 试用，免费再体验 14 天工作树和所有新版 Pro 功能！';
 	}
 
 	if (contents.includes('GitLens 将许多相关视图') && when.includes('!gitlens:install:new')) {
@@ -3123,8 +3128,8 @@ const runtimeLiteralTranslations = new Map(
 		Prefix: '前缀',
 		// Step 3: 补充高优先级 runtime 弹窗/QuickPick/InputBox 字符串
 		'Are you sure you want to delete this workspace? This cannot be undone.': '确定要删除此工作区吗？此操作无法撤销。',
-		'Choose worktree to open': '选择要打开的 工作树',
-		'Choose worktrees to delete': '选择要删除的 工作树s',
+		'Choose worktree to open': '选择要打开的工作树',
+		'Choose worktrees to delete': '选择要删除的工作树',
 		'Enter stash message': '输入贮藏消息',
 		'Enter new stash message': '输入新贮藏消息',
 		'Choose a pull request or paste a pull request URL to act on': '选择拉取请求或粘贴拉取请求 URL 以执行操作',
@@ -3133,7 +3138,7 @@ const runtimeLiteralTranslations = new Map(
 		'Your local changes would be overwritten by checkout': '签出操作将覆盖你的本地更改',
 		'A merge is already in progress': '合并操作已在进行中',
 		'Resolve the conflicts before continuing': '请在继续之前解决冲突',
-		'Cannot delete the default worktree': '无法删除默认 工作树',
+		'Cannot delete the default worktree': '无法删除默认工作树',
 		'Failed to create pull request': '创建拉取请求失败',
 		'Failed to open pull request': '打开拉取请求失败',
 		'Failed to open pull request details': '打开拉取请求详情失败',
@@ -3247,8 +3252,8 @@ const runtimeLiteralTranslations = new Map(
 		'Apply Stash...': '应用贮藏...',
 		'Autolinked Issues and Pull Requests': '自动链接的议题和拉取请求',
 		'Autolinked Pull Request': '自动链接的拉取请求',
-		'Cannot delete the default worktree.': '无法删除默认 worktree。',
-		'Cannot delete worktree because it is the default working tree': '无法删除 worktree，因为它是默认 工作树',
+		'Cannot delete the default worktree.': '无法删除默认工作树。',
+		'Cannot delete worktree because it is the default working tree': '无法删除工作树，因为它是默认工作树',
 		'Cannot get files for comparisons of a ref with working tree': '无法获取引用与 工作树 比较的文件',
 		'Cannot pull a branch until it has been published': '分支发布前无法拉取',
 		'Cannot pull a remote branch': '无法拉取远程分支',
@@ -6248,6 +6253,11 @@ function localizeRuntimeBundles() {
 		// 工作树/工作树s 在 fragment 翻译结果中作为术语残留，需在 fragment 后再次替换
 		// 移除时间格式化中的 " ago" 后缀（中文不需要）
 		const postFragmentRegexes = [
+			[/Filter Worktrees\.\.\./g, '筛选工作树...'],
+			[/Filter 工作树\.\.\./g, '筛选工作树...'],
+			[/筛选Worktrees\.\.\./g, '筛选工作树...'],
+			[/(?<![A-Za-z])WORKTREES(?![A-Za-z])/g, '工作树'],
+			[/(?<![A-Za-z])Worktrees(?![A-Za-z])/g, '工作树'],
 			[/(?<![a-zA-Z])工作树s(?![A-Za-z])/g, '工作树'],
 			[/(?<![a-zA-Z])工作树(?![A-Za-z])/g, '工作树'],
 			// 时间格式: "9秒前 ago" → "9秒前"
